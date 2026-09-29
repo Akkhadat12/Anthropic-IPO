@@ -1,9 +1,9 @@
 # Independent web QA report — Anthropic IPO two-clock story
 
-**Status: FAIL — do not accept as final delivery yet.**  
+**Current status after 29 September 2026 retest: FAIL — F1 and F5 remain open.**  
 Test date: 29 September 2026 (Asia/Bangkok).  
 Final URL tested: https://anthropic-ipo-two-clocks.vercel.app/  
-Browser: Chrome, live public URL. Desktop viewports tested at 1920 × 900 and 1600 × 900 (16:9); narrow viewport tested at 390 × 844. The page opened without an application login prompt. This is an independent first pass; all listed corrections and post-fix retests are pending.
+Browser: Chrome, live public URL. Desktop viewports tested at 1920 × 900 and 1600 × 900 (16:9); narrow viewport tested at 390 × 844. The page opened without an application login prompt. The scene table and findings below record the first pass; the dated retest at the end gives the current finding status.
 
 ## Evidence and limits
 
@@ -45,6 +45,21 @@ The [Series H announcement](https://www.anthropic.com/news/series-h) supports th
 
 Cover-to-Closing clicks, route selection, early proof-gate feedback, Spacebar advancement, R return, Sources open/close, and Escape were exercised. No skipped scene was observed in the tested sequence. Rapid repetition, refresh during navigation, reduced motion, and clean-profile access still require the acceptance plan's separate retest.
 
-## Acceptance decision
+## First-pass acceptance decision
 
 **FAIL / return for correction.** F1 and F2 block the specified deliverables or source access. F3–F5 require correction or durable verification before final sign-off. After changes, recheck the exact production URL and actual DOCX, capture final desktop/phone/transition evidence, and record a dated post-fix result for each finding here.
+
+## Retest after correction commit 94ea643 — 29 September 2026
+
+This retest supersedes the first-pass finding statuses above. I reopened the public production URL in Chrome, inspected the corrected phone states at 390 × 844 and Scene 5 at 1600 × 900, clicked the replacement Reuters link, checked the Thai rationale text, inspected the commit, and listed the specified Drive folder.
+
+| Finding | Current result | Retest evidence |
+| --- | --- | --- |
+| F1 — actual Word deliverable | **OPEN** | The specified Drive folder still contains only one item named 06_SCENE_RATIONALE.docx, file ID 1grcgF9jbovWbEG0_ASc12Te_xeT81PlGqjhEyiG6nik. Its MIME remains application/vnd.google-apps.document. No actual DOCX with the Word MIME type is in that folder. |
+| F2 — Reuters link | **PASS** | The live Sources overlay now links to the Reuters article on StreetInsider. Clicking it opened the full bylined article, including FY2025 revenue, operating loss, and future obligations. The Thai rationale and both chart-data CSVs use the same reachable URL. |
+| F3 — customer vs provider cost | **PASS** | Live Scene 3 now says “up to 30% less customer API cost per task · provider compute cost unknown.” The Thai rationale explicitly says this is not Anthropic internal compute cost or proof of serving margin. |
+| F4 — phone labels | **PASS at tested size** | At 390 × 844, the Cover ownership label has a dark backing and Scene 5’s overlap/not-2027-cash caveat is larger and wraps legibly. Scene 5 also remained intact at 1600 × 900. |
+| F5 — durable visual evidence | **OPEN** | The repository still has no linked final-version settled desktop/phone and representative transition/interaction capture set required by 05_QA.md. The specified Drive folder contains the rationale and two reading PDFs plus the link text file, not that capture set. Browser observations are recorded here but are not stable screenshot artifacts. |
+| F6 — README handoff | **PARTIAL / LOW** | The opening now names the live site and QA report. Later paragraphs still instruct the next agent to build and publish the already-existing website and upload the rationale; those should be revised for a clean handoff. |
+
+**Current acceptance decision: FAIL.** The product corrections F2–F4 passed this retest. F1 still blocks the contracted Word deliverable, and F5 is required by the QA acceptance plan. Export and place a true DOCX in the specified Drive folder, link final-version QA captures, then verify both before final sign-off. F6 is a low-priority documentation cleanup.
