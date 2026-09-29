@@ -15,6 +15,10 @@ for (const [name, viewport] of Object.entries({ desk: { width: 1920, height: 108
   await page.screenshot({ path: `${out}/qa-${name}-overlay.png` });
   results.push(`${name}: overlay links=${await page.locator('#ov-list a').count()}`);
   await page.keyboard.press('Escape');
+  await page.locator('#btn-menu').click();
+  await page.screenshot({ path: `${out}/qa-${name}-menu.png` });
+  results.push(`${name}: menu items=${await page.locator('#menu-list button').count()}`);
+  await page.keyboard.press('Escape');
   for (const id of ['models', 'cover']) {
     await page.goto(`${base}/?scene=${id}`);
     await settled(id);
@@ -30,6 +34,17 @@ for (const [name, viewport] of Object.entries({ desk: { width: 1920, height: 108
     const pressed = await page.getByRole('button', { name: option, exact: true }).getAttribute('aria-pressed');
     results.push(`${name}: ${option} selected=${pressed}, scene=${await page.locator('body').getAttribute('data-scene')}`);
     await page.screenshot({ path: `${out}/qa-${name}-scenario-${option.toLowerCase()}.png` });
+  }
+  await page.goto(`${base}/?scene=cover`);
+  await settled('cover');
+  for (const id of ['filing', 'close']) {
+    await page.goto(`${base}/?scene=${id}`);
+    await settled(id);
+    const bounds = await page.locator('#primary').evaluate((el) => {
+      const r = el.getBoundingClientRect();
+      return { left: r.left, right: r.right, viewport: innerWidth };
+    });
+    results.push(`${name}: ${id} primary bounds=${JSON.stringify(bounds)}`);
   }
   await page.goto(`${base}/?scene=cover`);
   await settled('cover');

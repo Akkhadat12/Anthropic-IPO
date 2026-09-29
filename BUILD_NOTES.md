@@ -1,6 +1,6 @@
 # Build notes — Anthropic IPO capacity ledger
 
-**Status:** Second retest build deployed after `QA_FAIL` (QA-06 major, QA-07 minor) and the owner feedback on bottom controls. Ready for independent retest per [05_QA.md](05_QA.md). Builder does not self-approve.
+**Status:** Production build `944a2d9` passed independent retest after the owner feedback on bottom controls and QA-06/07 fixes. See [07_WEB_QA_REPORT.md](07_WEB_QA_REPORT.md).
 
 ## Build facts
 
@@ -78,5 +78,5 @@ Production retest captures (all nine scenes at 1920×1080 and 390×844, scenario
 3. **Space on in-scene selector buttons** activates them natively (Enter also works); Space elsewhere advances.
 4. **Phone 3D is context only.** Facts are carried by the stacked label list; the 3D objects are small at 390px by design.
 5. **Corridor ribbon** in `capacity` is qualitative (demand above floor). It encodes no magnitude.
-6. **`06_SCENE_RATIONALE`** (Thai Google Doc / .docx with scene screenshots) is not created yet; it depends on the deployed build.
+6. **`06_SCENE_RATIONALE`** is the current [Thai Google Doc](https://docs.google.com/document/d/1LTo2_oDB7hmAocPf7uKCOWxsrcs_Hm61_kvGCQlyaoA/edit) with nine finished-scene screenshots for deployed build `944a2d9`.
 7. `?dir=a` remains available as an alternate direction; it is not the shipped default.

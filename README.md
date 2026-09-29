@@ -1,8 +1,8 @@
-# Start here — Web Build agent
+# Anthropic IPO capacity ledger — current branch
 
-Build the **new** Anthropic IPO immersive 3D story from branch [`research-ipo-financials-models-2026`](https://github.com/Akkhadat12/Anthropic-IPO/tree/research-ipo-financials-models-2026). First read [WORKFLOW_STATUS.md](WORKFLOW_STATUS.md), then [04_BUILD_WEB.md](04_BUILD_WEB.md), [03_STORY_STRUCTURE.md](03_STORY_STRUCTURE.md), [02_RESEARCH_AND_ANALYSIS.md](02_RESEARCH_AND_ANALYSIS.md), [01_KNOWLEDGE_SUMMARY.md](01_KNOWLEDGE_SUMMARY.md), and [05_QA.md](05_QA.md). The owner approved thesis #1: **revenue is accelerating while minimum compute obligations extend far ahead**. The build must test whether retained cash from Claude demand can cover those obligations, with the uncertainty and contrary evidence intact.
+This branch [`research-ipo-financials-models-2026`](https://github.com/Akkhadat12/Anthropic-IPO/tree/research-ipo-financials-models-2026) contains the **new** Anthropic IPO immersive 3D story. First read [WORKFLOW_STATUS.md](WORKFLOW_STATUS.md), then the [independent QA report](07_WEB_QA_REPORT.md) and [build notes](BUILD_NOTES.md). The owner approved thesis #1: **revenue is accelerating while minimum compute obligations extend far ahead**. The story tests whether retained cash from Claude demand can cover those obligations, with the uncertainty and contrary evidence intact.
 
-This branch is the research and story handoff. **No website has been built, deployed, or QA-tested for this branch.** The earlier `main` site and QA report are historical; do not present their URL, screenshots, or pass status as the result of this assignment. The later builder must create and verify a distinct public Vercel production build from this branch, then hand its exact URL and commit to independent QA.
+**Current production:** https://anthropic-ipo-capacity-ledger.vercel.app/ at build `944a2d9`; independent QA marked that build `QA_PASS` on 29 September 2026. The earlier `main` site and QA report are historical and are not the result of this assignment.
 
 ## Handoff files
 
@@ -20,6 +20,6 @@ This branch is the research and story handoff. **No website has been built, depl
 
 **Research cutoff:** 29 September 2026, Thailand time. Anthropic announced a confidential S-1, but this team has not read a public filing. Reuters and Bloomberg reports are attributed as such. If a public S-1 appears before build or QA, reopen and update the affected research, PDFs, scene data, and site before claiming current accuracy.
 
-## Later workflow
+## Completed workflow
 
-The builder prototypes two distinct visual directions, builds the entire route, deploys and verifies a public Vercel **production** URL, records exact commit/build notes, and produces one current Thai `06_SCENE_RATIONALE` Google Doc or genuine `.docx` in the owner Drive folder with finished-scene screenshots. The builder updates [WORKFLOW_STATUS.md](WORKFLOW_STATUS.md) to `READY_FOR_QA` only after production verification. Independent QA follows [05_QA.md](05_QA.md) and writes `07_WEB_QA_REPORT.md` on this branch with screenshot evidence, defects, retest, and `QA_PASS` or `QA_FAIL`. No agent should infer these later artifacts from this planning handoff.
+The builder compared two visual directions, built and deployed the full route, and produced the current Thai [06_SCENE_RATIONALE](https://docs.google.com/document/d/1LTo2_oDB7hmAocPf7uKCOWxsrcs_Hm61_kvGCQlyaoA/edit) with finished-scene screenshots. Independent QA tested production build `944a2d9` under [05_QA.md](05_QA.md); the [report](07_WEB_QA_REPORT.md) preserves the two earlier failed rounds and the final passing retest.
