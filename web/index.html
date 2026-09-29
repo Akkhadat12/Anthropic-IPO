@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Can growth pay for the frontier?</title>
+  <meta name="description" content="A presenter film about whether Claude revenue can fund frontier compute. Confidential draft S-1 only. Not an investment call.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#story">Skip to story</a>
+  <div id="story" class="story" tabindex="-1">
+    <p class="sr-live" aria-live="polite" id="live"></p>
+
+    <section class="scene scene-cover is-current" data-scene="cover" aria-label="Cover">
+      <img class="hall-photo" src="images/project-rainier-interior.png" width="2550" height="1434" alt="AWS Project Rainier hall: rows of pink compute racks along an aisle, with a person walking for scale.">
+      <div class="hall-scrim" aria-hidden="true"></div>
+      <p class="identity">AWS Project Rainier · not Anthropic-owned</p>
+      <button class="advance cover-entry" type="button" data-advance aria-label="Enter the story from the compute hall">
+        <span class="clock-pair" aria-hidden="true">
+          <span class="mini-clock mini-clock-short"><span class="hand"></span></span>
+          <span class="clock-word">Demand</span>
+          <span class="clock-bridge"></span>
+          <span class="mini-clock mini-clock-long"><span class="hand"></span></span>
+          <span class="clock-word">Capacity</span>
+        </span>
+        <span class="question">Can growth pay for the frontier?</span>
+      </button>
+    </section>
+
+    <section class="scene scene-1" data-scene="s1" hidden aria-label="Two financial bases">
+      <button class="advance pair" type="button" data-advance aria-label="Continue from the two financial bases">
+        <article class="plate plate-year">
+          <h2>FY2025 actual</h2>
+          <p class="metric"><span>Revenue</span> <strong>~$4.6B</strong></p>
+          <p class="metric metric-loss"><span>Operating loss</span> <strong>&gt;$8B</strong></p>
+          <p class="basis">Reuters · prospectus it reviewed · full year</p>
+        </article>
+        <p class="gulf">Different bases</p>
+        <article class="plate plate-pace">
+          <h2>May 2026 run-rate</h2>
+          <p class="metric metric-pace"><span>Annualized pace</span> <strong>&gt;$47B</strong></p>
+          <p class="basis">Company stated · not full-year revenue</p>
+        </article>
+      </button>
+    </section>
+
+    <section class="scene scene-2" data-scene="s2" hidden aria-label="Paid work routes">
+      <div class="route-map">
+        <p class="task-origin">Customer work</p>
+        <div class="routes">
+          <svg class="wires" viewBox="0 0 600 320" preserveAspectRatio="none" aria-hidden="true">
+            <path id="wire-direct" data-wire="direct" d="M0 160 H600" />
+            <path id="wire-api" data-wire="api" d="M0 160 V236 H150 L290 160 H600" />
+            <path id="wire-cloud" data-wire="cloud" d="M0 160 V268 C230 300 340 220 600 160" />
+            <circle class="mover" r="6">
+              <animateMotion id="route-motion" dur="0.95s" fill="freeze" begin="0s" path="M0 160 H600" />
+            </circle>
+          </svg>
+          <div class="route-labels" role="group" aria-label="Distribution routes. Choosing a route stays on this scene.">
+            <button class="route route-direct is-selected" type="button" data-route="direct">Direct</button>
+            <button class="route route-api" type="button" data-route="api">API</button>
+            <button class="route route-cloud" type="button" data-route="cloud">Cloud</button>
+          </div>
+        </div>
+        <button class="advance paid" type="button" data-advance aria-label="Continue from paid use">Paid use</button>
+      </div>
+      <p class="basis route-note">Routes are conceptual · mix unknown</p>
+    </section>
+
+    <section class="scene scene-3" data-scene="s3" hidden aria-label="Price and compute per task">
+      <div class="hinge-layout">
+        <button class="advance hinge" type="button" data-advance aria-label="Continue from price and compute per task">
+          <span class="var var-price">Price per task</span>
+          <span class="task-core">
+            <span class="task-dot" aria-hidden="true"></span>
+            Useful task
+          </span>
+          <span class="var var-compute">Compute per task</span>
+          <span class="hinge-note">Conceptual · not a measured split</span>
+        </button>
+        <aside class="training">
+          <h2>Frontier training</h2>
+          <p>Outside the task</p>
+        </aside>
+      </div>
+      <p class="basis vendor">Sonnet 5.5 · company test · up to 30% less per task · not a margin</p>
+    </section>
+
+    <section class="scene scene-4" data-scene="s4" hidden aria-label="Loss and adjusted signal">
+      <button class="advance evidence" type="button" data-advance aria-label="Continue from the separated evidence">
+        <article class="obs obs-loss">
+          <h2>2025 operating loss</h2>
+          <p class="big">&gt;$8B</p>
+          <p class="basis">Reuters · full-year operating result</p>
+        </article>
+        <p class="broken">Not comparable</p>
+        <article class="obs obs-signal">
+          <h2>Q2 2026 adjusted signal</h2>
+          <p class="signal-line">Positive</p>
+          <p class="basis">Adjusted operating income · amount undisclosed · not GAAP · not cash</p>
+          <p class="metric metric-quiet"><span>Revenue</span> <strong>&gt;$11.5B</strong></p>
+          <p class="basis">Bloomberg · preliminary quarter</p>
+        </article>
+      </button>
+    </section>
+
+    <section class="scene scene-5" data-scene="s5" hidden aria-label="Capacity and commitments">
+      <button class="advance campus-hit" type="button" data-advance aria-label="Continue from the campus and commitments">
+        <figure class="campus">
+          <img src="images/project-rainier-exterior.png" width="2550" height="1433" alt="AWS Project Rainier campus at dusk: long data-center halls and roof cooling units.">
+          <figcaption>AWS Project Rainier · one campus, not every site</figcaption>
+        </figure>
+        <div class="commitments">
+          <p class="lead">Capacity first</p>
+          <div class="clock-pair capacity-clocks" aria-hidden="true">
+            <span class="mini-clock mini-clock-short"><span class="hand"></span></span>
+            <span class="clock-word">Work</span>
+            <span class="clock-bridge"></span>
+            <span class="mini-clock mini-clock-long"><span class="hand"></span></span>
+            <span class="clock-word">Capacity</span>
+          </div>
+          <div class="horizon">
+            <p><strong>&gt;$100B</strong> <span>AWS · 10 years</span></p>
+            <p class="basis">Company agreement · from April 2026</p>
+          </div>
+          <div class="horizon">
+            <p><strong>~$518B</strong> <span>Future years</span></p>
+            <p class="basis">Reuters · multiyear obligations · may overlap · not added · not 2027 cash</p>
+          </div>
+        </div>
+      </button>
+    </section>
+
+    <section class="scene scene-6" data-scene="s6" hidden aria-label="Proof gates">
+      <div class="proof">
+        <div class="choice">
+          <p class="lead">Customer choice</p>
+          <ul>
+            <li>Claude</li>
+            <li>GPT-6 Astra</li>
+            <li>Gemini</li>
+          </ul>
+          <p class="basis">Named options · not a ranking</p>
+        </div>
+        <div class="gates" role="group" aria-label="Proof gates. The last gate continues.">
+          <button class="gate" type="button" data-gate="1">Revenue quality</button>
+          <button class="gate" type="button" data-gate="2">GAAP margins</button>
+          <button class="gate" type="button" data-gate="3">Cash after compute</button>
+          <button class="gate advance" type="button" data-gate="4" data-advance aria-label="Continue from the commitment schedule gate">Commitment schedule</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene-close" data-scene="close" hidden aria-label="Closing">
+      <button class="advance close-hit" type="button" data-advance aria-label="Return to the cover">
+        <span class="close-clocks">
+          <span class="big-clock">
+            <span class="face face-short" aria-hidden="true"><span class="hand"></span></span>
+            <span>Customer work</span>
+          </span>
+          <span class="condition">Not yet</span>
+          <span class="big-clock">
+            <span class="face face-long" aria-hidden="true"><span class="hand"></span></span>
+            <span>Frontier capacity</span>
+          </span>
+        </span>
+        <span class="question close-line">Two clocks. One cash test.</span>
+      </button>
+    </section>
+  </div>
+
+  <button class="sources-open" type="button" id="sources-open">Sources</button>
+  <dialog class="sources" id="sources">
+    <form method="dialog">
+      <header>
+        <h2>Sources</h2>
+        <button class="sources-close" type="submit" value="close">Close</button>
+      </header>
+      <p>Checked 29 September 2026. No public Anthropic S-1 was on EDGAR. A confidential draft is not a priced listing.</p>
+      <ul>
+        <li><a href="https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster">AWS Project Rainier</a> — photos of the hall and campus.</li>
+        <li><a href="https://kelo.com/2026/09/28/exclusive-anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs/">Reuters, 28 Sep 2026</a> — FY2025 revenue, operating loss, and ~$518B future obligations, from a prospectus it reviewed.</li>
+        <li><a href="https://www.anthropic.com/news/series-h">Anthropic Series H</a> — May 2026 run-rate above $47B.</li>
+        <li><a href="https://news.bloomberglaw.com/artificial-intelligence/anthropic-revenue-surges-to-over-11-5-billion-in-second-quarter">Bloomberg</a> — preliminary Q2 2026 revenue and positive adjusted operating income. Amount of that income is not shown.</li>
+        <li><a href="https://www.anthropic.com/news/anthropic-amazon-compute">Anthropic–AWS</a> — agreement above $100B over 10 years.</li>
+        <li><a href="https://www.anthropic.com/claude-sonnet-5-5">Anthropic Sonnet 5.5</a> — company test, up to 30% less per task.</li>
+        <li><a href="https://openai.com/index/gpt-6-astra/">OpenAI GPT-6 Astra</a> and <a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini API pricing</a> — current alternatives, not a winner.</li>
+        <li><a href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic, 1 Jun 2026</a> — confidential draft S-1. Share count and price were not set.</li>
+      </ul>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
