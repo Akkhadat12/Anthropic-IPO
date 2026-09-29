@@ -1,6 +1,6 @@
 # Build notes — Anthropic IPO capacity ledger
 
-**Status:** Deployed to a public Vercel production URL and verified. Ready for independent QA per [05_QA.md](05_QA.md).
+**Status:** Retest build deployed after `QA_FAIL` in [07_WEB_QA_REPORT.md](07_WEB_QA_REPORT.md). Ready for independent retest per [05_QA.md](05_QA.md).
 
 ## Build facts
 
@@ -9,8 +9,8 @@
 | Branch | `research-ipo-financials-models-2026` |
 | Stack | Vite 8, three.js 0.186 (vanilla, no framework), Playwright-core for local checks only |
 | Build | `npm install && npm run build` → `dist/` (Vercel auto-detects Vite) |
-| Public production URL | https://anthropic-ipo-capacity-ledger.vercel.app (Vercel project `anthropic-ipo-capacity-ledger`, target `production`, deployment `dpl_CJnwxicNfbv6ctqVGyKMPdbVCCY7`) |
-| Deployed commit | `349c3cd67d4217496d3dae1b0ac7338647af1e85` (shown as `349c3cd` in the Sources overlay footer). Later commits on the branch are documentation only |
+| Public production URL | https://anthropic-ipo-capacity-ledger.vercel.app (Vercel project `anthropic-ipo-capacity-ledger`, target `production`, deployment `dpl_5qvCAqwZTQmSsnAY2vpuFkFbwscQ`; first build was `dpl_CJnwxicNfbv6ctqVGyKMPdbVCCY7`) |
+| Deployed commit | `d1b458f7436bcfb14dba75a03f9b2aac9b17c159` (`d1b458f`, shown in the Sources overlay footer). Later commits on the branch add evidence and notes only |
 | Build date | 2026-09-29 |
 
 ## Visual direction comparison (04 §Prototype step 1)
@@ -37,6 +37,18 @@ Both directions are live behind `?dir=a` and `?dir=b` and share geometry, data, 
 - Data lives in [src/data.js](src/data.js) and mirrors [references/chart-data.csv](references/chart-data.csv) one-to-one, with source IDs and caveats. Nothing is interpolated: no year-by-year commitment bars, no channel split, no forecast values.
 - Visible text is English only. Real assets: the two AWS Project Rainier images from `references/`, attributed on the page and in the overlay.
 - Direct landing supported: `/?scene=capacity` (used for QA screenshots).
+
+## QA retest fixes (after QA_FAIL, 2026-09-29)
+
+| ID | Fix | Where |
+| --- | --- | --- |
+| QA-01 | Thai `06_SCENE_RATIONALE` Google Doc created in the owner Drive folder: https://docs.google.com/document/d/19PeeIJjt_hcoAZMAmY7BTvphtzAd58VMCA6lrPNAnM8/edit (nine scenes, purpose, visual meaning, interaction, asset attribution, departures, desktop screenshots embedded; file size 824 KB. The embedding was inferred from that size and not opened visually by the builder). Phone captures are in `build-notes/prod-screens/`. Two other copies were renamed `..._superseded_delete_me` / `..._links_only_delete_me` in that folder and are safe to delete | Drive |
+| QA-02 | Bar values and basis are chips that stay visible in the stacked mobile list | `src/style.css` |
+| QA-03 | `Direct route` and `Via cloud partners route` chips stay visible on phones | `src/style.css`, `src/scenes.js` |
+| QA-04 | Q1 is `Bloomberg · reported` (own badge and color); only Q2 stays preliminary; overlay caveat states both | `src/data.js`, `src/theme.js`, `src/style.css` |
+| QA-05 | `≥ $518B floor` label moved clear of the dock at 16:9 | `src/scenes.js` |
+
+Production retest captures (all nine scenes at 1920×1080 and 390×844, scenario states, overlay, transition, Opus toggle): `build-notes/prod-screens/`. `node tools/flow.mjs https://anthropic-ipo-capacity-ledger.vercel.app` passed all 38 checks on the retest build. The builder does not self-approve; QA must rerun.
 
 ## Production verification (2026-09-29)
 

@@ -6,3 +6,5 @@ tools/patch*.py
 shots-final
 tools/fix_qa.py
 shots-prod
+tools/docs_update.py
+tools/06_SCENE_RATIONALE.html
