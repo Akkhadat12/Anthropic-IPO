@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-dir="b">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Anthropic IPO: Capacity Ledger</title>
+    <meta name="description" content="A presenter-led 3D story: can Claude demand become cash across contracted compute? Research cutoff 29 Sep 2026. Not investment advice." />
+    <meta name="theme-color" content="#070b14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d1b17'/%3E%3Cpath d='M6 22h20M8 22V12h6v10M18 22V8h6v14' stroke='%23e9e3d5' stroke-width='2' fill='none'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <h1 class="sr-only">Anthropic IPO: the capacity ledger. A presenter-led 3D story about demand, retained cash, and contracted compute.</h1>
+    <canvas id="c" aria-hidden="true"></canvas>
+
+    <header class="top">
+      <div class="brand">Anthropic IPO · Capacity ledger</div>
+      <div class="tools">
+        <button id="btn-src" type="button" class="ghost" aria-haspopup="dialog">Sources / caveats</button>
+      </div>
+    </header>
+
+    <section class="head" aria-live="off">
+      <p class="kicker" id="kicker"></p>
+      <h2 id="line"></h2>
+    </section>
+
+    <div id="labels"></div>
+
+    <footer class="dock">
+      <div id="aux"></div>
+      <button id="primary" type="button" class="primary"></button>
+      <nav id="rail" aria-label="Scenes"></nav>
+      <p class="hint">Space next · R restart · Esc close</p>
+    </footer>
+
+    <div id="overlay" role="dialog" aria-modal="true" aria-labelledby="ov-title" hidden>
+      <div class="panel">
+        <div class="panel-head">
+          <h3 id="ov-title">Sources / caveats</h3>
+          <button id="ov-close" type="button" class="ghost">Close</button>
+        </div>
+        <ul id="ov-list"></ul>
+        <p class="ov-foot" id="ov-foot"></p>
+      </div>
+    </div>
+
+    <div id="live" class="sr-only" aria-live="polite"></div>
+    <noscript><p style="padding:24px">This story needs JavaScript and WebGL.</p></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
