@@ -1,6 +1,6 @@
 # Independent web QA report — Anthropic IPO two-clock story
 
-**Current status: F2–F4 passed, F1 accepted by the owner, F6 README handoff updated, F5 capture files are now in the repository and still need Codex to confirm them.**  
+**Current status: F1 accepted by the owner; F2–F4 and F6 passed; F5 PARTIAL — settled desktop/phone evidence verified, but transition and interactive-state captures remain open. Overall acceptance remains pending.**  
 Test date: 29 September 2026 (Asia/Bangkok).  
 Final URL tested: https://anthropic-ipo-two-clocks.vercel.app/  
 Browser: Chrome, live public URL. Desktop viewports tested at 1920 × 900 and 1600 × 900 (16:9); narrow viewport tested at 390 × 844. The page opened without an application login prompt. The scene table and findings below record the first pass; the dated retest at the end gives the current finding status.
@@ -8,7 +8,7 @@ Browser: Chrome, live public URL. Desktop viewports tested at 1920 × 900 and 16
 ## Evidence and limits
 
 - The owner-facing [Thai scene rationale](https://docs.google.com/document/d/1grcgF9jbovWbEG0_ASc12Te_xeT81PlGqjhEyiG6nik/edit) contains embedded settled desktop images for Cover, Scenes 1–6, and Closing. I compared those scenes with the live published page and inspected settled desktop (including 1600 × 900) and phone states in Chrome.
-- Precise observations below record actual visible text, controls, and state changes. Separate durable 16:9, phone, and transition screenshot files are **not yet linked**. This falls short of the stable evidence requirement in [05_QA.md](https://github.com/Akkhadat12/Anthropic-IPO/blob/main/05_QA.md). Capture and link those files after corrections; do not convert this report into a blanket PASS without them.
+- The first pass had no separate durable screenshot files. The later [capture set](#capture-set-added-29-september-2026) now links settled 16:9 and phone images. The missing transition and interactive-state evidence remains an open part of [05_QA.md](https://github.com/Akkhadat12/Anthropic-IPO/blob/main/05_QA.md).
 - I did not run the production build, a clean unauthenticated browser profile, a reduced-motion emulation, or a long-duration memory test. The live page showed no site-origin console errors during this pass; warnings observed came from a Chrome extension.
 
 ## Scene-by-scene results
@@ -59,10 +59,10 @@ This retest supersedes the first-pass finding statuses above. I reopened the pub
 | F2 — Reuters link | **PASS** | The live Sources overlay now links to the Reuters article on StreetInsider. Clicking it opened the full bylined article, including FY2025 revenue, operating loss, and future obligations. The Thai rationale and both chart-data CSVs use the same reachable URL. |
 | F3 — customer vs provider cost | **PASS** | Live Scene 3 now says “up to 30% less customer API cost per task · provider compute cost unknown.” The Thai rationale explicitly says this is not Anthropic internal compute cost or proof of serving margin. |
 | F4 — phone labels | **PASS at tested size** | At 390 × 844, the Cover ownership label has a dark backing and Scene 5’s overlap/not-2027-cash caveat is larger and wraps legibly. Scene 5 also remained intact at 1600 × 900. |
-| F5 — durable visual evidence | **FILES ADDED — confirm** | Settled captures of the live URL are in [qa-evidence/](qa-evidence/): desktop 1600×900 for Cover, Scenes 1–6, Closing, and R back to Cover; phone 390×844 for the same beats, R back to Cover, and the Sources overlay. |
+| F5 — durable visual evidence | **PARTIAL — independently reviewed** | The 19 linked files in [qa-evidence/](qa-evidence/) show settled desktop 1600×900 and phone 390×844 states for Cover, Scenes 1–6, Closing, R back to Cover, and a phone Sources overlay. No transition frame, Scene 2 selected API/Cloud route, Scene 6 selected proof gate, or desktop Sources overlay is linked. |
 | F6 — README handoff | **PASS** | The closing README paragraph no longer tells a later agent to build or publish the existing site. It points to the live URL, the accepted Google Doc, and this report. |
 
-**Current acceptance decision after the evidence commit:** the product findings F2–F4 passed, the owner closed F1, and the README handoff is updated. Final-version settled desktop and phone captures, plus the Sources overlay and the R-return frames, are linked from `qa-evidence/`. Codex still needs to open those files against the live page before changing this report to an overall PASS.
+**Current acceptance decision after independent capture review:** F1 is accepted by the owner; F2–F4 and F6 pass. F5 is partial because required transition and interactive-state screenshots are still missing. The existing R-return files show the settled Cover after return, not an in-between transition. Keep overall acceptance pending until those linked captures are added and reviewed.
 
 ## Owner clarification — 29 September 2026
 
@@ -75,3 +75,15 @@ Taken from https://anthropic-ipo-two-clocks.vercel.app/ after the correction dep
 Desktop 1600×900: [cover](qa-evidence/desktop-1600x900-cover.jpg), [scene 1](qa-evidence/desktop-1600x900-s1.jpg), [scene 2](qa-evidence/desktop-1600x900-s2.jpg), [scene 3](qa-evidence/desktop-1600x900-s3.jpg), [scene 4](qa-evidence/desktop-1600x900-s4.jpg), [scene 5](qa-evidence/desktop-1600x900-s5.jpg), [scene 6](qa-evidence/desktop-1600x900-s6.jpg), [closing](qa-evidence/desktop-1600x900-close.jpg), [R back to cover](qa-evidence/desktop-1600x900-r-back-to-cover.jpg).
 
 Phone 390×844: [cover](qa-evidence/phone-390x844-cover.jpg), [scene 1](qa-evidence/phone-390x844-s1.jpg), [scene 2](qa-evidence/phone-390x844-s2.jpg), [scene 3](qa-evidence/phone-390x844-s3.jpg), [scene 4](qa-evidence/phone-390x844-s4.jpg), [scene 5](qa-evidence/phone-390x844-s5.jpg), [scene 6](qa-evidence/phone-390x844-s6.jpg), [closing](qa-evidence/phone-390x844-close.jpg), [R back to cover](qa-evidence/phone-390x844-r-back-to-cover.jpg), [Sources overlay](qa-evidence/phone-390x844-sources.jpg).
+
+## Independent review of evidence commit 171b60d — 29 September 2026
+
+I opened all 19 JPEG files in `qa-evidence/` from commit [171b60d](https://github.com/Akkhadat12/Anthropic-IPO/commit/171b60d12a148836329fee6cab91c86853b752a5) and compared the Cover and Scene 1 with the current public page in Chrome. The production source change remains [94ea643](https://github.com/Akkhadat12/Anthropic-IPO/commit/94ea643e833cb4c603850f286def7d53ceb9c9b5); the later evidence commit changed the report, README, and captures, not the site source. I also selected API on live Scene 2 and observed its distinct selected state without advancing.
+
+| Evidence check | Result | Observation |
+| --- | --- | --- |
+| Settled desktop and phone beats | **PASS** | All eight beats appear at 1600×900 and 390×844. Cover/Scene 5 retain the Project Rainier imagery; the period, amount, cost-basis, overlap, and adjusted-result caveats remain visible in the inspected files. |
+| Sources and return states | **PARTIAL** | The phone Sources overlay and settled desktop/phone R-return Cover are linked. No desktop Sources overlay is linked. The R-return files are settled end states, not transition frames. |
+| Transitions and selected controls | **OPEN** | No capture of an in-between scene transition or explanatory reveal is linked. Scene 2 has only its default Direct route, with no selected API or Cloud screenshot. Scene 6 has only its default gate state, with no click-feedback screenshot. |
+
+**F5 remains PARTIAL; overall sign-off is pending.** Add representative transition/reveal frames and selected Scene 2 route and Scene 6 gate states at the relevant widths, plus the desktop Sources overlay, to the same stable evidence folder. Link them here with the production source revision and capture date. Recheck the files against the public URL before closing [issue #1](https://github.com/Akkhadat12/Anthropic-IPO/issues/1).
