@@ -1,7 +1,7 @@
 import { chromium } from 'playwright-core';
 
-const base = 'http://127.0.0.1:4174';
-const out = 'qa-evidence/screens';
+const base = process.argv[2] || 'http://127.0.0.1:4174';
+const out = process.argv[3] || 'qa-evidence/screens';
 const browser = await chromium.launch({ channel: 'msedge', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 const results = [];
 
@@ -15,6 +15,14 @@ for (const [name, viewport] of Object.entries({ desk: { width: 1920, height: 108
   await page.screenshot({ path: `${out}/qa-${name}-overlay.png` });
   results.push(`${name}: overlay links=${await page.locator('#ov-list a').count()}`);
   await page.keyboard.press('Escape');
+  for (const id of ['models', 'cover']) {
+    await page.goto(`${base}/?scene=${id}`);
+    await settled(id);
+    await page.locator('#btn-src').click();
+    await page.screenshot({ path: `${out}/qa-${name}-${id}-overlay.png` });
+    results.push(`${name}: ${id} overlay links=${await page.locator('#ov-list a').count()}`);
+    await page.keyboard.press('Escape');
+  }
   await page.goto(`${base}/?scene=scenarios`);
   await settled('scenarios');
   for (const option of ['Upside', 'Base', 'Downside']) {

@@ -1,6 +1,10 @@
 # Independent web QA — Anthropic IPO capacity ledger
 
-**Result: QA_FAIL** — 29 September 2026, 21:40 ICT (14:40 UTC). Three major build/content defects and one missing required handoff artifact remain open. This report does not approve the release.
+**Current result: QA_FAIL** — production retest on 29 September 2026, 22:02 ICT (15:02 UTC). QA-01–05 from the first pass are closed, but a new major model-availability finding (QA-06) remains. This report does not approve the release.
+
+## First pass — 29 September 2026, 21:40 ICT
+
+The sections below this heading record the original test of production commit `349c3cd`. Their original **Open** labels describe the state at that time; the retest section at the end is the current disposition.
 
 ## Build identity and environments
 
@@ -21,7 +25,7 @@ Settled captures exist for each scene at both viewports: `qa-evidence/screens/b-
 
 The numeric manifest in `src/data.js` matches the values/operators in `references/chart-data.csv` for the key financial and benchmark quantities. The live/locally rendered demand scene separates FY2025, Q1, Q2, and the May run-rate, and the capacity scene does not annualize or add the AWS agreement. However, Q1's *status* is wrong (QA-04). Primary source links for Anthropic, AWS, Artificial Analysis, Bloomberg, and Axios were reopened; the Anthropic May run-rate, confidential S-1 status, Claude prices, independent Sonnet task-cost contrast, Bloomberg Q1/Q2 figures, AWS attribution, and Axios gross-revenue explanation agree with their linked pages. The two MarketScreener Reuters pages appeared in search but could not be opened by the research browser, so their full text and the live outbound-link behavior remain unverified. A search for a public Anthropic S-1 found no confirmed public filing as of this test; the site must be refreshed if one appears before retest.
 
-## Open findings
+## Original findings (all closed on retest)
 
 | ID / severity | Scene / viewport | Expected → observed | Evidence / owner / retest |
 | --- | --- | --- | --- |
@@ -31,6 +35,35 @@ The numeric manifest in `src/data.js` matches the values/operators in `reference
 | QA-04 **major** | `demand` / desktop and phone | Q1 $4.73B is Bloomberg-reported from investor documents; Q2 >$11.5B alone is preliminary in `chart-data.csv` and Bloomberg's article → both Q1 and Q2 display `BLOOMBERG · PRELIMINARY`. This overstates uncertainty for Q1 and conflicts with the authoritative manifest. | [desktop capture](qa-evidence/screens/b-desk-demand.png), [phone capture](qa-evidence/screens/b-phone-demand.png), `src/data.js` (`q1_2026_revenue.status='prelim'`). Builder. Give Q1 a distinct reported status and keep Q2 preliminary; retest overlay and both viewports. **Open.** |
 | QA-05 **minor** | `scenarios` / 1920×1080 | The common `≥ $518B floor` label should stay readable while a path is selected → its lower lines sit behind the scenario buttons in the recording viewport. | [selected downside capture](qa-evidence/screens/qa-desk-scenario-downside.png). Builder. Move the floor label clear of the dock for all three selections; retest 16:9. **Open.** |
 
-## Exit and retest
+## Original exit and retest request
 
 Per [05_QA.md](05_QA.md), any open major means `QA_FAIL`. After Claude fixes QA-01–04 and QA-05, deploy a **new production commit**, update the exact URL/SHA and Thai scene rationale link, then rerun all nine scenes at 1920×1080 and 390×844 on that production build. Capture production screenshots, all scenario states, one transition, and an overlay; verify the source links and console again. Only a new report/retest against that deployed commit can set `QA_PASS`.
+
+## Production retest — 29 September 2026, 22:02 ICT (15:02 UTC)
+
+**Identity and environment.** Tested https://anthropic-ipo-capacity-ledger.vercel.app/ on production build `d1b458f7436bcfb14dba75a03f9b2aac9b17c159`, confirmed by the live Sources overlay (`Build d1b458f · 2026-09-29`). Retest source was branch HEAD `15bdd9dcadd34ca4e84ca035986986d98650cd50`; build code changes are in `d1b458f`, and later commits contain screenshots and handoff notes. Chrome live browser and Playwright Edge (Chromium) production sessions covered 1920×1080 and 390×844 touch emulation. Real phone hardware, Safari/Firefox, and GPU performance remain untested.
+
+**Interaction trace.** `node tools/flow.mjs https://anthropic-ipo-capacity-ledger.vercel.app` passed all 38 checks against production: nine-scene Space route, close hold and Restart, all primary destinations, rapid Space, `R` during a transition and in an overlay, Escape/Space overlay behavior, in-scene model/scenario/filing selectors, 3D doorway click, reduced motion, and zero console errors. `node qa-evidence/capture.mjs https://anthropic-ipo-capacity-ledger.vercel.app qa-evidence/retest` additionally confirmed three scenario selections remain in scene (`aria-pressed=true`), cover-primary click reaches demand, and the demand overlay has three links at both viewports.
+
+**Visual evidence.** [Production retest captures](qa-evidence/retest) include `b-{desk,phone}-{cover,demand,retained,models,statements,capacity,scenarios,filing,close}.png`, all three selected scenario states at both viewports (`qa-{desk,phone}-scenario-{upside,base,downside}.png`), an open demand Sources overlay and cover→demand transition at both viewports, and the final close hold. All 18 settled scenes were inspected: the previously hidden values and route labels are legible, scenario floor clears the selector, and no new crop/collision was observed. This is production evidence, separate from the first-pass local captures.
+
+**Artifact and source audit.** The Thai `06_SCENE_RATIONALE` [Google Doc](https://docs.google.com/document/d/19PeeIJjt_hcoAZMAmY7BTvphtzAd58VMCA6lrPNAnM8/edit) is present in the owner Drive folder, has nine scene sections and nine inline screenshots, and names the current build. The two MarketScreener Reuters source articles were opened successfully in the browser on retest and support the FY2025 and compute-obligation claims. The live model/source text was compared with [Anthropic's Fable/Mythos announcement](https://www.anthropic.com/claude-fable-and-mythos-5-1), which explicitly says Fable 5.1 is generally available and Mythos 5.1 is available only through trusted access. No confirmed public S-1 was found in this retest. Source-overlay links and caveats for demand/models and the live AWS photograph attribution were inspected; the AWS badge issue is QA-07 below.
+
+### Original finding disposition
+
+| ID | Retest result and production evidence |
+| --- | --- |
+| QA-01 | **Closed.** Native Thai rationale document exists in the owner folder with all nine finished-scene images and build reference; link above and in [WORKFLOW_STATUS.md](WORKFLOW_STATUS.md). |
+| QA-02 | **Closed.** [Phone Models](qa-evidence/retest/b-phone-models.png) visibly gives Opus/Sonnet 58/56 and Sonnet 5/5.5 $5.09/$7.60 with independent-test basis; both in-scene toggles work. |
+| QA-03 | **Closed.** [Phone Retained](qa-evidence/retest/b-phone-retained.png) identifies Direct route and Via cloud partners route. |
+| QA-04 | **Closed.** [Desktop](qa-evidence/retest/b-desk-demand.png) and [phone](qa-evidence/retest/b-phone-demand.png) show Q1 as `BLOOMBERG · REPORTED` and Q2 as `BLOOMBERG · PRELIMINARY`. |
+| QA-05 | **Closed.** [Desktop selected downside](qa-evidence/retest/qa-desk-scenario-downside.png), plus upside/base captures, show the `≥$518B floor` label clear of the selector. |
+
+### Current open findings
+
+| ID / severity | Scene / viewport | Expected → observed | Evidence / owner / retest |
+| --- | --- | --- | --- |
+| QA-06 **major** | `models` / desktop and phone; narration brief | [05_QA.md](05_QA.md) requires the current Claude lineup's availability to be correctly separated. Anthropic says Fable 5.1 is **generally available** and Mythos 5.1 uses **trusted access** → the live scene omits Fable/Mythos status; its Sources caveat mentions only Mythos; [03_STORY_STRUCTURE.md](03_STORY_STRUCTURE.md) incorrectly groups both as having “limited or controlled availability.” This can give the presenter an inaccurate current-lineup claim and leaves the required Fable status unstated. | [Live Models source capture](qa-evidence/retest/qa-desk-models-overlay.png), [Anthropic source](https://www.anthropic.com/claude-fable-and-mythos-5-1), `src/data.js` Fable caveat, `src/scenes.js` Models, story row 3. Research/story owner: correct narration wording. Builder: display or explicitly caveat both statuses on the production Models scene/overlay. **Open; retest after new deployment.** |
+| QA-07 **minor** | `cover` / `capacity` Sources overlay, desktop and phone | An AWS-authored Project Rainier image source should have an AWS/source-appropriate badge → `src/data.js` sets `SRC.rainier.type='stated'`, which renders `ANTHROPIC STATED`. The source title and caveat correctly say AWS, and the scene image attribution is correct, so this is an overlay provenance-label error. | [Live cover source capture](qa-evidence/retest/qa-desk-cover-overlay.png), `src/data.js` Rainier entry. Builder. **Open; retest badge.** |
+
+**Exit:** QA-06 is major under [05_QA.md](05_QA.md), so the current production build remains `QA_FAIL`. Correct the story and web source text, deploy a new commit, and retest Models at both viewports plus source overlays and a regression route. QA-07 can be fixed in the same build. Preserve this report's original findings as history; they are closed on the tested production build.
