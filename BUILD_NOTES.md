@@ -1,6 +1,6 @@
 # Build notes — Anthropic IPO capacity ledger
 
-**Status:** Code complete and verified locally. **Not yet deployed.** The Vercel connector used by the builder returned `403` for team scope `ham-b6fc`, so no production URL exists and `WORKFLOW_STATUS.md` is intentionally **not** `READY_FOR_QA`.
+**Status:** Deployed to a public Vercel production URL and verified. Ready for independent QA per [05_QA.md](05_QA.md).
 
 ## Build facts
 
@@ -9,8 +9,8 @@
 | Branch | `research-ipo-financials-models-2026` |
 | Stack | Vite 8, three.js 0.186 (vanilla, no framework), Playwright-core for local checks only |
 | Build | `npm install && npm run build` → `dist/` (Vercel auto-detects Vite) |
-| Public production URL | **Pending** (see “Deploy blocker”) |
-| Deployed commit | **Pending**. The build stamps `VERCEL_GIT_COMMIT_SHA` (or local `git rev-parse`) into the Sources overlay footer |
+| Public production URL | https://anthropic-ipo-capacity-ledger.vercel.app (Vercel project `anthropic-ipo-capacity-ledger`, target `production`, deployment `dpl_CJnwxicNfbv6ctqVGyKMPdbVCCY7`) |
+| Deployed commit | `349c3cd67d4217496d3dae1b0ac7338647af1e85` (shown as `349c3cd` in the Sources overlay footer). Later commits on the branch are documentation only |
 | Build date | 2026-09-29 |
 
 ## Visual direction comparison (04 §Prototype step 1)
@@ -38,6 +38,11 @@ Both directions are live behind `?dir=a` and `?dir=b` and share geometry, data, 
 - Visible text is English only. Real assets: the two AWS Project Rainier images from `references/`, attributed on the page and in the overlay.
 - Direct landing supported: `/?scene=capacity` (used for QA screenshots).
 
+## Production verification (2026-09-29)
+
+- `GET /` and `/img/project-rainier-interior.png` return 200 with no login. Page title is “Anthropic IPO: Capacity Ledger”; this is a separate Vercel project from the historical `anthropic-ipo-two-clocks` (main).
+- `node tools/flow.mjs https://anthropic-ipo-capacity-ledger.vercel.app`: all 38 checks passed against the live URL.
+
 ## Local verification performed
 
 - `node tools/flow.mjs <url>`: 38 checks, all passed on the final build. Covers the Space route, rapid Space, every primary click destination, `R` mid-transition and from overlay, overlay open/close/Space/Escape, scenario / gate / model selectors staying in scene, 3D doorway click, reduced-motion route, and zero console errors.
@@ -46,7 +51,7 @@ Both directions are live behind `?dir=a` and `?dir=b` and share geometry, data, 
 
 ## Known limitations and decisions for QA
 
-1. **Deploy blocker.** No production URL yet. Needs Vercel re-authentication for scope `ham-b6fc`, or a CLI login/token. Do not treat any other Vercel project (for example the historical `anthropic-ipo-two-clocks`) as this build.
+1. **Do not confuse projects.** The historical `anthropic-ipo-two-clocks` deployment is not this build.
 2. **Source URLs copied from the handoff.** They were not re-opened by the builder; 05_QA requires QA to reopen each.
 3. **Space on in-scene selector buttons** activates them natively (Enter also works); Space elsewhere advances.
 4. **Phone 3D is context only.** Facts are carried by the stacked label list; the 3D objects are small at 390px by design.
