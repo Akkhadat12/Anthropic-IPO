@@ -128,8 +128,8 @@ export function buildScenes(theme, ORDER) {
     // Narrow demand route runs toward a much wider capacity horizon.
     add(s, basic(0.5, 0.12, 20, theme.route), 0, -3.9, 2, 0.2);
     add(s, basic(40, 0.28, 0.4, theme.floor), 0, -6.3, -15.4, 0.35);
-    label(s, '<span class="mini">Demand route</span>', 0, -3.4, 8, 'mini-l', 1);
-    label(s, '<span class="mini">Capacity horizon</span>', 12, -5.9, -15, 'mini-l', 2);
+    label(s, '<span class="mini">Demand route</span>', 0, -3.4, 8, 'mini-l deco', 1);
+    label(s, '<span class="mini">Capacity horizon</span>', 12, -5.9, -15, 'mini-l deco', 2);
     label(s, 'Photo: Amazon Web Services, Project Rainier. An AWS compute building used for Anthropic workloads. Not owned by Anthropic.', 0, 0, 0, 'credit', 3);
     s.labels[s.labels.length - 1].fixed = 'br';
     scenes.cover = s;
@@ -220,11 +220,13 @@ export function buildScenes(theme, ORDER) {
     // Anthropic's own typical-task claim sits on a separate translucent layer.
     add(s, box(12, 2.4, 0.12, sc, { op: 0.3 }), 0, 9.6, -6, 0.45);
     label(s, '<span class="badge" data-st="stated">Anthropic stated</span><span class="desc">Own tests: Opus ≈ 40% and Sonnet up to 30% lower cost per typical task. Different basis.</span>', 0, 8.6, -6, 'tag sm', 6);
+    // Lineup availability, kept distinct: Fable is generally available, Mythos is trusted-access only.
+    label(s, '<span class="badge" data-st="stated">Anthropic stated</span><span class="desc"><b>Fable 5.1</b>: generally available. <b>Mythos 5.1</b>: trusted access only.</span>', 12, 10.6, -6, 'tag sm', 6.5);
     // Completed task: the object the presenter clicks.
     const task = box(2.2, 2.2, 2.2, theme.route, { edgeColor: theme.ink });
     add(s, task, 0, 2.4, 0, 0.5);
     target(s, task, 'next', { halo: 2.2, haloZ: 0 });
-    label(s, '<span class="mini">Completed task</span>', 0, 4.6, 0, 'mini-l', 7);
+    label(s, '<span class="mini">Completed task</span>', 0, 4.6, 0, 'mini-l deco', 7);
     // Opus / Sonnet toggle: changes in-scene details, does not advance.
     const detail = label(s, '', 0, 0.6, 6, 'tag sm detail', 8);
     const modelInfo = {

@@ -8,3 +8,4 @@ tools/fix_qa.py
 shots-prod
 tools/docs_update.py
 tools/06_SCENE_RATIONALE.html
+tools/ui_v2.py

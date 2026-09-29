@@ -28,8 +28,9 @@ ORDER.forEach((id) => scene.add(scenes[id].group));
 
 // ------------------------------------------------------------------ layout
 function syncDock() {
-  const dock = document.querySelector('.dock');
-  document.documentElement.style.setProperty('--dock-h', dock.offsetHeight + 8 + 'px');
+  const aux = $('aux');
+  const h = stacked ? (aux.childElementCount ? aux.offsetHeight + 68 : 0) + 64 : 0;
+  document.documentElement.style.setProperty('--dock-h', h + 'px');
 }
 const labelsEl = $('labels');
 let stacked = false;
@@ -97,6 +98,7 @@ function goTo(id, opts = {}) {
   target = id;
   setBusy(true);
   closeOverlay(true);
+  closeMenu(true);
   ORDER.forEach((k) => (scenes[k].group.visible = true));
   hideForReveal(scenes[id]);
   pulses.forEach((p) => (p.visible = false));
@@ -154,26 +156,45 @@ function unmountUI() {
   labelsEl.classList.add('hidden');
 }
 
-// ------------------------------------------------------------------ rail
-const rail = $('rail');
+// ------------------------------------------------------------------ scene menu (rehearsal)
+const menu = $('menu');
+const menuBtn = $('btn-menu');
+const menuList = $('menu-list');
 ORDER.forEach((id, i) => {
+  const li = document.createElement('li');
   const b = document.createElement('button');
   b.type = 'button';
   b.dataset.id = id;
-  b.setAttribute('aria-label', `Go to stop ${i + 1} of ${ORDER.length}: ${SCENES[id].kicker}`);
-  b.title = SCENES[id].kicker;
+  b.textContent = `${i + 1}. ${SCENES[id].kicker}`;
   b.addEventListener('click', () => {
+    closeMenu(true);
     goTo(id);
-    b.blur();
   });
-  rail.appendChild(b);
+  li.appendChild(b);
+  menuList.appendChild(li);
+});
+function openMenu() {
+  menu.hidden = false;
+  menuBtn.setAttribute('aria-expanded', 'true');
+  (menuList.querySelector('[aria-current="step"]') || menuList.querySelector('button')).focus();
+}
+function closeMenu(silent) {
+  if (menu.hidden) return;
+  menu.hidden = true;
+  menuBtn.setAttribute('aria-expanded', 'false');
+  if (!silent) menuBtn.focus();
+}
+menuBtn.addEventListener('click', () => (menu.hidden ? openMenu() : closeMenu()));
+menu.addEventListener('keyup', (e) => {
+  if (e.code === 'Space') e.preventDefault();
+});
+document.addEventListener('pointerdown', (e) => {
+  if (!menu.hidden && !menu.contains(e.target) && e.target !== menuBtn) closeMenu(true);
 });
 function updateRail() {
-  const ci = ORDER.indexOf(cur);
-  [...rail.children].forEach((b, i) => {
-    if (i === ci) b.setAttribute('aria-current', 'step');
+  [...menuList.querySelectorAll('button')].forEach((b) => {
+    if (b.dataset.id === cur) b.setAttribute('aria-current', 'step');
     else b.removeAttribute('aria-current');
-    b.classList.toggle('done', i < ci);
   });
 }
 
@@ -246,6 +267,11 @@ addEventListener('keydown', (e) => {
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   const open = !overlay.hidden;
   if (e.key === 'Escape') {
+    if (!menu.hidden) {
+      e.preventDefault();
+      closeMenu();
+      return;
+    }
     if (open) {
       e.preventDefault();
       closeOverlay();
@@ -255,7 +281,12 @@ addEventListener('keydown', (e) => {
   if (e.key === 'r' || e.key === 'R') {
     if (e.repeat) return;
     closeOverlay(true);
+    closeMenu(true);
     goTo('cover');
+    return;
+  }
+  if (!menu.hidden) {
+    if (e.code === 'Space') e.preventDefault(); // Space inside the menu neither advances nor selects.
     return;
   }
   if (open) {
@@ -340,7 +371,7 @@ function projectLabels() {
     let x = (v.x * 0.5 + 0.5) * W;
     let y = (-v.y * 0.5 + 0.5) * H;
     x = Math.min(W - l.w / 2 - 8, Math.max(l.w / 2 + 8, x));
-    y = Math.min(H - 150, Math.max(l.h + 60, y));
+    y = Math.min(H - 30, Math.max(l.h + 60, y));
     if (x - l.w / 2 < headRight && y - l.h < headBottom) y = headBottom + 10 + l.h;
     l.el.style.visibility = 'visible';
     l.el.style.transform = `translate(${x - l.w / 2}px, ${y - l.h}px)`;

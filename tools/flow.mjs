@@ -92,6 +92,34 @@ await page.mouse.click(800, 450);
 await settle();
 ok((await scene()) === 'demand', 'clicking the 3D doorway advances to demand');
 
+// Owner feedback: no persistent bottom rail/dots/hint; discreet Scenes menu instead.
+await page.goto(base + '/?scene=demand'); await settle();
+ok((await page.locator('#rail').count()) === 0 && (await page.locator('.hint').count()) === 0, 'no scene dots or bottom hint in the DOM');
+await page.click('#btn-menu');
+ok(await page.isVisible('#menu'), 'Scenes menu opens');
+ok((await page.locator('#menu-list button').count()) === 9, 'Scenes menu lists nine stops');
+await page.keyboard.press('Space');
+await page.waitForTimeout(300);
+ok((await scene()) === 'demand', 'Space inside menu does not advance');
+await page.keyboard.press('Escape');
+ok(!(await page.isVisible('#menu')) && (await scene()) === 'demand', 'Escape closes menu, scene unchanged');
+await page.click('#btn-menu');
+await page.click('#menu-list button:has-text("Statements")'); await settle();
+ok((await scene()) === 'statements', 'Scenes menu jumps to statements');
+
+// QA-06: Fable / Mythos availability stated distinctly on models; QA-07: AWS badge.
+await page.goto(base + '/?scene=models'); await settle();
+const lbls = await page.locator('#labels').innerText();
+ok(/Fable 5\.1[^]*generally available/.test(lbls) && /Mythos 5\.1[^]*trusted access/.test(lbls), 'models shows Fable generally available and Mythos trusted access');
+await page.click('#btn-src');
+ok((await page.locator('#ov-list').innerText()).includes('trusted access'), 'models overlay caveat covers Mythos trusted access');
+await page.keyboard.press('Escape');
+await page.goto(base + '/?scene=cover'); await settle();
+await page.click('#btn-src');
+const cov = await page.locator('#ov-list li').first().innerText();
+ok(/SOURCE: AWS/i.test(cov) && !/ANTHROPIC STATED/i.test(cov), 'AWS Rainier source has an AWS badge, not Anthropic stated');
+await page.keyboard.press('Escape');
+
 // Reduced motion: same destinations.
 const rm = await (await browser.newContext({ viewport: { width: 1600, height: 900 }, reducedMotion: 'reduce' })).newPage();
 await rm.goto(base + '/?scene=cover');

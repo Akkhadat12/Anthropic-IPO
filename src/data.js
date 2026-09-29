@@ -8,6 +8,7 @@ export const STATUS = {
   stated: { label: 'Anthropic stated', short: 'Anthropic stated' },
   bench: { label: 'Independent benchmark', short: 'Independent benchmark' },
   scenario: { label: 'Scenario · editorial analysis', short: 'Scenario' },
+  vendor: { label: 'Source: AWS (photograph and facility description)', short: 'AWS source' },
   unknown: { label: 'Not disclosed', short: 'Not disclosed' },
 };
 
@@ -58,7 +59,7 @@ export const SRC = {
     id: 'A',
     title: 'AWS: Project Rainier (photographs)',
     url: 'https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster',
-    type: 'stated',
+    type: 'vendor',
     caveat: 'Photograph: Amazon Web Services. An AWS facility used for Anthropic workloads. Not an Anthropic-owned data center and not a measure of Anthropic capacity.',
   },
   axios: {
@@ -87,7 +88,7 @@ export const SRC = {
     title: 'Anthropic: Claude Fable 5.1 and Mythos 5.1, 1 Sep 2026',
     url: 'https://www.anthropic.com/claude-fable-and-mythos-5-1',
     type: 'stated',
-    caveat: 'Mythos is available only to vetted groups. Haiku 5.5 is announced but not released.',
+    caveat: 'Fable 5.1 is generally available (API $10 in / $50 out per M tokens). Mythos 5.1 is the same model but available only through trusted access for vetted groups. Haiku 5.5 is announced, not released.',
   },
   aaOpus: {
     id: 'S14',
