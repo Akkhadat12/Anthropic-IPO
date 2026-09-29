@@ -494,9 +494,9 @@ export function buildScenes(theme, ORDER) {
     label(s, '<span class="badge" data-st="unknown">Unproven</span><b class="big">Cash conversion</b><span class="desc">Demand above, floor below</span>', 3, 6.6, -1, 'tag', 0);
     label(s, '<span class="mini">Demand route</span>', -13, 8.2, 2, 'mini-l', 1);
     label(s, '<span class="mini">≥ $518B floor · ≈ one decade</span>', -10, 1.6, 2, 'mini-l', 2);
-    const restart = box(3, 1.6, 3, theme.route, { edgeColor: theme.ink });
-    add(s, restart, -11, 1, 6, 0.6);
-    target(s, restart, 'next', { halo: 2.2, haloZ: 1.6 });
+    const restart = box(2, 1.1, 2, theme.route, { edgeColor: theme.ink });
+    add(s, restart, -7, 0.7, 7, 0.6);
+    target(s, restart, 'next', { halo: 1.6, haloZ: 1.2 });
     scenes.close = s;
   }
 

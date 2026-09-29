@@ -2,3 +2,5 @@ node_modules
 dist
 .vercel
 qa-shots
+tools/patch*.py
+shots-final
