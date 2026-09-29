@@ -4,3 +4,4 @@ dist
 qa-shots
 tools/patch*.py
 shots-final
+tools/fix_qa.py

@@ -168,8 +168,8 @@ export function buildScenes(theme, ORDER) {
     const lane = (pts, delay, op = 1, color = rc) => add(s, tube(pts, 0.28, color, { op }), 0, 0, 0, delay);
     lane([[-9.5, 0.5, 0], [-7, 0.5, 0], [-4, 0.5, -4.5], [0, 0.5, -4.5], [4, 0.5, -4.5], [7.5, 0.5, 0], [10, 0.5, 0]], 0.3);
     lane([[-9.5, 0.5, 0], [-7, 0.5, 0], [-4, 0.5, 4.5], [0, 0.5, 4.5], [4, 0.5, 4.5], [7.5, 0.5, 0], [10, 0.5, 0]], 0.4);
-    label(s, '<span class="mini">Direct</span>', -2, 1.6, -4.5, 'mini-l', 1);
-    label(s, '<span class="mini">Via cloud partners</span>', -2, 1.6, 4.5, 'mini-l', 2);
+    label(s, '<span class="mini">Direct route</span>', -2, 1.6, -4.5, 'mini-l', 1);
+    label(s, '<span class="mini">Via cloud partners route</span>', -2, 1.6, 4.5, 'mini-l', 2);
     // Partner share gate on the cloud lane: unnumbered.
     add(s, box(0.4, 2.2, 2, theme.status.unknown, { op: 0.9 }), -1.5, 1.1, 4.5, 0.55);
     label(s, '<span class="badge" data-st="unknown">Not disclosed</span><span class="desc">Partner share</span>', -1.5, 3.6, 4.5, 'tag sm', 3);
@@ -359,7 +359,7 @@ export function buildScenes(theme, ORDER) {
     ground(s);
     // Common capacity floor stays visible in every selection.
     add(s, box(34, 0.9, 5, theme.floor), 2, -0.45, 0, 0.05);
-    label(s, stat('reported', '≥ $518B floor', 'Common to all paths', '≈ one decade'), 2, -0.9, 6, 'tag sm', 0);
+    label(s, stat('reported', '≥ $518B floor', 'Common to all paths', '≈ one decade'), 12, -0.6, 4, 'tag sm', 0);
     add(s, box(1.4, 1.4, 1.4, theme.status.scenario), -15, 4, 0, 0.1);
     label(s, '<span class="mini">Same start</span>', -15, 5.4, 0, 'mini-l', 1);
     const paths = {

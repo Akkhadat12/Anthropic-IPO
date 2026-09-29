@@ -3,6 +3,7 @@
 
 export const STATUS = {
   reported: { label: 'Reported · from filing seen by Reuters', short: 'Reuters · reported' },
+  bloomberg: { label: 'Reported · Bloomberg, from investor documents', short: 'Bloomberg · reported' },
   prelim: { label: 'Preliminary · Bloomberg', short: 'Bloomberg · preliminary' },
   stated: { label: 'Anthropic stated', short: 'Anthropic stated' },
   bench: { label: 'Independent benchmark', short: 'Independent benchmark' },
@@ -30,7 +31,7 @@ export const SRC = {
     title: 'Bloomberg: Anthropic revenue surges to over $11.5 billion in second quarter',
     url: 'https://news.bloomberglaw.com/artificial-intelligence/anthropic-revenue-surges-to-over-11-5-billion-in-second-quarter',
     type: 'prelim',
-    caveat: 'Preliminary and may be revised. Adjusted result has no public reconciliation to GAAP.',
+    caveat: 'Q1 ($4.73B) is reported from investor documents. Q2 (> $11.5B) is preliminary and may be revised. The adjusted Q2 result has no public reconciliation to GAAP.',
   },
   seriesH: {
     id: 'S2',
@@ -121,7 +122,7 @@ export const SRC = {
 // Numeric manifest, mirrors references/chart-data.csv one-for-one.
 export const DATA = {
   fy2025_revenue: { value: 4.6, op: '≈', unit: '$B', period: 'FY2025', status: 'reported', src: 'reutersFiling', text: '≈ $4.6B' },
-  q1_2026_revenue: { value: 4.73, op: '', unit: '$B', period: 'Q1 2026', status: 'prelim', src: 'bloombergQ2', text: '$4.73B' },
+  q1_2026_revenue: { value: 4.73, op: '', unit: '$B', period: 'Q1 2026', status: 'bloomberg', src: 'bloombergQ2', text: '$4.73B' },
   q2_2026_revenue: { value: 11.5, op: '>', unit: '$B', period: 'Q2 2026', status: 'prelim', src: 'bloombergQ2', text: '> $11.5B' },
   may_2026_run_rate: { value: 47, op: '>', unit: '$B / year', period: 'May 2026', status: 'stated', src: 'seriesH', text: '> $47B / yr' },
   fy2025_operating_loss: { value: 8, op: '>', unit: '$B', period: 'FY2025', status: 'reported', src: 'reutersFiling', text: '> $8B' },

@@ -16,7 +16,7 @@ export const THEMES = {
     fogFar: 230,
     ambient: 2.4,
     key: 1.9,
-    status: { reported: 0xb5482a, prelim: 0xd39a1a, stated: 0x1f7a80, bench: 0x5b4db8, scenario: 0x3a3a3a, unknown: 0x9a9384 },
+    status: { reported: 0xb5482a, bloomberg: 0x2f8f5b, prelim: 0xd39a1a, stated: 0x1f7a80, bench: 0x5b4db8, scenario: 0x3a3a3a, unknown: 0x9a9384 },
   },
   b: {
     id: 'b',
@@ -32,7 +32,7 @@ export const THEMES = {
     fogFar: 200,
     ambient: 1.6,
     key: 1.6,
-    status: { reported: 0xff7a59, prelim: 0xffc24a, stated: 0x37d6c6, bench: 0x9d8cff, scenario: 0xcfd8e6, unknown: 0x5d6b85 },
+    status: { reported: 0xff7a59, bloomberg: 0x6fd08c, prelim: 0xffc24a, stated: 0x37d6c6, bench: 0x9d8cff, scenario: 0xcfd8e6, unknown: 0x5d6b85 },
   },
 };
 
