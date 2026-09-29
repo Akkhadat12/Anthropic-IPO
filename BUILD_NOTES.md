@@ -2,7 +2,9 @@
 
 **Date:** 29 September 2026  
 **Branch:** `main`  
-**Production URL:** https://anthropic-ipo-two-clocks.vercel.app  
+**Production URL:** https://anthropic-ipo-two-clocks.vercel.app
+
+After the 29 September 2026 QA pass, the clickable Reuters source is the readable StreetInsider syndication of the same 28 September report. The KELO page returned 403 in that review. Scene 3 labels the Sonnet 5.5 “30%” figure as customer API cost in company tests, not Anthropic’s internal compute cost.  
 **Site root:** `web/`  
 **Evidence recheck:** No public Anthropic, PBC S-1 was returned as the filer in an EDGAR full-text search for “Anthropic, PBC” on Form S-1 / S-1/A from 1 January 2026 through 29 September 2026. Hits were other issuers that mention the phrase. Company browse results were investment funds, not a public Anthropic prospectus. The site therefore keeps the confidential-draft status and the Reuters / Bloomberg / company-statement labels. It does not show a priced or listed IPO.
 

@@ -220,8 +220,12 @@ button {
   left: clamp(16px, 3vw, 40px);
   z-index: 2;
   max-width: min(460px, calc(100% - 130px));
-  color: #f3eee6;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #f7f3ea;
+  background: rgba(8, 10, 9, 0.82);
+  font-size: 14px;
+  line-height: 1.35;
 }
 
 .cover-entry {
@@ -474,7 +478,9 @@ button {
 .training h2 { color: var(--ink); }
 .training p { margin: 0; color: var(--muted); }
 
-.vendor { max-width: 720px; }
+.vendor { max-width: 920px; font-size: clamp(13px, 1.7vh, 16px); line-height: 1.4; }
+
+.scene-5 .basis { font-size: clamp(13px, 1.8vh, 16px); line-height: 1.4; }
 
 .scene-3.is-current .hinge { animation: settle 0.75s ease both; }
 .scene-3.is-current .training { animation: from-right 0.7s ease 0.2s both; }
@@ -734,9 +740,12 @@ button {
   .hall-photo { object-position: 18% 62%; }
 
   .scene-cover .identity {
-    top: 72px;
-    max-width: calc(100% - 28px);
+    top: 64px;
+    max-width: calc(100% - 24px);
+    font-size: 15px;
   }
+
+  .scene-5 .basis { font-size: 15px; line-height: 1.45; }
 
   .metric { flex-wrap: wrap; }
   .metric strong { font-size: clamp(26px, 8vw, 40px); }

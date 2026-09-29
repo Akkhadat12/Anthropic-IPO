@@ -1,9 +1,9 @@
 scene,measure,period,value_usd_billions,qualifier,basis,source_url,source_status
-1,recognized_revenue,FY2025,4.6,approximately,full-year revenue,https://kelo.com/2026/09/28/exclusive-anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs/,Reuters reviewed prospectus
-1,operating_loss,FY2025,8,greater_than,full-year operating loss,https://kelo.com/2026/09/28/exclusive-anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs/,Reuters reviewed prospectus
+1,recognized_revenue,FY2025,4.6,approximately,full-year revenue,https://www.streetinsider.com/Reuters/Exclusive-Anthropics%2BIPO%2Bprospectus%2Bshows%2Bsweeping%2BAI%2Bvision%2C%2Bsurging%2Bcosts/27115819.html,Reuters reviewed prospectus
+1,operating_loss,FY2025,8,greater_than,full-year operating loss,https://www.streetinsider.com/Reuters/Exclusive-Anthropics%2BIPO%2Bprospectus%2Bshows%2Bsweeping%2BAI%2Bvision%2C%2Bsurging%2Bcosts/27115819.html,Reuters reviewed prospectus
 1,revenue_run_rate,February 2026,14,company_stated,annualized pace,https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation,company statement
 1,revenue_run_rate,April 2026,30,greater_than,annualized pace,https://www.anthropic.com/news/anthropic-amazon-compute,company statement
 1,revenue_run_rate,May 2026,47,greater_than,annualized pace,https://www.anthropic.com/news/series-h,company statement
 4,preliminary_revenue,Q2 2026,11.5,greater_than,quarterly recognized revenue preliminary,https://news.bloomberglaw.com/artificial-intelligence/anthropic-revenue-surges-to-over-11-5-billion-in-second-quarter,Bloomberg saw documents
 5,AWS_commitment,10 years from April 2026,100,greater_than,contract commitment over ten years,https://www.anthropic.com/news/anthropic-amazon-compute,company statement
-5,future_infrastructure_obligations,coming years as reported September 2026,518,approximately,multiyear obligations; may overlap AWS commitment,https://kelo.com/2026/09/28/exclusive-anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs/,Reuters reviewed prospectus
+5,future_infrastructure_obligations,coming years as reported September 2026,518,approximately,multiyear obligations; may overlap AWS commitment,https://www.streetinsider.com/Reuters/Exclusive-Anthropics%2BIPO%2Bprospectus%2Bshows%2Bsweeping%2BAI%2Bvision%2C%2Bsurging%2Bcosts/27115819.html,Reuters reviewed prospectus
