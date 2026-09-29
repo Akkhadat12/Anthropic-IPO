@@ -1,6 +1,6 @@
 # Build notes — Anthropic IPO capacity ledger
 
-**Status:** Retest build deployed after `QA_FAIL` in [07_WEB_QA_REPORT.md](07_WEB_QA_REPORT.md). Ready for independent retest per [05_QA.md](05_QA.md).
+**Status:** Second retest build deployed after `QA_FAIL` (QA-06 major, QA-07 minor) and the owner feedback on bottom controls. Ready for independent retest per [05_QA.md](05_QA.md). Builder does not self-approve.
 
 ## Build facts
 
@@ -9,8 +9,8 @@
 | Branch | `research-ipo-financials-models-2026` |
 | Stack | Vite 8, three.js 0.186 (vanilla, no framework), Playwright-core for local checks only |
 | Build | `npm install && npm run build` → `dist/` (Vercel auto-detects Vite) |
-| Public production URL | https://anthropic-ipo-capacity-ledger.vercel.app (Vercel project `anthropic-ipo-capacity-ledger`, target `production`, deployment `dpl_5qvCAqwZTQmSsnAY2vpuFkFbwscQ`; first build was `dpl_CJnwxicNfbv6ctqVGyKMPdbVCCY7`) |
-| Deployed commit | `d1b458f7436bcfb14dba75a03f9b2aac9b17c159` (`d1b458f`, shown in the Sources overlay footer). Later commits on the branch add evidence and notes only |
+| Public production URL | https://anthropic-ipo-capacity-ledger.vercel.app (Vercel project `anthropic-ipo-capacity-ledger`, target `production`, deployment `dpl_9YKNRKuUaSdW97QGuhpTyfMspiKk`; earlier builds `dpl_CJnwxicNfbv6ctqVGyKMPdbVCCY7`, `dpl_5qvCAqwZTQmSsnAY2vpuFkFbwscQ`) |
+| Deployed commit | `944a2d976ad2daec2d3806bba78282b0a6e5f301` (`944a2d9`, shown in the Sources overlay footer). Later commits on the branch add evidence and notes only |
 | Build date | 2026-09-29 |
 
 ## Visual direction comparison (04 §Prototype step 1)
@@ -37,6 +37,16 @@ Both directions are live behind `?dir=a` and `?dir=b` and share geometry, data, 
 - Data lives in [src/data.js](src/data.js) and mirrors [references/chart-data.csv](references/chart-data.csv) one-to-one, with source IDs and caveats. Nothing is interpolated: no year-by-year commitment bars, no channel split, no forecast values.
 - Visible text is English only. Real assets: the two AWS Project Rainier images from `references/`, attributed on the page and in the overlay.
 - Direct landing supported: `/?scene=capacity` (used for QA screenshots).
+
+## Second retest fixes (owner feedback, QA-06, QA-07)
+
+| Item | Change | Where |
+| --- | --- | --- |
+| Owner feedback | Removed the persistent bottom control strip, scene dots, and key-hint line. The primary action is a small pill (bottom right); in-scene selectors and the Opus/Sonnet toggle are a small panel (bottom left, stacked above the pill on phones); a discreet **Scenes** menu (top right) jumps to any stop for rehearsal (Esc closes it; Space inside it does nothing). Phone brand chip hidden, decorative chips hidden in the stacked list | `index.html`, `src/style.css`, `src/main.js` |
+| QA-06 | `models` shows a chip: Fable 5.1 generally available, Mythos 5.1 trusted access only. The Sources caveat also states Fable API price and that Haiku 5.5 is announced, not released. `03_STORY_STRUCTURE.md` row 3 still says both are limited; that wording belongs to the research owner and is unchanged | `src/scenes.js`, `src/data.js` |
+| QA-07 | AWS Project Rainier source badge is `SOURCE: AWS` (new `vendor` status), not `ANTHROPIC STATED` | `src/data.js`, `src/style.css` |
+
+Thai rationale for this build: https://docs.google.com/document/d/1LTo2_oDB7hmAocPf7uKCOWxsrcs_Hm61_kvGCQlyaoA/edit (nine scenes with embedded desktop screenshots from this deployment; phone captures linked). Older Drive copies were renamed `..._delete_me`. Production captures for this build: `build-notes/prod-screens-v2/`. `node tools/flow.mjs https://anthropic-ipo-capacity-ledger.vercel.app` passed on production, including new checks for the Scenes menu, no dots or hint, Fable/Mythos text, and the AWS badge.
 
 ## QA retest fixes (after QA_FAIL, 2026-09-29)
 
