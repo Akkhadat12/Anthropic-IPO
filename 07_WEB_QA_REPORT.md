@@ -1,6 +1,6 @@
 # Independent web QA report — Anthropic IPO two-clock story
 
-**Current status after 29 September 2026 retest: FAIL — F1 and F5 remain open.**  
+**Current status after owner clarification: FAIL — only F5 evidence capture remains an acceptance gap.**  
 Test date: 29 September 2026 (Asia/Bangkok).  
 Final URL tested: https://anthropic-ipo-two-clocks.vercel.app/  
 Browser: Chrome, live public URL. Desktop viewports tested at 1920 × 900 and 1600 × 900 (16:9); narrow viewport tested at 390 × 844. The page opened without an application login prompt. The scene table and findings below record the first pass; the dated retest at the end gives the current finding status.
@@ -55,11 +55,15 @@ This retest supersedes the first-pass finding statuses above. I reopened the pub
 
 | Finding | Current result | Retest evidence |
 | --- | --- | --- |
-| F1 — actual Word deliverable | **OPEN** | The specified Drive folder still contains only one item named 06_SCENE_RATIONALE.docx, file ID 1grcgF9jbovWbEG0_ASc12Te_xeT81PlGqjhEyiG6nik. Its MIME remains application/vnd.google-apps.document. No actual DOCX with the Word MIME type is in that folder. |
+| F1 — document format | **ACCEPTED BY OWNER** | The file is a native Google Doc, despite its .docx filename. On 29 September 2026 the owner clarified that this Google Docs file is the intended deliverable. A separate Word export is no longer required for acceptance. |
 | F2 — Reuters link | **PASS** | The live Sources overlay now links to the Reuters article on StreetInsider. Clicking it opened the full bylined article, including FY2025 revenue, operating loss, and future obligations. The Thai rationale and both chart-data CSVs use the same reachable URL. |
 | F3 — customer vs provider cost | **PASS** | Live Scene 3 now says “up to 30% less customer API cost per task · provider compute cost unknown.” The Thai rationale explicitly says this is not Anthropic internal compute cost or proof of serving margin. |
 | F4 — phone labels | **PASS at tested size** | At 390 × 844, the Cover ownership label has a dark backing and Scene 5’s overlap/not-2027-cash caveat is larger and wraps legibly. Scene 5 also remained intact at 1600 × 900. |
 | F5 — durable visual evidence | **OPEN** | The repository still has no linked final-version settled desktop/phone and representative transition/interaction capture set required by 05_QA.md. The specified Drive folder contains the rationale and two reading PDFs plus the link text file, not that capture set. Browser observations are recorded here but are not stable screenshot artifacts. |
 | F6 — README handoff | **PARTIAL / LOW** | The opening now names the live site and QA report. Later paragraphs still instruct the next agent to build and publish the already-existing website and upload the rationale; those should be revised for a clean handoff. |
 
-**Current acceptance decision: FAIL.** The product corrections F2–F4 passed this retest. F1 still blocks the contracted Word deliverable, and F5 is required by the QA acceptance plan. Export and place a true DOCX in the specified Drive folder, link final-version QA captures, then verify both before final sign-off. F6 is a low-priority documentation cleanup.
+**Current acceptance decision after owner clarification: FAIL on evidence only.** The product corrections F2–F4 passed. The owner accepts the native Google Doc, so F1 is closed by clarified scope. F5 remains required by the QA acceptance plan: link final-version settled desktop/phone and representative transition/interaction captures, then verify those artifacts before final sign-off. F6 is a low-priority documentation cleanup.
+
+## Owner clarification — 29 September 2026
+
+The owner confirmed that the Google Docs file in the specified Drive folder is the intended document deliverable. This overrides the earlier DOCX-format requirement for this delivery. The first-pass F1 observation about MIME type remains factually correct as a historical check, but it is **not an open defect or acceptance blocker**. The remaining acceptance gap is F5, the durable visual QA evidence specified in 05_QA.md.
