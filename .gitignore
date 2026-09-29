@@ -9,3 +9,6 @@ shots-prod
 tools/docs_update.py
 tools/06_SCENE_RATIONALE.html
 tools/ui_v2.py
+tools/docs_update2.py
+tools/rat_patch.py
+shots-prod2
