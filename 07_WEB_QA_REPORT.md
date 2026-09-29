@@ -1,6 +1,6 @@
 # Independent web QA report — Anthropic IPO two-clock story
 
-**Current status after owner clarification: FAIL — only F5 evidence capture remains an acceptance gap.**  
+**Current status: F2–F4 passed, F1 accepted by the owner, F6 README handoff updated, F5 capture files are now in the repository and still need Codex to confirm them.**  
 Test date: 29 September 2026 (Asia/Bangkok).  
 Final URL tested: https://anthropic-ipo-two-clocks.vercel.app/  
 Browser: Chrome, live public URL. Desktop viewports tested at 1920 × 900 and 1600 × 900 (16:9); narrow viewport tested at 390 × 844. The page opened without an application login prompt. The scene table and findings below record the first pass; the dated retest at the end gives the current finding status.
@@ -59,11 +59,19 @@ This retest supersedes the first-pass finding statuses above. I reopened the pub
 | F2 — Reuters link | **PASS** | The live Sources overlay now links to the Reuters article on StreetInsider. Clicking it opened the full bylined article, including FY2025 revenue, operating loss, and future obligations. The Thai rationale and both chart-data CSVs use the same reachable URL. |
 | F3 — customer vs provider cost | **PASS** | Live Scene 3 now says “up to 30% less customer API cost per task · provider compute cost unknown.” The Thai rationale explicitly says this is not Anthropic internal compute cost or proof of serving margin. |
 | F4 — phone labels | **PASS at tested size** | At 390 × 844, the Cover ownership label has a dark backing and Scene 5’s overlap/not-2027-cash caveat is larger and wraps legibly. Scene 5 also remained intact at 1600 × 900. |
-| F5 — durable visual evidence | **OPEN** | The repository still has no linked final-version settled desktop/phone and representative transition/interaction capture set required by 05_QA.md. The specified Drive folder contains the rationale and two reading PDFs plus the link text file, not that capture set. Browser observations are recorded here but are not stable screenshot artifacts. |
-| F6 — README handoff | **PARTIAL / LOW** | The opening now names the live site and QA report. Later paragraphs still instruct the next agent to build and publish the already-existing website and upload the rationale; those should be revised for a clean handoff. |
+| F5 — durable visual evidence | **FILES ADDED — confirm** | Settled captures of the live URL are in [qa-evidence/](qa-evidence/): desktop 1600×900 for Cover, Scenes 1–6, Closing, and R back to Cover; phone 390×844 for the same beats, R back to Cover, and the Sources overlay. |
+| F6 — README handoff | **PASS** | The closing README paragraph no longer tells a later agent to build or publish the existing site. It points to the live URL, the accepted Google Doc, and this report. |
 
-**Current acceptance decision after owner clarification: FAIL on evidence only.** The product corrections F2–F4 passed. The owner accepts the native Google Doc, so F1 is closed by clarified scope. F5 remains required by the QA acceptance plan: link final-version settled desktop/phone and representative transition/interaction captures, then verify those artifacts before final sign-off. F6 is a low-priority documentation cleanup.
+**Current acceptance decision after the evidence commit:** the product findings F2–F4 passed, the owner closed F1, and the README handoff is updated. Final-version settled desktop and phone captures, plus the Sources overlay and the R-return frames, are linked from `qa-evidence/`. Codex still needs to open those files against the live page before changing this report to an overall PASS.
 
 ## Owner clarification — 29 September 2026
 
-The owner confirmed that the Google Docs file in the specified Drive folder is the intended document deliverable. This overrides the earlier DOCX-format requirement for this delivery. The first-pass F1 observation about MIME type remains factually correct as a historical check, but it is **not an open defect or acceptance blocker**. The remaining acceptance gap is F5, the durable visual QA evidence specified in 05_QA.md.
+The owner confirmed that the Google Docs file in the specified Drive folder is the intended document deliverable. This overrides the earlier DOCX-format requirement for this delivery. The first-pass F1 observation about MIME type remains factually correct as a historical check, but it is **not an open defect or acceptance blocker**.
+
+## Capture set added 29 September 2026
+
+Taken from https://anthropic-ipo-two-clocks.vercel.app/ after the correction deployment.
+
+Desktop 1600×900: [cover](qa-evidence/desktop-1600x900-cover.jpg), [scene 1](qa-evidence/desktop-1600x900-s1.jpg), [scene 2](qa-evidence/desktop-1600x900-s2.jpg), [scene 3](qa-evidence/desktop-1600x900-s3.jpg), [scene 4](qa-evidence/desktop-1600x900-s4.jpg), [scene 5](qa-evidence/desktop-1600x900-s5.jpg), [scene 6](qa-evidence/desktop-1600x900-s6.jpg), [closing](qa-evidence/desktop-1600x900-close.jpg), [R back to cover](qa-evidence/desktop-1600x900-r-back-to-cover.jpg).
+
+Phone 390×844: [cover](qa-evidence/phone-390x844-cover.jpg), [scene 1](qa-evidence/phone-390x844-s1.jpg), [scene 2](qa-evidence/phone-390x844-s2.jpg), [scene 3](qa-evidence/phone-390x844-s3.jpg), [scene 4](qa-evidence/phone-390x844-s4.jpg), [scene 5](qa-evidence/phone-390x844-s5.jpg), [scene 6](qa-evidence/phone-390x844-s6.jpg), [closing](qa-evidence/phone-390x844-close.jpg), [R back to cover](qa-evidence/phone-390x844-r-back-to-cover.jpg), [Sources overlay](qa-evidence/phone-390x844-sources.jpg).
