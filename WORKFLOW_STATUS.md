@@ -5,7 +5,7 @@
 - **Approved scope:** Financial statements and quality of figures; model/compute economics; Claude's current standing; competition, risks, and conditional future outcomes.
 - **Thesis:** Open — owner Gate 2 decision pending.
 - **Stage:** `PLANNING` — reading packs prepared; no story/build/QA handoff yet.
-- **Last verified commit:** To be recorded after the reading-pack commit; 29 September 2026.
+- **Last verified research-pack commit:** [`f933d7e`](https://github.com/Akkhadat12/Anthropic-IPO/commit/f933d7e87a5cff581a70fd25376584d68c17ccca); 29 September 2026.
 - **Owner reading folder:** [Google Drive](https://drive.google.com/drive/folders/1hM3luybOC9QNUn4nqEm8g_zNJM3LL4Mz)
 - **Current files:** [01 MD](01_KNOWLEDGE_SUMMARY.md), [01 PDF](01_KNOWLEDGE_SUMMARY.pdf), [02 MD](02_RESEARCH_AND_ANALYSIS.md), [02 PDF](02_RESEARCH_AND_ANALYSIS.pdf)
 - **Public build URL:** None for this branch.
