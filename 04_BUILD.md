@@ -4,7 +4,7 @@ Build defines execution. This brief exists before implementation; Builder fills 
 
 ## Shared contract — mandatory for every agent
 
-This is one of five reusable workflow templates, version 1.6, dated 2026-10-01. The master copies live in 00_WORKFLOW, the reusable template library:
+This is one of five reusable workflow templates, version 1.7, dated 2026-10-01. The master copies live in 00_WORKFLOW, the reusable template library:
 https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 
 For a topic, Agent 1 copies all five templates into the chosen GitHub repository and fills their project sections. The five master templates remain reusable. Topic-specific technical files are maintained in GitHub; do not mirror them back into Drive.
@@ -15,6 +15,10 @@ For a topic, Agent 1 copies all five templates into the chosen GitHub repository
 WORKFLOW_FOLDER: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 WORKFLOW_FOLDER_ID: 1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 TEMPLATE_LIBRARY_URL: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+WEB_LANGUAGE: English
+NARRATION_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
 TOPIC_DRIVE_PARENT: https://drive.google.com/drive/folders/153uw4BMBT78VS6TQgGelanIzXPomkzZt
 TOPIC_DRIVE_PARENT_ID: 153uw4BMBT78VS6TQgGelanIzXPomkzZt
 ~~~
@@ -60,6 +64,23 @@ Later agents reuse that exact recorded owner folder and ID; never create new/fin
 - A Windows local agent may execute START.bat/STOP.bat and target-browser checks against the exact delivered archive. A cloud agent with actual Windows access may do the same; a Linux/macOS cloud run cannot certify Windows execution. Record actual Windows evidence and archive hash, not execution location as a proxy for OS.
 - Resume existing verified work when source/package bytes are unchanged. Complete the pending environment-specific checks and affected regressions; do not rebuild/restart the assignment solely because the executor changes. Changed runtime/assets/launchers require a new package identity and independent affected QA.
 - If a Windows check fails after a scoped cloud pass, record a stable finding and route Builder → independent QA retest. Preserve the previous evidence, but invalidate affected readiness/pass claims for that package. Keep owner acceptance separate from technical test evidence.
+
+### Language contract — English canvas, Thai owner editions
+
+~~~yaml
+WEB_LANGUAGE: English
+NARRATION_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
+~~~
+
+- All app-authored audience-facing presentation text is English: first cover, titles, annotations, diagram/chart labels, legends, units expressed in words, permitted attribution and any fallback/error text inside the Webapp. Keep the existing 0–8-word ordinary-copy target and clean-canvas rules.
+- On-page semantic descriptions, alternative text and accessible labels are English as well. Set the presentation document language to en. Browser/OS-owned interface text is outside this app contract.
+- Proper names, authentic brand wordmarks, numerals, currency/unit symbols and standard technical abbreviations retain their correct form. This is not permission to add Thai or mixed-language explanatory text to the canvas.
+- Audit text baked into images/video/screenshots and every reveal/hold/reset/fallback state. Prefer an authentic English-language asset/version or an appropriate truthful crop if source material contains other-language prose. Do not redraw, translate or materially edit an official logo/real image in a way that misrepresents it. An indispensable non-English source inscription requires an explicit recorded owner exception before it is used; do not silently relax English-only.
+- Spoken narration, both reading/research PDFs, final scene rationale and the owner quick-start are Thai by default. English technical terms and exact original source titles/quotations may remain where needed for precision. Editable narration/rationale remain Thai Google Docs.
+- Technical workflow specifications, source code and agent QA/build reports are not audience canvas or owner reading editions; their working language does not determine WEB_LANGUAGE.
+- Record any explicit owner language override and affected artifacts in status. Do not infer language from a topic, folder, execution environment, Thai narration or source publisher.
 
 ### Drive ownership and storage
 
@@ -147,7 +168,7 @@ Do not create another folder, change a factual claim without Content review or r
 7. Keep controls hidden: no control panel, navigation bar, Next/Back buttons, page/scene numbers, progress dots/bars, UI/navigation arrows, play bars, persistent menus/help/source panels, keyboard hints, header/footer, watermark, developer overlays or competing UI chrome. Implement only the Visual Plan's explanatory content arrows; these must be minimal, meaningful, subordinate and clearly unlike controls. Document keys externally.
 8. Respect reduced-motion preferences; use stable equivalent states and the same presenter actions. Handle fullscreen rejection without a visible panel or claiming success.
 9. Optimize images/video/fonts, preload only what is needed, dispose of graphics resources, and pause rendering where possible during hold. Provide a planned fallback for unavailable media or WebGL. Do not silently replace factual evidence with generated imagery.
-10. Verify ordinary visible copy, including media text, against each scene's default 0–8-word target. Preserve only justified essential chart/data label exclusions and record excluded and total counts. Keep script, detailed citations, and technical metadata out of the canvas.
+10. Implement all audience-facing copy, labels, accessible descriptions and in-app fallback/error text in English; set HTML lang=en. Keep narration/owner documents/quick-start Thai. Check original media/cover inscriptions without altering authentic assets misleadingly. Verify ordinary visible copy, including media text, against each scene's default 0–8-word target. Preserve only justified essential chart/data label exclusions and record excluded and total counts. Keep script, detailed citations, and technical metadata out of the canvas.
 11. Provide semantic descriptions and the separate reading/narration documents. Avoid color-only encodings. Recording mode cannot be an excuse for unusable keyboard navigation.
 12. Implement the required theme-adaptive presenter dot and authentic S01 cover from 02/03. Package the verified original cover asset; it is visible on initial load and R reset. Pointer tracking is direct, stage-only, high-contrast, non-blocking, and has no trail/pulse. Normal cursor behavior returns outside the stage.
 13. Build a static distributable with relative/base paths compatible with loopback serving and no necessary backend, cloud credentials, CDN or external API. Include all required runtime assets and fonts for offline use after prerequisite setup. A necessary live-data/backend requirement must be explicitly resolved before LOCAL_ZIP readiness.
@@ -177,6 +198,10 @@ ANIMATION_ENGINE: <chosen and reason>
 REDUCED_MOTION_STRATEGY: <same endpoints>
 WEBGL_FALLBACK: <behavior or NOT_APPLICABLE>
 TARGET_BROWSERS: <actual planned versions/platforms>
+WEB_LANGUAGE: English
+DOCUMENT_LANG_ATTRIBUTE: en
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
 PERFORMANCE_TARGETS: <targets and measurement conditions>
 LOCAL_RUNTIME: <Python 3 default or documented Node.js alternative>
 LOCAL_RUNTIME_TESTED_VERSION: <actual>
@@ -250,6 +275,7 @@ No source code or developer report. Verify its content, ID, source/version and c
 
 ## Exit criteria and handoff
 
+- English-only scene/cover/label/accessibility/fallback copy and embedded-media language rules, with Thai owner editions, are verified.
 - Planned scenes, clean 16:9 framing, copy budget, authentic S01 initial/reset cover, theme-adaptive pointer, Spacebar/R, stable hold, reduced motion and fallback checks pass.
 - The prebuilt ZIP includes all required assets, launchers/helper, manifest and Thai quick-start. No required public deployment or runtime network installation.
 - BUILD_COMMIT, archive SHA-256/version, verified owner package link and source/manifest identity agree.

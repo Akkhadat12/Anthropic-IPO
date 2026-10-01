@@ -1,6 +1,6 @@
 # Current assignment specification
 
-The shared v1.6 master instructions below are retained verbatim. Placeholder examples in the master are illustrative, not live assignment values. This Current assignment specification and the committed WORKFLOW_STATUS.md carry the live values. No downstream Design/Visual/Build work has been performed.
+The shared v1.7 master instructions below are retained verbatim. Placeholder examples in the master are illustrative, not live assignment values. This Current assignment specification and the committed WORKFLOW_STATUS.md carry the live values. No downstream Design/Visual/Build work has been performed.
 
 ```yaml
 PROJECT_ID: anthropic-ipo-20261001-0426
@@ -9,6 +9,12 @@ BOOTSTRAP_MODE: FRESH
 AUDIENCE: Thai general audience; no accounting background required
 OWNER: UNSET
 NARRATION_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+DOCUMENT_LANG_ATTRIBUTE: en
+WEB_LANGUAGE: English
+ON_CANVAS_LANGUAGE: English
+LANGUAGE_OWNER_DECISION: Explicit owner reply on 2026-10-01, English as before; Thai narration unchanged
 TARGET_DURATION: 8–10 minutes; editorial scene budgets total 560 seconds; measured read-through NOT_RUN
 FORMAT: narration-led local web presentation
 DELIVERY_MODE: LOCAL_ZIP
@@ -22,12 +28,16 @@ OWNER_SCOPE_DECISION: APPROVED general audience8–10minutes, ownerreplyดี�
 OWNER_THESIS_DECISION: APPROVED title/question above
 RESEARCH_AS_OF: 2026-10-01T04:24:00Z
 COVER_SCENE_ID: S01
-COVER_IMAGE_SUBJECT: authentic official Anthropic or Claude logo from company source
-COVER_ASSET_REQUIREMENT: authentic_original_required
-COVER_PROVENANCE_CANDIDATE: https://www.anthropic.com/news/confidential-draft-s1-sec
-COVER_RIGHTS: Trademark/company-owned; no license assumed. Visual must verify official downloadable asset/usage terms, record provenance/crop/offline path and fallback before READY_FOR_BUILD.
-COVER_FALLBACK: Another verified authentic company/product image with usable rights; never generated/reconstructed logo. If none, block Visual readiness.
+COVER_IMAGE_SUBJECT: authentic licensed photograph of Dario Amodei at TechCrunch Disrupt, 2023-09-20
+COVER_ASSET_REQUIREMENT: authentic_original_required; licensed real company-founder photo selected instead of restricted logo
+COVER_PROVENANCE_CANDIDATE: https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg
+COVER_RIGHTS: CC BY 2.0 verified against Commons and original TechCrunch Flickr source; required credit and no-crop resize notice in assets/CREDITS.txt; official logos not cleared
+COVER_FALLBACK: same original licensed photograph independently packaged as assets/photos/dario-amodei-techcrunch-2023-fallback.jpg, identical SHA256; never generated/reconstructed logo
 ```
+
+## Visual alignment addendum — 2026-10-01
+
+The owner explicitly chose English on-canvas text (“เป็น english แบบเดิม”) after being asked English or Thai for scenes; Thai narration stays unchanged. These visible-copy fields now match Visual 1.0. The coordinator approved a verified licensed real founder photograph when the official logo lacked a usable grant. This scoped image/copy alignment changes no financial claim, Thai spoken paragraph, thesis, audience or 560-second editorial budget. Three owner reading/narration editions remain current for their substantive text; the final rationale must explain the built English labels.
 
 ## Evidence architecture
 
@@ -179,18 +189,18 @@ Spacebar is the full forward route: reveal/settle/hold/advance. Each beat holds 
 
 ## S01 คำถามเปิดเรื่อง
 
-SCENE_PURPOSE: ทำให้ผู้ชมเข้าใจตั้งแต่ต้นว่าเราจะตรวจความสัมพันธ์ระหว่างการเติบโตกับความยั่งยืนของธุรกิจ ใช้โลโก้หรือ wordmark ของ Anthropic หรือ Claude จากแหล่งทางการอย่างแท้จริงเพื่อระบุเจ้าของเรื่อง ไม่วาดเลียนแบบและไม่สื่อถึงการรับรองคลิปโดยบริษัท หากใช้ wordmark หนึ่งชื่อ ต้องนับเพิ่มในงบข้อความภาพอนาคตจาก 7 เป็น 8 หน่วย; อย่าเพิ่มทั้งสองชื่อโดยไม่ปรับข้อความอื่น
+SCENE_PURPOSE: ใช้ภาพถ่ายจริงของ Dario Amodei ในงาน TechCrunch Disrupt ปี 2023 เพื่อระบุบริบทบริษัท คู่กับชื่อ Anthropic ในฟอนต์ข้อความปกติและคำถามภาษาอังกฤษ ไม่สร้างโลโก้เลียนแบบ ไม่สื่อว่าภาพเป็นเหตุการณ์ IPO หรือบริษัทรับรองคลิป เครดิตภาพอยู่ในเอกสารประกอบและแพ็กเกจตาม CC BY 2.0
 CLAIM_IDS: [C02, C03, C04, C05]
 ESTIMATED_SPOKEN_SECONDS: 30 (editorial budget; no audio measured)
 PRESENTER_CUES: เว้นสั้น ๆ หลังคำถามแรก,ไม่เน้นคำว่าขาดทุนจนกลบข่าวด้านบวก
-VISUAL_JOB: ทำให้ผู้ชมเข้าใจตั้งแต่ต้นว่าเราจะตรวจความสัมพันธ์ระหว่างการเติบโตกับความยั่งยืนของธุรกิจ ใช้โลโก้หรือ wordmark ของ Anthropic หรือ Claude จากแหล่งทางการอย่างแท้จริงเพื่อระบุเจ้าของเรื่อง ไม่วาดเลียนแบบและไม่สื่อถึงการรับรองคลิปโดยบริษัท หากใช้ wordmark หนึ่งชื่อ ต้องนับเพิ่มในงบข้อความภาพอนาคตจาก 7 เป็น 8 หน่วย; อย่าเพิ่มทั้งสองชื่อโดยไม่ปรับข้อความอื่น
-VISIBLE_COPY_PROPOSAL: โตแรง แต่ กำไร ยั่งยืน หรือยัง?
-VISIBLE_WORD_COUNT: 7
-COUNT_METHOD: โต,แรง,แต่,กำไร,ยั่งยืน,หรือ,ยัง
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 7 ordinary copy + 1 official wordmark = 8 maximum; if logo wordmark longer reduce ordinary copy
-FACTUAL_BOUNDARIES: wordmark ที่เพิ่มภายหลังต้องนับในงบข้อความบนภาพ,ใช้โลโก้จากแหล่งทางการ ไม่สร้างเครื่องหมายเลียนแบบ
+VISUAL_JOB: ใช้ภาพถ่ายจริงของ Dario Amodei ในงาน TechCrunch Disrupt ปี 2023 เพื่อระบุบริบทบริษัท คู่กับชื่อ Anthropic ในฟอนต์ข้อความปกติและคำถามภาษาอังกฤษ ไม่สร้างโลโก้เลียนแบบ ไม่สื่อว่าภาพเป็นเหตุการณ์ IPO หรือบริษัทรับรองคลิป เครดิตภาพอยู่ในเอกสารประกอบและแพ็กเกจตาม CC BY 2.0
+VISIBLE_COPY_PROPOSAL: Anthropic / Fast growth. / Sustainable profits?
+VISIBLE_WORD_COUNT: 5
+COUNT_METHOD: English words across all scene states; Anthropic; Fast,growth; Sustainable,profits
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 0 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 5 (5 ordinary + 0 essential)
+FACTUAL_BOUNDARIES: Authentic licensed 2023 photo, not current IPO event; generic company name counts as ordinary text; no logo imitation or endorsement.
 TRANSITION_REASON: Next audience question: ก่อน IPO เรารู้อะไรจริง
 
 NARRATION:
@@ -209,12 +219,12 @@ CLAIM_IDS: [C01, C02, C10]
 ESTIMATED_SPOKEN_SECONDS: 55 (editorial budget; no audio measured)
 PRESENTER_CUES: เน้นความต่างระหว่างยื่นร่างกับราคาเสนอขาย,ไม่เปลี่ยนเป็นบทสอนขั้นตอน IPO ยาว ๆ
 VISUAL_JOB: แยกเหตุการณ์ที่บริษัทยืนยันแล้วออกจากเงื่อนไข IPO ที่ยังไม่ยืนยัน และแสดงขอบเขตของเอกสารที่เราเข้าถึง
-VISIBLE_COPY_PROPOSAL: ยื่นร่างแล้ว ยังไม่รู้ราคาขาย
-VISIBLE_WORD_COUNT: 8
-COUNT_METHOD: ยื่น,ร่าง,แล้ว,ยัง,ไม่,รู้,ราคา,ขาย
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 8
+VISIBLE_COPY_PROPOSAL: Draft submitted / Offer price unknown
+VISIBLE_WORD_COUNT: 5
+COUNT_METHOD: English words across all scene states; Draft,submitted; Offer,price,unknown
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 3 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 8 (5 ordinary + 3 essential)
 FACTUAL_BOUNDARIES: กล่าวว่ายังหาเอกสารสาธารณะฉบับเต็มไม่พบ ไม่สรุปว่าไม่มีข้อมูลการเงินสาธารณะ,ไม่ยืนยันวัน IPO หรือ offer terms
 TRANSITION_REASON: Next audience question: ตัวเลขสามแบบ อย่าอ่านแทนกัน
 
@@ -240,12 +250,12 @@ CLAIM_IDS: [C02, C03, C06]
 ESTIMATED_SPOKEN_SECONDS: 75 (editorial budget; no audio measured)
 PRESENTER_CUES: หยุดสั้นหลังตัวเลขแต่ละชุด,อ่าน run-rate แล้วอธิบายภาษาไทยทันที
 VISUAL_JOB: อธิบายช่วงเวลาที่ตัวเลขแต่ละชนิดครอบคลุม เพื่อป้องกันการนำยอดรายปี รายไตรมาส และ run-rate มาเทียบตรง ๆ
-VISIBLE_COPY_PROPOSAL: คนละช่วงเวลา คนละความหมาย
-VISIBLE_WORD_COUNT: 5
-COUNT_METHOD: คนละ,ช่วง,เวลา,คนละ,ความหมาย
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 5
+VISIBLE_COPY_PROPOSAL: Different periods. Different meanings.
+VISIBLE_WORD_COUNT: 4
+COUNT_METHOD: English words across all scene states; Different,periods,Different,meanings
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 19 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 23 (4 ordinary + 19 essential)
 FACTUAL_BOUNDARIES: ไม่คำนวณ growth rate ข้ามฐานเวลา,ไม่ annualize Q2 เพิ่มเอง,ข้อความตัวเลขหรือวันที่ที่จะเพิ่มบนภาพต้องนับรวมในงบซีน
 TRANSITION_REASON: Next audience question: ลูกค้าจ่ายเงินให้ Claude เพราะอะไร
 
@@ -277,12 +287,12 @@ CLAIM_IDS: [C07, C08, C11]
 ESTIMATED_SPOKEN_SECONDS: 65 (editorial budget; no audio measured)
 PRESENTER_CUES: ใช้ภาพตัวอย่างงานเพื่อช่วยความเข้าใจ แต่ไม่อ้างว่าเป็นลูกค้าจริงหรือผลสำเร็จที่วัดแล้ว
 VISUAL_JOB: เชื่อมการใช้งานกับเหตุผลที่องค์กรยอมจ่าย พร้อมแยกหลักฐานการยอมรับผลิตภัณฑ์ออกจากหลักฐานการรักษาลูกค้า
-VISIBLE_COPY_PROPOSAL: ลูกค้า จ่ายซ้ำ เพราะอะไร?
-VISIBLE_WORD_COUNT: 5
-COUNT_METHOD: ลูกค้า,จ่าย,ซ้ำ,เพราะ,อะไร
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 5
+VISIBLE_COPY_PROPOSAL: Customers / Illustrative / Work / Worth paying for? / Pay again?
+VISIBLE_WORD_COUNT: 8
+COUNT_METHOD: English words across all scene states; Customers; Illustrative; Work; Worth,paying,for; Pay,again
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 0 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 8 (8 ordinary + 0 essential)
 FACTUAL_BOUNDARIES: ไม่สร้าง pie chart current revenue mix,ไม่ถือ enterprise use เป็นบริษัทลูกค้าใหม่ทั้งหมด,ไม่ยืด customer concentration ปี 2025 ไปปี 2026
 TRANSITION_REASON: Next audience question: ขาดทุนก้อนใหญ่ ไม่ใช่เงินสดที่หายไปเท่ากัน
 
@@ -308,12 +318,12 @@ CLAIM_IDS: [C02, C12]
 ESTIMATED_SPOKEN_SECONDS: 65 (editorial budget; no audio measured)
 PRESENTER_CUES: อ่านตัวเลขชัดแต่ไม่เร่ง,เว้นหลังคำว่าไม่ใช่เงินสดเพื่อให้ผู้ชมแยกแนวคิดทัน
 VISUAL_JOB: แยกผลขาดทุนทางบัญชีออกจากเงินสด โดยไม่ทำให้ผู้ชมเข้าใจว่ารายการ non-cash ไม่มีความสำคัญ
-VISIBLE_COPY_PROPOSAL: ขาดทุน ไม่เท่ากับ เงินสดที่ใช้
-VISIBLE_WORD_COUNT: 6
-COUNT_METHOD: ขาดทุน,ไม่,เท่ากับ,เงินสด,ที่,ใช้
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 6
+VISIBLE_COPY_PROPOSAL: Loss is not cash used
+VISIBLE_WORD_COUNT: 5
+COUNT_METHOD: English words across all scene states; Loss,is,not,cash,used
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 14 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 19 (5 ordinary + 14 essential)
 FACTUAL_BOUNDARIES: ไม่เรียกผลต่างว่า cash burn, operating loss หรือ adjusted loss ที่คำนวณยืนยันแล้ว,ไม่ใช้ผลปี 2025 สรุปสถานะปัจจุบันทุกนิยาม
 TRANSITION_REASON: Next audience question: ต้องให้เครดิตข่าวกำไรด้วย
 
@@ -343,12 +353,12 @@ CLAIM_IDS: [C03, C04, C09, C12]
 ESTIMATED_SPOKEN_SECONDS: 75 (editorial budget; no audio measured)
 PRESENTER_CUES: น้ำเสียงเป็นบวกจริงในครึ่งแรก,ไม่ใช้ประโยคแต่ลบล้างข่าวกำไรทั้งหมด
 VISUAL_JOB: แสดงระยะห่างของหลักฐานระหว่าง adjusted operating income, net income และ cash flow โดยไม่สมมติจำนวนเงินหรือรายการ reconciliation
-VISIBLE_COPY_PROPOSAL: กำไรปรับปรุงแล้ว ถึง เงินสด หรือยัง?
-VISIBLE_WORD_COUNT: 7
-COUNT_METHOD: กำไร,ปรับปรุง,แล้ว,ถึง,เงินสด,หรือ,ยัง
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 7
+VISIBLE_COPY_PROPOSAL: Adjusted profit. Sustainable cash?
+VISIBLE_WORD_COUNT: 4
+COUNT_METHOD: English words across all scene states; Adjusted,profit,Sustainable,cash
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 16 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 20 (4 ordinary + 16 essential)
 FACTUAL_BOUNDARIES: Q2 เป็น preliminary,Q3 เป็น outlook,ไม่อ้างว่า reported >80% เป็น all-in margin หรือ adjusted operating margin,ไม่อนุมาน exclusions ของ gross margin ไปยัง adjusted operating income
 TRANSITION_REASON: Next audience question: Compute เป็นทั้งกำลังผลิตและภาระล่วงหน้า
 
@@ -376,12 +386,12 @@ CLAIM_IDS: [C05, C13]
 ESTIMATED_SPOKEN_SECONDS: 75 (editorial budget; no audio measured)
 PRESENTER_CUES: เน้นหลายปีและเงื่อนไขต่างกัน,ให้พื้นที่กับประโยชน์ของ capacity ก่อนพูดความเสี่ยง
 VISUAL_JOB: ทำให้เห็นว่ากำลังประมวลผลรองรับรายได้ในอนาคต แต่มีภาระหลายปีและเงื่อนไขความยืดหยุ่นไม่เท่ากัน
-VISIBLE_COPY_PROPOSAL: จองกำลังผลิต รับภาระล่วงหน้า
-VISIBLE_WORD_COUNT: 6
-COUNT_METHOD: จอง,กำลัง,ผลิต,รับ,ภาระ,ล่วงหน้า
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 6
+VISIBLE_COPY_PROPOSAL: Reserve capacity / Illustrative / Future obligations
+VISIBLE_WORD_COUNT: 5
+COUNT_METHOD: English words across all scene states; Reserve,capacity; Illustrative; Future,obligations
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 8 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 13 (5 ordinary + 8 essential)
 FACTUAL_BOUNDARIES: ไม่บวก partnership announcements ซ้ำ,ไม่สร้าง annual payment schedule,ไม่ตีความ commitments ทั้งหมดเป็นหนี้ทางบัญชี
 TRANSITION_REASON: Next audience question: สองด้านของโอกาสเดียวกัน
 
@@ -411,12 +421,12 @@ CLAIM_IDS: [A01]
 ESTIMATED_SPOKEN_SECONDS: 60 (editorial budget; no audio measured)
 PRESENTER_CUES: แต่ละสถานการณ์ใช้น้ำหนักเสียงใกล้เคียงกัน,ไม่ทำฝั่งใดเป็นข้อสรุป
 VISUAL_JOB: เปรียบเทียบสถานการณ์เชิงเงื่อนไขโดยไม่ให้น้ำหนักความน่าจะเป็นหรือ forecast ตัวเลขที่ไม่มีหลักฐาน
-VISIBLE_COPY_PROPOSAL: โตทันต้นทุน หรือ ต้องเติมทุน?
-VISIBLE_WORD_COUNT: 7
-COUNT_METHOD: โต,ทัน,ต้นทุน,หรือ,ต้อง,เติม,ทุน
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 7
+VISIBLE_COPY_PROPOSAL: Scenarios / Growth outpaces costs / Cash strained / More funding
+VISIBLE_WORD_COUNT: 8
+COUNT_METHOD: English words across all scene states; Scenarios; Growth,outpaces,costs; Cash,strained; More,funding
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 0 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 8 (8 ordinary + 0 essential)
 FACTUAL_BOUNDARIES: เป็น analysis/scenario only,ไม่ใส่ bull/base/bear probabilities, valuation หรือผลตอบแทนคาดการณ์
 TRANSITION_REASON: Next audience question: หลักฐานที่จะตอบคำถามนี้
 
@@ -442,12 +452,12 @@ CLAIM_IDS: [C10, C11, C12, A01]
 ESTIMATED_SPOKEN_SECONDS: 60 (editorial budget; no audio measured)
 PRESENTER_CUES: เว้นระหว่างหลักฐานสามชุด,จบเป็นคำถามชวนประเมิน ไม่เชิญชวนซื้อหุ้น
 VISUAL_JOB: ให้ผู้ชมจบด้วยเกณฑ์ตรวจหลักฐานสามชุด และข้อสรุปที่แยกสิ่งที่รู้จากสิ่งที่ยังพิสูจน์ไม่ได้
-VISIBLE_COPY_PROPOSAL: ลูกค้า กำไร เงินสด ภาระจ่าย
+VISIBLE_COPY_PROPOSAL: Customers / Profit / Cash / Payment obligations
 VISIBLE_WORD_COUNT: 5
-COUNT_METHOD: ลูกค้า,กำไร,เงินสด,ภาระ,จ่าย
-ESSENTIAL_DATA_LABELS: NONE proposed at Content stage. If Visual uses data, its minimum value/unit/period labels must map to the claims and be justified, not disguised prose.
-ESSENTIAL_LABEL_REASON: NOT_APPLICABLE until a data visual is chosen.
-TOTAL_VISIBLE_WORD_COUNT: 5
+COUNT_METHOD: English words across all scene states; Customers; Profit; Cash; Payment,obligations
+ESSENTIAL_DATA_LABELS: See exact English all-state ledger in 03_VISUAL_PLAN.md and references/visual-scenes.json; 0 excluded essential words
+ESSENTIAL_LABEL_REASON: Each minimal value, metric, unit, period and uncertainty label is justified separately in Visual Plan; no generic prose exemption.
+TOTAL_VISIBLE_WORD_COUNT: 5 (5 ordinary + 0 essential)
 FACTUAL_BOUNDARIES: ไม่ยกระดับยังไม่มีหลักฐานเพียงพอให้กลายเป็นบริษัททำกำไรไม่ได้,ไม่แนะนำซื้อขายเฉพาะบุคคล
 TRANSITION_REASON: Close with evidence tests; no investment instruction.
 
@@ -482,7 +492,7 @@ Anthropic: แอนโทรปิก; Claude: คลอด; IPO: ไอพี�
 
 ---
 
-# Master instructions retained from v1.6
+# Master instructions retained from v1.7
 
 # 01_CONTENT.md — Agent 1: Content and Research
 
@@ -490,7 +500,7 @@ Content defines truth and narration. This file is an executable stage brief plus
 
 ## Shared contract — mandatory for every agent
 
-This is one of five reusable workflow templates, version 1.6, dated 2026-10-01. The master copies live in 00_WORKFLOW, the reusable template library:
+This is one of five reusable workflow templates, version 1.7, dated 2026-10-01. The master copies live in 00_WORKFLOW, the reusable template library:
 https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 
 For a topic, Agent 1 copies all five templates into the chosen GitHub repository and fills their project sections. The five master templates remain reusable. Topic-specific technical files are maintained in GitHub; do not mirror them back into Drive.
@@ -501,6 +511,10 @@ For a topic, Agent 1 copies all five templates into the chosen GitHub repository
 WORKFLOW_FOLDER: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 WORKFLOW_FOLDER_ID: 1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 TEMPLATE_LIBRARY_URL: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+WEB_LANGUAGE: English
+NARRATION_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
 TOPIC_DRIVE_PARENT: https://drive.google.com/drive/folders/153uw4BMBT78VS6TQgGelanIzXPomkzZt
 TOPIC_DRIVE_PARENT_ID: 153uw4BMBT78VS6TQgGelanIzXPomkzZt
 ~~~
@@ -546,6 +560,23 @@ Later agents reuse that exact recorded owner folder and ID; never create new/fin
 - A Windows local agent may execute START.bat/STOP.bat and target-browser checks against the exact delivered archive. A cloud agent with actual Windows access may do the same; a Linux/macOS cloud run cannot certify Windows execution. Record actual Windows evidence and archive hash, not execution location as a proxy for OS.
 - Resume existing verified work when source/package bytes are unchanged. Complete the pending environment-specific checks and affected regressions; do not rebuild/restart the assignment solely because the executor changes. Changed runtime/assets/launchers require a new package identity and independent affected QA.
 - If a Windows check fails after a scoped cloud pass, record a stable finding and route Builder → independent QA retest. Preserve the previous evidence, but invalidate affected readiness/pass claims for that package. Keep owner acceptance separate from technical test evidence.
+
+### Language contract — English canvas, Thai owner editions
+
+~~~yaml
+WEB_LANGUAGE: English
+NARRATION_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
+~~~
+
+- All app-authored audience-facing presentation text is English: first cover, titles, annotations, diagram/chart labels, legends, units expressed in words, permitted attribution and any fallback/error text inside the Webapp. Keep the existing 0–8-word ordinary-copy target and clean-canvas rules.
+- On-page semantic descriptions, alternative text and accessible labels are English as well. Set the presentation document language to en. Browser/OS-owned interface text is outside this app contract.
+- Proper names, authentic brand wordmarks, numerals, currency/unit symbols and standard technical abbreviations retain their correct form. This is not permission to add Thai or mixed-language explanatory text to the canvas.
+- Audit text baked into images/video/screenshots and every reveal/hold/reset/fallback state. Prefer an authentic English-language asset/version or an appropriate truthful crop if source material contains other-language prose. Do not redraw, translate or materially edit an official logo/real image in a way that misrepresents it. An indispensable non-English source inscription requires an explicit recorded owner exception before it is used; do not silently relax English-only.
+- Spoken narration, both reading/research PDFs, final scene rationale and the owner quick-start are Thai by default. English technical terms and exact original source titles/quotations may remain where needed for precision. Editable narration/rationale remain Thai Google Docs.
+- Technical workflow specifications, source code and agent QA/build reports are not audience canvas or owner reading editions; their working language does not determine WEB_LANGUAGE.
+- Record any explicit owner language override and affected artifacts in status. Do not infer language from a topic, folder, execution environment, Thai narration or source publisher.
 
 ### Drive ownership and storage
 
@@ -658,8 +689,9 @@ Existing deployment caches are historical and never required for LOCAL_ZIP. Igno
 - Write a hook, context, explanation, evidence, implications, and a closing takeaway appropriate to the topic. Avoid rigid scene counts or padding to reach a duration.
 - Require an authentic cover image: identify a relevant official logo, original character artwork, or real photograph from a verifiable source. Record source and rights; do not generate/reconstruct the required authentic image. The packaged image must be visible in the initial S01 state and after R reset. The owner may choose a subject; Content defines the relevance and Visual selects the actual asset.
 - Divide narration into stable scene IDs S01, S02, etc. Define S01 as the cover so that R has an unambiguous destination; the cover is part of the story and follows the same clean-canvas and copy rules. One scene has one audience takeaway, but may contain multiple reveal beats. IDs are internal metadata, never visible page numbers.
+- Draft all proposed audience-visible copy and essential data labels in English, including cover text and all reveals. Narration and owner reading editions are Thai; English technical terms are allowed there. Record source-image language issues before handing to Visual.
 - Narration carries explanation and nuance. Visuals carry relationships, scale, mechanisms, or evidence. Do not write slides as paragraphs or repeat the spoken script onscreen.
-- Supply proposed ordinary visible copy targeting 0–8 words per scene, excluding essential chart/data labels. Separate indispensable labels/units/numbers from ordinary copy; justify the minimum data labels needed for truthful reading and do not use the exception for prose. A scene may be entirely text-free. For Thai, count meaningful linguistic words rather than whitespace chunks; document segmentation where ambiguous.
+- Supply proposed ordinary visible copy targeting 0–8 words per scene, excluding essential chart/data labels. Separate indispensable labels/units/numbers from ordinary copy; justify the minimum data labels needed for truthful reading and do not use the exception for prose. A scene may be entirely text-free. If an explicit Thai-canvas override is recorded, count meaningful linguistic words rather than whitespace chunks; document segmentation where ambiguous.
 - Estimate pacing from an actual read-through where possible. A presenter can hold longer than the estimate; avoid assuming narration audio or automatic timing exists.
 - Do not select 3D merely for appearance. State the understanding needed; Agent 3 chooses the appropriate visual medium.
 
@@ -673,7 +705,10 @@ PROJECT_ID: <unique identifier for this fresh assignment>
 PROJECT_TITLE: <title>
 AUDIENCE: <who and prior knowledge>
 OWNER: <provided name or UNSET>
-NARRATION_LANGUAGE: <language>
+NARRATION_LANGUAGE: Thai # explicit owner override must be recorded
+WEB_LANGUAGE: English
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
 TARGET_DURATION: <range and read-through estimate>
 FORMAT: narration-led local web presentation
 DELIVERY_MODE: LOCAL_ZIP
@@ -735,8 +770,8 @@ Write these into the exact OWNER_DRIVE_FOLDER:
 
 | Name | Format | Contents | Responsible |
 |---|---|---|---|
-| 01_KNOWLEDGE_SUMMARY.pdf | PDF | Concise knowledge map, definitions, key facts, uncertainties, source links | Agent 1 |
-| 02_RESEARCH_AND_ANALYSIS.pdf | PDF | Claim/evidence analysis, thesis, counterarguments, limitations, dated references | Agent 1 |
+| 01_KNOWLEDGE_SUMMARY.pdf | PDF | Thai knowledge map, definitions, key facts, uncertainties, source links | Agent 1 |
+| 02_RESEARCH_AND_ANALYSIS.pdf | PDF | Thai claim/evidence analysis, thesis, counterarguments, limitations, dated references | Agent 1 |
 | 03A_NARRATION_SCRIPT | Google Doc | Editable Thai rehearsal-ready script with scene IDs, pacing/cues, pronunciation notes if needed; no code | Agent 1 |
 | 06_SCENE_RATIONALE | Google Doc | Final Thai explanation of the actual built visuals and pointer; created after build | Agent 4 |
 | <PROJECT_ID>-<PACKAGE_VERSION>-local.zip | ZIP | Prebuilt Webapp, START.bat/STOP.bat, runtime helper, packaged authentic cover/assets, manifest and Thai quick-start | Agent 4 |
@@ -787,7 +822,7 @@ This is a status schema, not a sixth master-template deliverable. Agent 1 create
 
 ## Identity and storage
 ~~~yaml
-SCHEMA_VERSION: 7
+SCHEMA_VERSION: 8
 PROJECT: <real topic/project name>
 BOOTSTRAP_MODE: FRESH
 PROJECT_ID: <unique ID for this fresh assignment>
@@ -796,7 +831,7 @@ REPOSITORY: <actual repo URL>
 DEFAULT_BRANCH: <verified repository default branch>
 BRANCH: <actual new normal assignment branch>
 BRANCH_URL: <actual branch URL>
-TEMPLATE_VERSION: "1.6"
+TEMPLATE_VERSION: "1.7"
 WORKFLOW_FOLDER: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 WORKFLOW_FOLDER_ID: 1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 TEMPLATE_LIBRARY_URL: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n

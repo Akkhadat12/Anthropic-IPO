@@ -1,0 +1,7 @@
+TechCrunch Disrupt 2023 – Day 2. Photo: Kimberly White/Getty Images for TechCrunch, © 2023 Getty Images. Licensed CC BY 2.0. Source: https://www.flickr.com/photos/techcrunch/53202070940/ ; license: https://creativecommons.org/licenses/by/2.0/ . Changes: source proportionally resized to a 1200×800 JPEG for offline packaging; displayed with fit-contain, no crop, recoloring, mirroring or generative edits.
+
+Font credits
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic) — Noto Sans — SIL Open Font License 1.1 (bundled license: fonts/NotoSans-OFL.txt).
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/thai) — Noto Sans Thai — SIL Open Font License 1.1 (bundled license: fonts/NotoSansThai-OFL.txt).
+
+Bundled font derivatives: Unicode subsets compressed as WOFF; original glyph design/metrics retained. Original source versions/hashes and derivative hashes are in manifest.json.

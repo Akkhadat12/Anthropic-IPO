@@ -1,0 +1,1540 @@
+[
+  {
+    "id": "S01",
+    "seconds": 30,
+    "claims": [
+      "C02",
+      "C03",
+      "C04",
+      "C05"
+    ],
+    "takeaway": "Identify the company and pose the approved sustainability question without a verdict.",
+    "rationale_th": "เปิดด้วยภาพถ่ายจริงของผู้ร่วมก่อตั้งในงานปี 2023 เพื่อบอกว่าเรากำลังพูดถึงใคร วางภาพซ้ายและคำถามขวา เว้นที่ว่างให้คำถาม ไม่มีภาพสำเร็จหรือล้มเหลวชี้นำคำตอบ",
+    "boundary": "No profit conclusion, IPO celebration, generated mark or endorsement claim.",
+    "objects": [
+      {
+        "id": "authentic-photo",
+        "type": "asset",
+        "beat": 0,
+        "x": 192,
+        "y": 220,
+        "w": 840,
+        "h": 560,
+        "asset": "A01"
+      },
+      {
+        "id": "company",
+        "type": "text",
+        "copy": "Anthropic",
+        "tokens": [
+          "Anthropic"
+        ],
+        "x": 1152,
+        "y": 275,
+        "size": 72,
+        "color": "#202722",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "question-a",
+        "type": "text",
+        "copy": "Fast growth.",
+        "tokens": [
+          "Fast",
+          "growth"
+        ],
+        "x": 1152,
+        "y": 465,
+        "size": 64,
+        "color": "#202722",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "question-b",
+        "type": "text",
+        "copy": "Sustainable profits?",
+        "tokens": [
+          "Sustainable",
+          "profits"
+        ],
+        "x": 1152,
+        "y": 565,
+        "size": 58,
+        "color": "#202722",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "ถ้าบริษัท AI มีรายได้โตเร็วมาก",
+        "job": "Static authentic identity and open question present on first meaningful paint; all narration stays on this hold."
+      }
+    ],
+    "ordinary_count": 5,
+    "excluded_count": 0,
+    "total_count": 5,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "Identify the company and pose the approved sustainability question without a verdict. No profit conclusion, IPO celebration, generated mark or endorsement claim.",
+    "alt_text_en": "Dario Amodei speaking at TechCrunch Disrupt on 20 September 2023.",
+    "fallback_text_en": "Image unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No legible non-English text in approved photo; Anthropic is generic proper-name text",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 1 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  },
+  {
+    "id": "S02",
+    "seconds": 55,
+    "claims": [
+      "C01",
+      "C02",
+      "C10"
+    ],
+    "takeaway": "Submitted draft and unknown offering terms are different evidence states.",
+    "rationale_th": "เอกสารเส้นเดียวหมายถึงการยื่นร่าง ไม่ทำหน้าปลอมของ S-1 ข้อความอีกฝั่งแยกสิ่งที่ยังไม่รู้ โดยไม่ใช้ตราอนุมัติหรือวันเข้าตลาดที่ไม่ได้ยืนยัน",
+    "boundary": "Document outline is conceptual, not the confidential filing; no offer date, ticker, price, SEC approval or claim financial information is absent.",
+    "objects": [
+      {
+        "id": "draft",
+        "type": "rect",
+        "beat": 0,
+        "x": 270,
+        "y": 270,
+        "w": 550,
+        "h": 490,
+        "stroke": "#202722"
+      },
+      {
+        "id": "submitted",
+        "type": "text",
+        "copy": "Draft submitted",
+        "tokens": [
+          "Draft",
+          "submitted"
+        ],
+        "x": 545,
+        "y": 495,
+        "size": 58,
+        "color": "#226B5C",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "center"
+      },
+      {
+        "id": "date",
+        "type": "text",
+        "copy": "1 June 2026",
+        "tokens": [
+          "1",
+          "June",
+          "2026"
+        ],
+        "x": 545,
+        "y": 610,
+        "size": 40,
+        "color": "#576158",
+        "beat": 0,
+        "essential": true,
+        "reason": "Exact date of C01 submission; not a listing date.",
+        "align": "center"
+      },
+      {
+        "id": "unknown",
+        "type": "text",
+        "copy": "Offer price unknown",
+        "tokens": [
+          "Offer",
+          "price",
+          "unknown"
+        ],
+        "x": 1300,
+        "y": 505,
+        "size": 56,
+        "color": "#202722",
+        "beat": 1,
+        "essential": false,
+        "reason": null,
+        "align": "center"
+      },
+      {
+        "id": "terms-boundary",
+        "type": "line",
+        "beat": 1,
+        "x1": 1010,
+        "y1": 660,
+        "x2": 1590,
+        "y2": 660,
+        "stroke": "#576158",
+        "dash": "12 10"
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "เริ่มจากสถานะ IPO ก่อน",
+        "job": "Establish conceptual document, submitted wording and event date."
+      },
+      {
+        "index": 1,
+        "cue": "แต่ยังไม่ได้แปลว่ามีวันขายหุ้น",
+        "job": "Reveal unknown price at right; no connecting arrow or timeline. Hold through Reuters provenance and the public-document research limit."
+      }
+    ],
+    "ordinary_count": 5,
+    "excluded_count": 3,
+    "total_count": 8,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "Submitted draft and unknown offering terms are different evidence states. Document outline is conceptual, not the confidential filing; no offer date, ticker, price, SEC approval or claim financial information is absent.",
+    "alt_text_en": "Diagram: Submitted draft and unknown offering terms are different evidence states.",
+    "fallback_text_en": "Presentation unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No external text-bearing media",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 2 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  },
+  {
+    "id": "S03",
+    "seconds": 75,
+    "claims": [
+      "C02",
+      "C03",
+      "C06"
+    ],
+    "takeaway": "Three figures belong to different periods and definitions; compare labels, never magnitude.",
+    "rationale_th": "ตัวเลขแต่ละชุดอยู่คนละบรรทัดและมีงวดติดกัน ไม่ทำแท่งสูงขึ้นหรือกราฟโต เพื่อไม่ให้คนดูเอาทั้งปี ไตรมาส และ run-rate ไปหารเทียบกัน",
+    "boundary": "No common axis, lengths, circles, line, ratio, annualized Q2, or cross-period growth calculation. Run-rate is not FY revenue or backlog.",
+    "objects": [
+      {
+        "id": "thesis",
+        "type": "text",
+        "copy": "Different periods. Different meanings.",
+        "tokens": [
+          "Different",
+          "periods",
+          "Different",
+          "meanings"
+        ],
+        "x": 192,
+        "y": 130,
+        "size": 60,
+        "color": "#202722",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "period0",
+        "type": "text",
+        "copy": "FY2025",
+        "tokens": [
+          "FY2025"
+        ],
+        "x": 192,
+        "y": 330,
+        "size": 42,
+        "color": "#202722",
+        "beat": 0,
+        "essential": true,
+        "reason": "Exact fiscal/as-of clock attached to this figure.",
+        "align": "left"
+      },
+      {
+        "id": "metric0",
+        "type": "text",
+        "copy": "Full-year revenue",
+        "tokens": [
+          "Full-year",
+          "revenue"
+        ],
+        "x": 192,
+        "y": 403,
+        "size": 40,
+        "color": "#576158",
+        "beat": 0,
+        "essential": true,
+        "reason": "Metric basis and preliminary/annualized qualifier prevent false comparison.",
+        "align": "left"
+      },
+      {
+        "id": "value0",
+        "type": "text",
+        "copy": "Nearly US$4,600 million",
+        "tokens": [
+          "Nearly",
+          "US$4,600",
+          "million"
+        ],
+        "x": 1728,
+        "y": 356,
+        "size": 60,
+        "color": "#202722",
+        "beat": 0,
+        "essential": true,
+        "reason": "Source figure, inequality/approximation, USD million unit; same font size does not encode amount.",
+        "align": "right"
+      },
+      {
+        "id": "period1",
+        "type": "text",
+        "copy": "Q2 2026",
+        "tokens": [
+          "Q2",
+          "2026"
+        ],
+        "x": 192,
+        "y": 575,
+        "size": 42,
+        "color": "#226B5C",
+        "beat": 1,
+        "essential": true,
+        "reason": "Exact fiscal/as-of clock attached to this figure.",
+        "align": "left"
+      },
+      {
+        "id": "metric1",
+        "type": "text",
+        "copy": "Quarterly revenue · preliminary",
+        "tokens": [
+          "Quarterly",
+          "revenue",
+          "preliminary"
+        ],
+        "x": 192,
+        "y": 648,
+        "size": 40,
+        "color": "#576158",
+        "beat": 1,
+        "essential": true,
+        "reason": "Metric basis and preliminary/annualized qualifier prevent false comparison.",
+        "align": "left"
+      },
+      {
+        "id": "value1",
+        "type": "text",
+        "copy": ">US$11,500 million",
+        "tokens": [
+          "US$11,500",
+          "million"
+        ],
+        "x": 1728,
+        "y": 601,
+        "size": 60,
+        "color": "#226B5C",
+        "beat": 1,
+        "essential": true,
+        "reason": "Source figure, inequality/approximation, USD million unit; same font size does not encode amount.",
+        "align": "right"
+      },
+      {
+        "id": "period2",
+        "type": "text",
+        "copy": "End-July 2026",
+        "tokens": [
+          "End-July",
+          "2026"
+        ],
+        "x": 192,
+        "y": 820,
+        "size": 42,
+        "color": "#202722",
+        "beat": 2,
+        "essential": true,
+        "reason": "Exact fiscal/as-of clock attached to this figure.",
+        "align": "left"
+      },
+      {
+        "id": "metric2",
+        "type": "text",
+        "copy": "Annualized run-rate",
+        "tokens": [
+          "Annualized",
+          "run-rate"
+        ],
+        "x": 192,
+        "y": 893,
+        "size": 40,
+        "color": "#576158",
+        "beat": 2,
+        "essential": true,
+        "reason": "Metric basis and preliminary/annualized qualifier prevent false comparison.",
+        "align": "left"
+      },
+      {
+        "id": "value2",
+        "type": "text",
+        "copy": ">US$65,000 million",
+        "tokens": [
+          "US$65,000",
+          "million"
+        ],
+        "x": 1728,
+        "y": 846,
+        "size": 60,
+        "color": "#202722",
+        "beat": 2,
+        "essential": true,
+        "reason": "Source figure, inequality/approximation, USD million unit; same font size does not encode amount.",
+        "align": "right"
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "ชุดแรก Reuters รายงานปลายเดือนกันยายน",
+        "job": "Show first row only with full period/metric/unit tuple, plus title."
+      },
+      {
+        "index": 1,
+        "cue": "ชุดที่สอง Bloomberg รายงาน",
+        "job": "Add second row without changing first; keep preliminary label present from its first frame. Hold through newer reporting-period explanation."
+      },
+      {
+        "index": 2,
+        "cue": "ส่วนชุดที่สาม Reuters รายงาน",
+        "job": "Add third row with annualized definition visible immediately. All three remain stationary through run-rate explanation and warning about division."
+      }
+    ],
+    "ordinary_count": 4,
+    "excluded_count": 19,
+    "total_count": 23,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "Three figures belong to different periods and definitions; compare labels, never magnitude. No common axis, lengths, circles, line, ratio, annualized Q2, or cross-period growth calculation. Run-rate is not FY revenue or backlog.",
+    "alt_text_en": "Diagram: Three figures belong to different periods and definitions; compare labels, never magnitude.",
+    "fallback_text_en": "Presentation unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No external text-bearing media",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 3 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  },
+  {
+    "id": "S04",
+    "seconds": 65,
+    "claims": [
+      "C07",
+      "C08",
+      "C11"
+    ],
+    "takeaway": "Paying repeatedly is a question about work usefulness and retention, not established current revenue mix.",
+    "rationale_th": "ภาพงานเป็นเพียงตัวอย่างกลไก ไม่แสดงลูกค้าจริงหรือสัดส่วนรายได้ การเผยคำถามเรื่องจ่ายซ้ำทำให้หลักฐานผลิตภัณฑ์กับหลักฐานรักษาลูกค้าแยกจากกัน",
+    "boundary": "Schematic only; no measured task success, actual customer logos, retention, pie chart or concentration implied by icon count. February/2025 numbers stay in narration with original periods.",
+    "objects": [
+      {
+        "id": "customer",
+        "type": "text",
+        "copy": "Customers",
+        "tokens": [
+          "Customers"
+        ],
+        "x": 192,
+        "y": 150,
+        "size": 72,
+        "color": "#202722",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "schematic",
+        "type": "text",
+        "copy": "Illustrative",
+        "tokens": [
+          "Illustrative"
+        ],
+        "x": 192,
+        "y": 290,
+        "size": 36,
+        "color": "#576158",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "work",
+        "type": "rect",
+        "beat": 0,
+        "x": 240,
+        "y": 450,
+        "w": 390,
+        "h": 270,
+        "stroke": "#202722"
+      },
+      {
+        "id": "code-left",
+        "type": "path",
+        "beat": 0,
+        "d": "M 365 510 L 315 580 L 365 650",
+        "stroke": "#202722"
+      },
+      {
+        "id": "code-right",
+        "type": "path",
+        "beat": 0,
+        "d": "M 510 510 L 560 580 L 510 650",
+        "stroke": "#202722"
+      },
+      {
+        "id": "work-slash",
+        "type": "line",
+        "beat": 0,
+        "x1": 470,
+        "y1": 515,
+        "x2": 405,
+        "y2": 645,
+        "stroke": "#202722"
+      },
+      {
+        "id": "work-label",
+        "type": "text",
+        "copy": "Work",
+        "tokens": [
+          "Work"
+        ],
+        "x": 435,
+        "y": 775,
+        "size": 48,
+        "color": "#202722",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "center"
+      },
+      {
+        "id": "value-question",
+        "type": "text",
+        "copy": "Worth paying for?",
+        "tokens": [
+          "Worth",
+          "paying",
+          "for"
+        ],
+        "x": 995,
+        "y": 530,
+        "size": 44,
+        "color": "#226B5C",
+        "beat": 1,
+        "essential": false,
+        "reason": null,
+        "align": "center"
+      },
+      {
+        "id": "work-value-arrow",
+        "type": "path",
+        "beat": 1,
+        "d": "M 675 580 L 755 580 M 740 570 L 755 580 L 740 590",
+        "stroke": "#202722",
+        "width": 3
+      },
+      {
+        "id": "repeat-question",
+        "type": "text",
+        "copy": "Pay again?",
+        "tokens": [
+          "Pay",
+          "again"
+        ],
+        "x": 1530,
+        "y": 530,
+        "size": 52,
+        "color": "#226B5C",
+        "beat": 2,
+        "essential": false,
+        "reason": null,
+        "align": "center"
+      },
+      {
+        "id": "value-repeat-arrow",
+        "type": "path",
+        "beat": 2,
+        "d": "M 1225 580 L 1355 580 M 1340 570 L 1355 580 L 1340 590",
+        "stroke": "#202722",
+        "width": 3
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "แล้วลูกค้าจ่ายเงินให้ Claude เพราะอะไร?",
+        "job": "Establish clearly illustrative coding work and customer identity; no measured task outcome."
+      },
+      {
+        "index": 1,
+        "cue": "เครื่องมือที่ช่วยให้งานเสร็จเร็วขึ้น",
+        "job": "Reveal the explicit value-for-money question and first dependency arrow; value is conditional, not measured."
+      },
+      {
+        "index": 2,
+        "cue": "แต่ต้องพิสูจน์ว่าลูกค้าเดิมอยู่ต่อ",
+        "job": "Reveal repeat-payment question and second dependency arrow. Hold through FY2025 concentration and continued-payment question."
+      }
+    ],
+    "ordinary_count": 8,
+    "excluded_count": 0,
+    "total_count": 8,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "Paying repeatedly is a question about work usefulness and retention, not established current revenue mix. Schematic only; no measured task success, actual customer logos, retention, pie chart or concentration implied by icon count. February/2025 numbers stay in narration with original periods.",
+    "alt_text_en": "Diagram: Paying repeatedly is a question about work usefulness and retention, not established current revenue mix.",
+    "fallback_text_en": "Presentation unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No external text-bearing media",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 3 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  },
+  {
+    "id": "S05",
+    "seconds": 65,
+    "claims": [
+      "C02",
+      "C12"
+    ],
+    "takeaway": "Accounting loss contains noncash charges; cash used cannot be computed from these figures alone.",
+    "rationale_th": "วงเล็บแสดงว่ารายการไม่ใช่เงินสดอยู่ภายในขาดทุนตามข่าว แต่ไม่ใช้พื้นที่สัดส่วนและไม่ลบตัวเลขออกเป็นเงินสด เส้นแยกกับคำถามด้านขวาย้ำว่าขาดหลักฐานเชื่อม",
+    "boundary": "No subtraction, $8B residual, waterfall, money disappearance, cash burn result, or current-financial conclusion. Noncash is not irrelevant.",
+    "objects": [
+      {
+        "id": "question",
+        "type": "text",
+        "copy": "Loss is not cash used",
+        "tokens": [
+          "Loss",
+          "is",
+          "not",
+          "cash",
+          "used"
+        ],
+        "x": 192,
+        "y": 135,
+        "size": 64,
+        "color": "#202722",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "period",
+        "type": "text",
+        "copy": "FY2025",
+        "tokens": [
+          "FY2025"
+        ],
+        "x": 192,
+        "y": 285,
+        "size": 40,
+        "color": "#576158",
+        "beat": 0,
+        "essential": true,
+        "reason": "Both accounting figures are historical FY2025, not current results.",
+        "align": "left"
+      },
+      {
+        "id": "losslabel",
+        "type": "text",
+        "copy": "Net loss",
+        "tokens": [
+          "Net",
+          "loss"
+        ],
+        "x": 192,
+        "y": 390,
+        "size": 42,
+        "color": "#202722",
+        "beat": 0,
+        "essential": true,
+        "reason": "Net-loss definition distinguishes from operating loss/cash.",
+        "align": "left"
+      },
+      {
+        "id": "loss",
+        "type": "text",
+        "copy": "About US$42,000 million",
+        "tokens": [
+          "About",
+          "US$42,000",
+          "million"
+        ],
+        "x": 192,
+        "y": 485,
+        "size": 64,
+        "color": "#965038",
+        "beat": 0,
+        "essential": true,
+        "reason": "Reported approximate net loss and unit.",
+        "align": "left"
+      },
+      {
+        "id": "inclusion",
+        "type": "path",
+        "beat": 1,
+        "d": "M 215 560 L 215 765 L 265 765",
+        "stroke": "#965038"
+      },
+      {
+        "id": "noncashlabel",
+        "type": "text",
+        "copy": "Includes non-cash charge",
+        "tokens": [
+          "Includes",
+          "non-cash",
+          "charge"
+        ],
+        "x": 288,
+        "y": 640,
+        "size": 40,
+        "color": "#202722",
+        "beat": 1,
+        "essential": true,
+        "reason": "Inclusion and noncash accounting nature, not deduction into cash.",
+        "align": "left"
+      },
+      {
+        "id": "noncash",
+        "type": "text",
+        "copy": "About US$34,000 million",
+        "tokens": [
+          "About",
+          "US$34,000",
+          "million"
+        ],
+        "x": 288,
+        "y": 735,
+        "size": 56,
+        "color": "#965038",
+        "beat": 1,
+        "essential": true,
+        "reason": "Approximate component amount; typography not proportional area.",
+        "align": "left"
+      },
+      {
+        "id": "separation",
+        "type": "line",
+        "beat": 2,
+        "x1": 1170,
+        "y1": 355,
+        "x2": 1170,
+        "y2": 820,
+        "stroke": "#576158",
+        "dash": "12 10"
+      },
+      {
+        "id": "cashunknown",
+        "type": "text",
+        "copy": "Cash flow ?",
+        "tokens": [
+          "Cash",
+          "flow"
+        ],
+        "x": 1475,
+        "y": 540,
+        "size": 56,
+        "color": "#202722",
+        "beat": 2,
+        "essential": true,
+        "reason": "Identifies the unknown cash-flow endpoint; question means data needed, not zero.",
+        "align": "center"
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "ผลขาดทุนสุทธิปี 2025 ราว 42,000 ล้านดอลลาร์",
+        "job": "Show net loss and historical period; top line warns against cash equivalence."
+      },
+      {
+        "index": 1,
+        "cue": "ตัวเลขนี้รวมค่าใช้จ่ายทางบัญชีที่ไม่ใช่เงินสด",
+        "job": "Add subordinate included noncash line and non-quantitative inclusion bracket, with amount unchanged."
+      },
+      {
+        "index": 2,
+        "cue": "สิ่งที่ต้องการจริง ๆ คืองบกระแสเงินสด",
+        "job": "Reveal separator and open question on cash side. No numeric relation connects the two sides; hold through current-period caution."
+      }
+    ],
+    "ordinary_count": 5,
+    "excluded_count": 14,
+    "total_count": 19,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "Accounting loss contains noncash charges; cash used cannot be computed from these figures alone. No subtraction, $8B residual, waterfall, money disappearance, cash burn result, or current-financial conclusion. Noncash is not irrelevant.",
+    "alt_text_en": "Diagram: Accounting loss contains noncash charges; cash used cannot be computed from these figures alone.",
+    "fallback_text_en": "Presentation unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No external text-bearing media",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 3 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  },
+  {
+    "id": "S06",
+    "seconds": 75,
+    "claims": [
+      "C03",
+      "C04",
+      "C09",
+      "C12"
+    ],
+    "takeaway": "Credit positive preliminary adjusted operating income and keep Q3 outlook separate from cash evidence.",
+    "rationale_th": "สองงวดใช้ตำแหน่งใกล้กันแต่ขอบเส้นต่างกันและติดสถานะชัด ให้ข่าวกำไรด้านบวกอยู่บนภาพจริง ส่วนกำไรสุทธิกับเงินสดยังเป็นคำถาม ไม่ต่อเป็นสะพานตัวเลขที่ยังไม่มี",
+    "boundary": "No numeric profit magnitude, GAAP or cash conclusion. Gross margin >80% and exclusions are narration-only; do not attach them to adjusted operating income.",
+    "objects": [
+      {
+        "id": "question",
+        "type": "text",
+        "copy": "Adjusted profit. Sustainable cash?",
+        "tokens": [
+          "Adjusted",
+          "profit",
+          "Sustainable",
+          "cash"
+        ],
+        "x": 192,
+        "y": 140,
+        "size": 60,
+        "color": "#202722",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "metric",
+        "type": "text",
+        "copy": "Adjusted operating income",
+        "tokens": [
+          "Adjusted",
+          "operating",
+          "income"
+        ],
+        "x": 192,
+        "y": 290,
+        "size": 42,
+        "color": "#202722",
+        "beat": 0,
+        "essential": true,
+        "reason": "Specific profit definition, not generic net profit.",
+        "align": "left"
+      },
+      {
+        "id": "q2-outline",
+        "type": "rect",
+        "beat": 0,
+        "x": 192,
+        "y": 365,
+        "w": 700,
+        "h": 270,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "q2",
+        "type": "text",
+        "copy": "Q2 2026 · Preliminary",
+        "tokens": [
+          "Q2",
+          "2026",
+          "Preliminary"
+        ],
+        "x": 235,
+        "y": 440,
+        "size": 40,
+        "color": "#226B5C",
+        "beat": 0,
+        "essential": true,
+        "reason": "Quarter and preliminary status attached from entry.",
+        "align": "left"
+      },
+      {
+        "id": "positive",
+        "type": "text",
+        "copy": "Positive",
+        "tokens": [
+          "Positive"
+        ],
+        "x": 235,
+        "y": 545,
+        "size": 64,
+        "color": "#226B5C",
+        "beat": 0,
+        "essential": true,
+        "reason": "Reported sign only; no amount inferred.",
+        "align": "left"
+      },
+      {
+        "id": "q3-outline",
+        "type": "rect",
+        "beat": 1,
+        "x": 1028,
+        "y": 365,
+        "w": 700,
+        "h": 270,
+        "stroke": "#576158",
+        "dash": "12 10"
+      },
+      {
+        "id": "q3",
+        "type": "text",
+        "copy": "Q3 2026 · Outlook",
+        "tokens": [
+          "Q3",
+          "2026",
+          "Outlook"
+        ],
+        "x": 1070,
+        "y": 440,
+        "size": 40,
+        "color": "#202722",
+        "beat": 1,
+        "essential": true,
+        "reason": "Outlook status, not achieved second quarter.",
+        "align": "left"
+      },
+      {
+        "id": "q3positive",
+        "type": "text",
+        "copy": "Expected positive",
+        "tokens": [
+          "Expected",
+          "positive"
+        ],
+        "x": 1070,
+        "y": 545,
+        "size": 56,
+        "color": "#226B5C",
+        "beat": 1,
+        "essential": true,
+        "reason": "Expected sign only; count repeated text instance.",
+        "align": "left"
+      },
+      {
+        "id": "unknown",
+        "type": "text",
+        "copy": "Net income ?   Cash flow ?",
+        "tokens": [
+          "Net",
+          "income",
+          "Cash",
+          "flow"
+        ],
+        "x": 960,
+        "y": 810,
+        "size": 48,
+        "color": "#576158",
+        "beat": 2,
+        "essential": true,
+        "reason": "Missing comparable reconciliation endpoints; question marks are not zero.",
+        "align": "center"
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "ไตรมาสสองปี 2026 Anthropic มีกำไร",
+        "job": "Show Q2 preliminary positive operating signal and exact adjusted metric."
+      },
+      {
+        "index": 1,
+        "cue": "คาดว่าจะทำกำไรในนิยามนี้ต่อเนื่องในไตรมาสสาม",
+        "job": "Reveal dashed Q3 outlook at equal size, not a growth bar. Hold through adjustments and gross-margin narration; no gross-margin graphic."
+      },
+      {
+        "index": 2,
+        "cue": "เชื่อมจากกำไรแบบปรับปรุงแล้ว ไปถึงกำไรสุทธิและเงินสดจริง",
+        "job": "Add two explicit unknown reconciliation endpoints below; no arrows or numeric bridge."
+      }
+    ],
+    "ordinary_count": 4,
+    "excluded_count": 16,
+    "total_count": 20,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "Credit positive preliminary adjusted operating income and keep Q3 outlook separate from cash evidence. No numeric profit magnitude, GAAP or cash conclusion. Gross margin >80% and exclusions are narration-only; do not attach them to adjusted operating income.",
+    "alt_text_en": "Diagram: Credit positive preliminary adjusted operating income and keep Q3 outlook separate from cash evidence.",
+    "fallback_text_en": "Presentation unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No external text-bearing media",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 3 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  },
+  {
+    "id": "S07",
+    "seconds": 75,
+    "claims": [
+      "C05",
+      "C13"
+    ],
+    "takeaway": "Reserved capacity can serve demand and creates differently flexible multiyear obligations.",
+    "rationale_th": "เริ่มจากกำลังผลิตก่อนเผยภาระ เพื่อให้เห็นเหตุผลทางธุรกิจ เส้นยาวหมายถึงสัญญาหลายปีเท่านั้น ไม่มีช่องปีหรือความสูงแทนเงินจ่ายจริง",
+    "boundary": "No rack counts, utilization, equal annual payments, total due today, stacked vendor totals or overlap sum. Contract flexibility and 80% detail remain narration-only.",
+    "objects": [
+      {
+        "id": "capacity",
+        "type": "text",
+        "copy": "Reserve capacity",
+        "tokens": [
+          "Reserve",
+          "capacity"
+        ],
+        "x": 192,
+        "y": 165,
+        "size": 60,
+        "color": "#226B5C",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "schematic",
+        "type": "text",
+        "copy": "Illustrative",
+        "tokens": [
+          "Illustrative"
+        ],
+        "x": 192,
+        "y": 280,
+        "size": 36,
+        "color": "#576158",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "capacity-outline",
+        "type": "rect",
+        "beat": 0,
+        "x": 315,
+        "y": 425,
+        "w": 290,
+        "h": 250,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "pin-left0",
+        "type": "line",
+        "beat": 0,
+        "x1": 265,
+        "y1": 460,
+        "x2": 315,
+        "y2": 460,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "pin-right0",
+        "type": "line",
+        "beat": 0,
+        "x1": 605,
+        "y1": 460,
+        "x2": 655,
+        "y2": 460,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "pin-left1",
+        "type": "line",
+        "beat": 0,
+        "x1": 265,
+        "y1": 515,
+        "x2": 315,
+        "y2": 515,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "pin-right1",
+        "type": "line",
+        "beat": 0,
+        "x1": 605,
+        "y1": 515,
+        "x2": 655,
+        "y2": 515,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "pin-left2",
+        "type": "line",
+        "beat": 0,
+        "x1": 265,
+        "y1": 570,
+        "x2": 315,
+        "y2": 570,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "pin-right2",
+        "type": "line",
+        "beat": 0,
+        "x1": 605,
+        "y1": 570,
+        "x2": 655,
+        "y2": 570,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "pin-left3",
+        "type": "line",
+        "beat": 0,
+        "x1": 265,
+        "y1": 625,
+        "x2": 315,
+        "y2": 625,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "pin-right3",
+        "type": "line",
+        "beat": 0,
+        "x1": 605,
+        "y1": 625,
+        "x2": 655,
+        "y2": 625,
+        "stroke": "#226B5C"
+      },
+      {
+        "id": "obligation",
+        "type": "text",
+        "copy": "Future obligations",
+        "tokens": [
+          "Future",
+          "obligations"
+        ],
+        "x": 840,
+        "y": 165,
+        "size": 60,
+        "color": "#965038",
+        "beat": 1,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "metric",
+        "type": "text",
+        "copy": "Commitments",
+        "tokens": [
+          "Commitments"
+        ],
+        "x": 840,
+        "y": 330,
+        "size": 40,
+        "color": "#202722",
+        "beat": 1,
+        "essential": true,
+        "reason": "Contract commitments, not debt, annual expense or cash used.",
+        "align": "left"
+      },
+      {
+        "id": "amount",
+        "type": "text",
+        "copy": "At least US$518,000 million",
+        "tokens": [
+          "At",
+          "least",
+          "US$518,000",
+          "million"
+        ],
+        "x": 840,
+        "y": 435,
+        "size": 56,
+        "color": "#965038",
+        "beat": 1,
+        "essential": true,
+        "reason": "At-least cumulative obligation, USD million unit.",
+        "align": "left"
+      },
+      {
+        "id": "period",
+        "type": "text",
+        "copy": "Roughly a decade",
+        "tokens": [
+          "Roughly",
+          "a",
+          "decade"
+        ],
+        "x": 840,
+        "y": 535,
+        "size": 44,
+        "color": "#576158",
+        "beat": 1,
+        "essential": true,
+        "reason": "Approximate multiyear horizon; not an annual schedule.",
+        "align": "left"
+      },
+      {
+        "id": "span",
+        "type": "path",
+        "beat": 1,
+        "d": "M 840 670 L 840 690 L 1720 690 L 1720 670",
+        "stroke": "#965038"
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "บริษัทก็ต้องมีกำลังประมวลผลเพียงพอ",
+        "job": "Establish one abstract capacity outline and reservation wording; silhouette has no rack/unit-count meaning."
+      },
+      {
+        "index": 1,
+        "cue": "แต่อีกด้านหนึ่งคือภาระที่ต้องรับไว้ก่อน",
+        "job": "Reveal future-obligation group with full metric/unit/horizon. Hold through 80%, variable flexibility, xAI 90-day notice and payment timing; no unsupported visual schedule."
+      }
+    ],
+    "ordinary_count": 5,
+    "excluded_count": 8,
+    "total_count": 13,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "Reserved capacity can serve demand and creates differently flexible multiyear obligations. No rack counts, utilization, equal annual payments, total due today, stacked vendor totals or overlap sum. Contract flexibility and 80% detail remain narration-only.",
+    "alt_text_en": "Diagram: Reserved capacity can serve demand and creates differently flexible multiyear obligations.",
+    "fallback_text_en": "Presentation unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No external text-bearing media",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 2 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  },
+  {
+    "id": "S08",
+    "seconds": 60,
+    "claims": [
+      "A01"
+    ],
+    "takeaway": "Three conditional paths are possible, without probability or forecast.",
+    "rationale_th": "แสดงทีละทางด้วยน้ำหนักเท่ากันและเก็บทั้งสามทางไว้ในตอนท้าย ป้ายสถานการณ์ป้องกันการอ่านเป็นผลที่เกิดแล้ว เส้นขนาดเท่ากันไม่ใช่กราฟหรือโอกาสเกิด",
+    "boundary": "Equal weight and equal durations; no winner, probabilities, numerical forecasts, directional financial scale or measured outcomes. All three narrated possibilities retained.",
+    "objects": [
+      {
+        "id": "scenario",
+        "type": "text",
+        "copy": "Scenarios",
+        "tokens": [
+          "Scenarios"
+        ],
+        "x": 192,
+        "y": 135,
+        "size": 56,
+        "color": "#576158",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "condition0",
+        "type": "line",
+        "beat": 0,
+        "x1": 275,
+        "y1": 335,
+        "x2": 675,
+        "y2": 335,
+        "stroke": "#226B5C",
+        "dash": "12 10"
+      },
+      {
+        "id": "path0",
+        "type": "text",
+        "copy": "Growth outpaces costs",
+        "tokens": [
+          "Growth",
+          "outpaces",
+          "costs"
+        ],
+        "x": 795,
+        "y": 290,
+        "size": 64,
+        "color": "#226B5C",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "condition1",
+        "type": "line",
+        "beat": 1,
+        "x1": 275,
+        "y1": 565,
+        "x2": 675,
+        "y2": 565,
+        "stroke": "#965038",
+        "dash": "12 10"
+      },
+      {
+        "id": "path1",
+        "type": "text",
+        "copy": "Cash strained",
+        "tokens": [
+          "Cash",
+          "strained"
+        ],
+        "x": 795,
+        "y": 520,
+        "size": 64,
+        "color": "#965038",
+        "beat": 1,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "condition2",
+        "type": "line",
+        "beat": 2,
+        "x1": 275,
+        "y1": 795,
+        "x2": 675,
+        "y2": 795,
+        "stroke": "#202722",
+        "dash": "12 10"
+      },
+      {
+        "id": "path2",
+        "type": "text",
+        "copy": "More funding",
+        "tokens": [
+          "More",
+          "funding"
+        ],
+        "x": 795,
+        "y": 750,
+        "size": 64,
+        "color": "#202722",
+        "beat": 2,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "ด้านที่เป็นโอกาสคือ ถ้าลูกค้าใช้ Claude ต่อเนื่อง",
+        "job": "Reveal first conditional branch; dashed rule encodes conditionality only, not length or time."
+      },
+      {
+        "index": 1,
+        "cue": "อีกด้าน ถ้าคู่แข่งกดราคา",
+        "job": "Reveal second equal-weight branch; first remains fully readable."
+      },
+      {
+        "index": 2,
+        "cue": "ยังมีกรณีที่ธุรกิจโตดี แต่ต้องระดมทุนต่อ",
+        "job": "Reveal third equal-weight branch; hold all three while narrator says these are tests, not predictions."
+      }
+    ],
+    "ordinary_count": 8,
+    "excluded_count": 0,
+    "total_count": 8,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "Three conditional paths are possible, without probability or forecast. Equal weight and equal durations; no winner, probabilities, numerical forecasts, directional financial scale or measured outcomes. All three narrated possibilities retained.",
+    "alt_text_en": "Diagram: Three conditional paths are possible, without probability or forecast.",
+    "fallback_text_en": "Presentation unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No external text-bearing media",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 3 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  },
+  {
+    "id": "S09",
+    "seconds": 60,
+    "claims": [
+      "C10",
+      "C11",
+      "C12",
+      "A01"
+    ],
+    "takeaway": "End with three evidence questions, not an investment instruction.",
+    "rationale_th": "สามกลุ่มคำคือหลักฐานที่ต้องตามต่อ กลุ่มกลางวางกำไรกับเงินสดใกล้กันแต่ไม่ต่อเป็นผลคำนวณ ตอนจบค้างไว้เพื่อให้ผู้เล่าสรุปตามหลักฐาน",
+    "boundary": "No investment verdict, no invented evidence, no claim profitability impossible, no fourth metric. R restarts cover; final Space does nothing.",
+    "objects": [
+      {
+        "id": "customers",
+        "type": "text",
+        "copy": "Customers",
+        "tokens": [
+          "Customers"
+        ],
+        "x": 300,
+        "y": 280,
+        "size": 80,
+        "color": "#226B5C",
+        "beat": 0,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "profit",
+        "type": "text",
+        "copy": "Profit",
+        "tokens": [
+          "Profit"
+        ],
+        "x": 770,
+        "y": 470,
+        "size": 72,
+        "color": "#202722",
+        "beat": 1,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "cash",
+        "type": "text",
+        "copy": "Cash",
+        "tokens": [
+          "Cash"
+        ],
+        "x": 1110,
+        "y": 470,
+        "size": 72,
+        "color": "#202722",
+        "beat": 1,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "payment",
+        "type": "text",
+        "copy": "Payment obligations",
+        "tokens": [
+          "Payment",
+          "obligations"
+        ],
+        "x": 1300,
+        "y": 710,
+        "size": 46,
+        "color": "#965038",
+        "beat": 2,
+        "essential": false,
+        "reason": null,
+        "align": "left"
+      },
+      {
+        "id": "question1",
+        "type": "line",
+        "beat": 0,
+        "x1": 300,
+        "y1": 405,
+        "x2": 490,
+        "y2": 405,
+        "stroke": "#226B5C",
+        "dash": "9 10"
+      },
+      {
+        "id": "question2",
+        "type": "line",
+        "beat": 1,
+        "x1": 770,
+        "y1": 595,
+        "x2": 1320,
+        "y2": 595,
+        "stroke": "#202722",
+        "dash": "9 10"
+      },
+      {
+        "id": "question3",
+        "type": "line",
+        "beat": 2,
+        "x1": 1370,
+        "y1": 835,
+        "x2": 1630,
+        "y2": 835,
+        "stroke": "#965038",
+        "dash": "9 10"
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "cue": "ชุดแรกคือคุณภาพของรายได้",
+        "job": "First evidence question at upper left; dashed underline signals unanswered prompt, not a series."
+      },
+      {
+        "index": 1,
+        "cue": "ชุดที่สองคือสะพานจากกำไรไปสู่เงินสด",
+        "job": "Reveal profit and cash together as one evidence question at center, without a calculated connector."
+      },
+      {
+        "index": 2,
+        "cue": "ชุดที่สามคือภาระตามเวลา",
+        "job": "Reveal obligations at lower right; retain all three through conclusion and valuation boundary. Final hold does not loop."
+      }
+    ],
+    "ordinary_count": 5,
+    "excluded_count": 0,
+    "total_count": 5,
+    "on_canvas_language": "English",
+    "narration_language": "Thai",
+    "semantic_description_en": "End with three evidence questions, not an investment instruction. No investment verdict, no invented evidence, no claim profitability impossible, no fourth metric. R restarts cover; final Space does nothing.",
+    "alt_text_en": "Diagram: End with three evidence questions, not an investment instruction.",
+    "fallback_text_en": "Presentation unavailable. Restart the presentation.",
+    "LANGUAGE_AUDIT": {
+      "app_authored_copy": "English only",
+      "semantic_and_alt": "English exact fields supplied",
+      "embedded_media": "No external text-bearing media",
+      "states": "Entry, all reveals, hold, reset and fallback audited; 3 normal endpoints",
+      "exceptions": [],
+      "runtime_verification": "NOT_RUN; Builder/QA AC-024 required"
+    },
+    "fallback_display_policy": "English fallback_text_en is semantic/accessibility status only; no new visible canvas copy. Visual fallback reuses existing scene text and original-photo fallback path; both-image failure is a defect, not an invented substitute."
+  }
+]

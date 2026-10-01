@@ -1,0 +1,55 @@
+{
+  "template": "1.7",
+  "schema": 8,
+  "master_sources": [
+    {
+      "name": "01_CONTENT.md",
+      "master_drive_id": "1XZoFdcWEgnEc9kWTJQvcW2Kepo86GtMk",
+      "master_modified_time": "2026-10-01T05:33:23.390Z",
+      "master_sha256": "eb268f90bc4078e301a46c0aa1bde7dd832fa567fd68a7f4a4cf3a9bda8d6880",
+      "master_exact_suffix": true
+    },
+    {
+      "name": "02_DESIGN_SYSTEM.md",
+      "master_drive_id": "1vLJfo7HlWt7dxKXvGog16qiuEBcDyVUM",
+      "master_modified_time": "2026-10-01T05:33:28.845Z",
+      "master_sha256": "2d2f1d64b9d608631b60e15591563a91f55ed09c881f03a944f968bb49173311",
+      "master_exact_suffix": true
+    },
+    {
+      "name": "03_VISUAL_PLAN.md",
+      "master_drive_id": "19N2YRPW7V7H4PoX-SpOKDoJIu4op_I0V",
+      "master_modified_time": "2026-10-01T05:33:34.541Z",
+      "master_sha256": "542ab770b51a83612b5f8bee5f34fa2235713356668ead05efd49141bfa1c28f",
+      "master_exact_suffix": true
+    },
+    {
+      "name": "04_BUILD.md",
+      "master_drive_id": "1FOwACG3LY-0gPWnytSun1e7bNQ4W9nIw",
+      "master_modified_time": "2026-10-01T05:33:39.868Z",
+      "master_sha256": "84eb594637693c66a1c825c9abbc228a976b39ac39d77ca1a36552af64787db6",
+      "master_exact_suffix": true
+    },
+    {
+      "name": "05_QA.md",
+      "master_drive_id": "1If9isuYY8IJ44AkQ2Ys4BfaXz9D3L0-D",
+      "master_modified_time": "2026-10-01T05:33:44.506Z",
+      "master_sha256": "0a6590ce45421477ba887ebb878d1c28efc947549ec9b6920c32aa677563a245",
+      "master_exact_suffix": true
+    }
+  ],
+  "geometry_changed": false,
+  "visible_copy_changed": false,
+  "narration_changed": false,
+  "language_audit": "English canvas/semantic/alt/fallback; Thai owner documents; no exceptions",
+  "package": "NOT_BUILT",
+  "runtime_QA": "NOT_RUN",
+  "assets_transport_optimization": "Disclosed1200x800 JPEG and OFL WOFF derivatives with verified source/runtime hashes; glyph metrics unchanged",
+  "final_master_suffix_check": {
+    "01_CONTENT.md": true,
+    "02_DESIGN_SYSTEM.md": true,
+    "03_VISUAL_PLAN.md": true,
+    "04_BUILD.md": true,
+    "05_QA.md": true
+  }
+}

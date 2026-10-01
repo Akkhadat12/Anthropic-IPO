@@ -1,0 +1,150 @@
+{
+  "reviewed_at_utc": "2026-10-01T05:15:00Z",
+  "scope": "Asset provenance, copyright-license verification, and local materialization only",
+  "status": "READY_FOR_BUILD_WITH_LICENSED_PHOTO_AND_OFL_FONTS",
+  "important": "Logos remain quarantined; do not include them in build artifacts. Use the licensed photograph alternative.",
+  "logo_guidelines_url": "https://www.anthropic.com/legal/trademark-guidelines",
+  "logo_permission_contact": "marketing@anthropic.com",
+  "photos": [
+    {
+      "path": "assets/photos/dario-amodei-techcrunch-2023.jpg",
+      "sha256": "395a3bc4b0e4ccaae1d3c6cb05e1aa39d10bb235288335551e91a67ab8289a2e",
+      "bytes": 88148,
+      "width": 1200,
+      "height": 800,
+      "mode": "RGB",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg",
+      "commons_revision_url": "https://commons.wikimedia.org/w/index.php?title=File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg&oldid=1261263724",
+      "original_source": "https://www.flickr.com/photos/techcrunch/53202070940/",
+      "title": "TechCrunch Disrupt 2023 – Day 2",
+      "depicted": "Dario Amodei, Anthropic co-founder and CEO, speaking at TechCrunch Disrupt 2023",
+      "photo_date": "2023-09-20",
+      "photographer": "Kimberly White",
+      "provider": "Getty Images for TechCrunch",
+      "copyright_notice": "© 2023 Getty Images",
+      "author_account": "TechCrunch",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "rights_status": "CLEARED_COPYRIGHT_WITH_ATTRIBUTION",
+      "verified_basis": [
+        "Original TechCrunch Flickr page links CC BY 2.0 on 2026-10-01",
+        "Commons page confirms CC BY 2.0 and FlickreviewR 2 review of 2024-05-16",
+        "Original source SHA-1 matches Commons published checksum; derivative checksums are separately recorded"
+      ],
+      "attribution": "TechCrunch Disrupt 2023 – Day 2. Photo: Kimberly White/Getty Images for TechCrunch, © 2023 Getty Images. Licensed CC BY 2.0. Source: https://www.flickr.com/photos/techcrunch/53202070940/ ; license: https://creativecommons.org/licenses/by/2.0/ . Changes: source proportionally resized to a 1200×800 JPEG for offline packaging; displayed with fit-contain, no crop, recoloring, mirroring or generative edits.",
+      "crop_rules": "Use uncropped fit-contain only for this approved plan; proportional resize/JPEG compression disclosed. No mirroring, recoloring or generative edits.",
+      "suggested_focal_point_normalized": [
+        0.49,
+        0.42
+      ],
+      "suggested_portrait_crop_xywh": null,
+      "crop_note": "No crop approved; use full optimized image",
+      "fallback": "Byte-identical optimized runtime photo at independently packaged fallback path; no logo substitution",
+      "credit_placement": "Complete credit in package-root CREDITS.txt or CREDITS.html, linked from README_TH and owner rationale. No recording-canvas UI. All standalone exports must carry or travel with complete credit.",
+      "private_preview": "Copyright license permits local preview with attribution retained; public use also permitted subject to the same conditions. Other rights such as publicity/privacy are not granted by CC license; restrict to accurate independent editorial context.",
+      "id": "A01",
+      "display": {
+        "rect": [
+          192,
+          220,
+          840,
+          560
+        ],
+        "fit": "contain",
+        "crop": null,
+        "preserve_original": true
+      },
+      "fallback_path": "assets/photos/dario-amodei-techcrunch-2023-fallback.jpg",
+      "fallback_sha256": "395a3bc4b0e4ccaae1d3c6cb05e1aa39d10bb235288335551e91a67ab8289a2e",
+      "fallback_id": "A01F",
+      "source_original_sha256": "7491726ca688e37f803008cf0010ec126c8fb4da39ee4a54f13b0cd1c749d822",
+      "source_original_dimensions": [
+        4000,
+        2667
+      ],
+      "source_original_bytes": 1545886,
+      "source_modified": true,
+      "modification": "Proportional resize to 1200x800, JPEG quality86; no crop/recolor/mirror/generative edit",
+      "source_original_sha1": "ebecf7e504dd6cbc843d9065ab1bb700aa5eb56c",
+      "sha1": "5cc5406873d1e72ceae6439d0fbe86219d0b283f"
+    }
+  ],
+  "fonts": [
+    {
+      "path": "assets/fonts/NotoSans-Subset.woff",
+      "sha256": "e96134d989ae22e3a0ff0dbab05440092d1f97dbe963cd456c5c3bacc483db2d",
+      "bytes": 216556,
+      "family": "Noto Sans",
+      "version": "Version 2.015",
+      "source_url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/notosans/NotoSans%5Bwdth%2Cwght%5D.ttf",
+      "source_commit": "9710da1eacb3be272583c3224dcb70f9da6eadbb",
+      "license": "SIL Open Font License 1.1",
+      "license_path": "assets/fonts/NotoSans-OFL.txt",
+      "license_sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "copyright": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)",
+      "axes": {
+        "wght": {
+          "min": 100.0,
+          "default": 400.0,
+          "max": 900.0
+        },
+        "wdth": {
+          "min": 62.5,
+          "default": 100.0,
+          "max": 100.0
+        }
+      },
+      "use_weights": [
+        400,
+        600
+      ],
+      "use_width": 100,
+      "source_modified": true,
+      "rights_status": "CLEARED_OFL",
+      "attribution": "Keep each bundled OFL file with redistributed fonts. No on-slide attribution required.",
+      "id": "F02",
+      "source_original_sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
+      "source_original_bytes": 2049096,
+      "modification": "OFL-permitted Unicode subset and lossless WOFF compression; glyph shapes/metrics and variable weight axis preserved"
+    },
+    {
+      "path": "assets/fonts/NotoSansThai-Subset.woff",
+      "sha256": "0f82314f5dffe90580195bb70f1e45a2e224f786b9d5d18fc71af9203160e5cf",
+      "bytes": 125360,
+      "family": "Noto Sans Thai",
+      "version": "Version 2.002",
+      "source_url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/notosansthai/NotoSansThai%5Bwdth%2Cwght%5D.ttf",
+      "source_commit": "9710da1eacb3be272583c3224dcb70f9da6eadbb",
+      "license": "SIL Open Font License 1.1",
+      "license_path": "assets/fonts/NotoSansThai-OFL.txt",
+      "license_sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "copyright": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/thai)",
+      "axes": {
+        "wght": {
+          "min": 100.0,
+          "default": 400.0,
+          "max": 900.0
+        },
+        "wdth": {
+          "min": 62.5,
+          "default": 100.0,
+          "max": 100.0
+        }
+      },
+      "use_weights": [
+        400,
+        600
+      ],
+      "use_width": 100,
+      "source_modified": true,
+      "rights_status": "CLEARED_OFL",
+      "attribution": "Keep each bundled OFL file with redistributed fonts. No on-slide attribution required.",
+      "id": "F01",
+      "source_original_sha256": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+      "source_original_bytes": 218652,
+      "modification": "OFL-permitted Unicode subset and lossless WOFF compression; glyph shapes/metrics and variable weight axis preserved"
+    }
+  ],
+  "excluded_assets": "Official logo/press-kit binaries and captured research pages are not committed or packaged; no logo-use grant established."
+}

@@ -7,7 +7,13 @@ REPOSITORY: https://github.com/Akkhadat12/Anthropic-IPO
 DEFAULT_BRANCH: main
 BRANCH: project/anthropic-ipo-20261001-0426
 BRANCH_URL: https://github.com/Akkhadat12/Anthropic-IPO/tree/project/anthropic-ipo-20261001-0426
-TEMPLATE_VERSION: "1.6"
+TEMPLATE_VERSION: "1.7"
+WEB_LANGUAGE: English
+DOCUMENT_LANG_ATTRIBUTE: en
+NARRATION_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
+LANGUAGE_EXCEPTIONS: NONE
 WORKFLOW_STATE: WORKFLOW_STATUS.md
 OWNER_DRIVE_FOLDER: https://drive.google.com/drive/folders/1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
 OWNER_DRIVE_FOLDER_ID: 1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
@@ -41,3 +47,8 @@ Content 1.1 is complete and independently reviewed. Read the live state for Desi
 ## Design handoff
 
 Design 1.0 specifies an editorial 16:9 evidence canvas, Thai typography, semantic color, financial encoding boundaries, restrained presenter-triggered motion, an exact-tracking pointer and authentic cover requirements. See 02_DESIGN_SYSTEM.md and the current status. Exact cover asset verification and the scene-by-scene Visual Plan are the next stage; no implementation, package, Windows launch or rendered QA is claimed.
+
+## Visual handoff
+
+Visual 1.0 contains nine English-canvas scene plans and 23 presenter-controlled beat endpoints, paired with unchanged Thai narration. The owner explicitly chose English scene copy. The cover uses a verified CC BY 2.0 photograph of Dario Amodei at TechCrunch Disrupt 2023 with accompanying credits; no restricted official logo ships. The exact scene geometry/copy and offline asset/font hashes are in 03_VISUAL_PLAN.md, references/visual-scenes.json and assets/manifest.json. Static storyboard review is documented under references/visual-review/; it is not browser, package or Windows QA. Follow WORKFLOW_STATUS.md for the live next actor.
+

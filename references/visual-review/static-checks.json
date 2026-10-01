@@ -1,0 +1,78 @@
+{
+  "scope": "Static specification, licensed asset identity and Pillow RAQM endpoint concepts; not browser/runtime/package QA",
+  "on_canvas_language": "English by explicit owner decision",
+  "narration_language": "Thai unchanged",
+  "scene_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09"
+  ],
+  "beats": 23,
+  "editorial_seconds": 560,
+  "copy_counts": {
+    "S01": [
+      5,
+      0,
+      5
+    ],
+    "S02": [
+      5,
+      3,
+      8
+    ],
+    "S03": [
+      4,
+      19,
+      23
+    ],
+    "S04": [
+      8,
+      0,
+      8
+    ],
+    "S05": [
+      5,
+      14,
+      19
+    ],
+    "S06": [
+      4,
+      16,
+      20
+    ],
+    "S07": [
+      5,
+      8,
+      13
+    ],
+    "S08": [
+      8,
+      0,
+      8
+    ],
+    "S09": [
+      5,
+      0,
+      5
+    ]
+  },
+  "all_ordinary_le_8": true,
+  "no_Thai_canvas": true,
+  "sequential_beats": true,
+  "F02_hash": true,
+  "F02_OFL_hash": true,
+  "F01_hash": true,
+  "F01_OFL_hash": true,
+  "missing_English_glyphs": [],
+  "A01_hash": true,
+  "A01F_hash": true,
+  "bounds_violations": [],
+  "browser": "NOT_RUN: Chromium launch failed before page creation with executor socket restriction",
+  "package_Windows": "NOT_RUN: Build has not started"
+}

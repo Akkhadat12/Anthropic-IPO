@@ -1,6 +1,12 @@
 # Anthropic IPO — current Design specification
 
-This filled topic specification is authoritative for Design 1.0. The v1.6 master contract below is retained for reference; its angle-bracket fields are template examples, not unresolved live Design choices. Content and narration remain unchanged. This is a specification-only handoff, not a Visual Plan, rendered concept approval, implementation, or runtime QA.
+This filled topic specification is authoritative for Design 1.1 (Visual-aligned). The v1.7 master contract below is retained for reference; its angle-bracket fields are template examples, not unresolved live Design choices. Content and narration remain unchanged. This is a specification-only handoff, not a Visual Plan, rendered concept approval, implementation, or runtime QA.
+
+## Visual-aligned language and cover amendment
+
+Owner decision on 2026-10-01: English visible scene text, Thai narration (“เป็น english แบบเดิม”). Canvas copy in Visual 1.0 supersedes the earlier Thai proposals; Thai remains correct for spoken script, rationale and owner documents. All in-app semantic/alt/accessibility and fallback/error text is English; HTML lang=en. English words count by whitespace, with punctuation excluded and hyphenated compounds counted once. All-state ordinary/excluded/total ledgers are exact in 03. Minimum visible type is 36px; English line height is 1.25 with full glyph padding. The reference frames are static concepts, not runtime output.
+
+The coordinator accepted the authentic relevant-image alternative: CC BY 2.0 photograph of Dario Amodei at TechCrunch Disrupt, 20 September 2023. Generic Anthropic text is not a reconstructed logo. Use A01 with same-source offline fallback A01F, no crop, no recoloring/mirroring; full creator/copyright/license/change credit accompanies the package via README_TH and rationale. No credits UI is added to the recording canvas. The photo must never be described as a 2026 IPO-event photograph. Official logos remain unlicensed for this handoff and must not ship. Asset/font provenance and binary hashes are in assets/manifest.json. Any earlier pending-cover wording below describes the original Design-only checkpoint and is superseded only by this verified Visual asset selection.
 
 ## Identity and design intent
 
@@ -10,7 +16,13 @@ BRANCH: project/anthropic-ipo-20261001-0426
 CONTENT_INPUT_COMMIT: 501f48afb1bddf098de95fa75f995dbd016d54c5
 CONTENT_HANDOFF_COMMIT: 87d4628046d15a1ab887be99b37eafe3489ce71d
 CONTENT_ARTIFACT_COMMIT: 6384d754ade1c931cae7dba2e62a5aab9234badc
-DESIGN_VERSION: "1.0"
+DESIGN_VERSION: "1.1"
+ON_CANVAS_LANGUAGE: English
+NARRATION_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+DOCUMENT_LANG_ATTRIBUTE: en
+WEB_LANGUAGE: English
 DESIGN_INTENT: "An editorial financial explanation: isolate the evidence, distinguish its clock and definition, then ask what it can prove."
 AUDIENCE: Thai general audience
 CANVAS: 1920x1080
@@ -22,11 +34,11 @@ ACCENT_PRIMARY: "#226B5C deep teal; documented demand or positive operating sign
 ACCENT_SECONDARY: "#965038 clay; obligation, cost boundary or conditional pressure, never automatic failure"
 MUTED: "#576158 secondary evidence; remains fully readable"
 POINTER_COLOR: "#354F91 indigo; presenter attention only, never a data category"
-FONT_PRIMARY: "Noto Sans Thai 400/600 for Thai; Noto Sans 400/600 for Latin and numerals; package both locally with OFL notices"
+FONT_PRIMARY: "Noto Sans 400/600 for English canvas/numerals; Noto Sans Thai 400/600 for Thai owner-document source only; no Thai runtime text; package both with OFL"
 FONT_FALLBACK: "Packaged Noto Sans Thai/Noto Sans first; Tahoma, Arial, sans-serif emergency system fallback only"
 TYPE_SCALE: "display 96; focal number 120; concept 64; data value 56; direct label 40; minimum label 32 logical px"
 MIN_LABEL_SIZE: 32
-LINE_HEIGHT: "Thai 1.45; Latin/numerals 1.25; do not clip glyph bounds"
+LINE_HEIGHT: "English/numerals 1.25; no clipping; Thai owner documents are separate"
 MAX_TEXT_WIDTH: "0.58 of canvas (1114 px) for a focal phrase; 0.80 only for one data group"
 SPACING_SCALE: [12, 24, 36, 48, 72, 96, 144]
 OBJECT_STYLE: "Flat 2D editorial geometry; 3–4 px ink outlines; square ends; no glass, glow, beveled tiles or decorative shadows"
@@ -44,26 +56,26 @@ POINTER_MODE: theme_adaptive_presenter_dot
 POINTER_DIAMETER_CSS_PX: 14
 POINTER_EDGE_OR_HALO: "2 CSS px #F5F1E8 inner edge and 1 CSS px #202722 outer edge; static, no glow"
 COVER_ASSET_STYLE: authentic_original_image_required
-COVER_IMAGE_PLACEMENT: "Dominant authentic mark within x=336..1584,y=216..540; focal question below within x=336..1584,y=612..828"
+COVER_IMAGE_PLACEMENT: "Authentic licensed 2023 founder photo x=192,y=220,w=840,h=560; generic Anthropic name and English question to right x=1152; exact geometry in Visual Plan"
 DELIVERY_MODE: LOCAL_ZIP
 TARGET_OS: Windows
 OFFLINE_AFTER_SETUP: true
 PUBLIC_DEPLOYMENT_REQUIRED: false
-COVER_ASSET_ID: UNSET
-COVER_ASSET_VERIFICATION: PENDING_VISUAL
-FONT_BINARY_AND_RENDER_VERIFICATION: PENDING_VISUAL_BUILD
+COVER_ASSET_ID: A01_DARIO_TECHCRUNCH_2023_CC_BY_2_0
+COVER_ASSET_VERIFICATION: VERIFIED_PHOTO_AND_CREDITS; logos not cleared
+FONT_BINARY_AND_RENDER_VERIFICATION: VERIFIED_BINARY_AND_STATIC_STORYBOARD; browser runtime pending Build
 ~~~
 
 The story is a sequence of questions, not a dashboard. Use open space, direct labels and purposeful juxtaposition. No equal-weight card grid, corporate pitch-deck chrome, hero statistics strip, investment-terminal imitation, speculative stock ticker or repeated title-and-bullets layout. Do not treat Anthropic's visual identity as endorsement of this independent explanation.
 
-## Hierarchy, composition and Thai typography
+## Hierarchy, composition and English typography
 
 - Maintain one dominant subject per beat, approximately 45–65% of the usable width. A supporting item may use at most 25%; the eye should not need to choose between simultaneous animations.
 - Preferred reading direction is left-to-right for relationships and top-to-bottom for qualification. Use the same anchor when a later beat changes evidentiary status. Empty space represents separation, not a quantified distance.
 - A scene may have one focal phrase plus its explanatory object, or a directly labeled data group. Do not add a standing header, footer or source strip. Sources and full caveats remain in the narration, accessible description, source register and eventual rationale; indispensable period/definition caveats stay beside displayed data.
 - No repeated panel boxes around unrelated subjects. A document silhouette is allowed only for an actual document-status concept and must not imitate an inspected confidential filing. It needs a truthful label; don't display fabricated document text.
-- Essential objects stay inside the 5% safe area. Text prefers the larger inner margin. Keep at least 24 logical px around Thai glyph bounds and 48 px between unrelated label groups. Fit the complete line box, including tone marks and descenders; never crop by tight bounding rectangles.
-- Thai text uses meaningful editorial line breaks. Never split a Thai word, tone-mark cluster, fiscal-year label or value-plus-unit. Avoid tracking/letter-spacing and synthetic bold. Default 600 headings, 400 labels; no thin 300, condensed width or Thai italics.
+- Essential objects stay inside the 5% safe area. Text prefers the larger inner margin. Keep at least 24 logical px around glyph bounds and 48 px between unrelated label groups. Fit the complete line box, including tone marks and descenders; never crop by tight bounding rectangles.
+- English canvas text uses meaningful editorial line breaks. Never split a word, fiscal-year label or value-plus-unit. No synthetic bold or condensed width. Thai shaping checks apply to owner documents, not an unapproved canvas override.
 - Numbers use the same aligned numeral style within a scene; decimal and grouping conventions must match source precision. No animated counting through invented intermediate figures. Prefer million-dollar units consistent with narration; if a billion-dollar shorthand is used, Visual must document conversion and prominently supply its unit. Do not show extra significant digits.
 - At 1280×720 the stage scales to two-thirds, so a 32 logical px minimum is about 21 CSS px. Smaller viewports preserve the exact 16:9 layout with neutral paper letterboxing; no portrait reflow, cropping or scrollbar. Mobile is not a separate redesign target for this owner-approved desktop recording artifact. Do not claim small-phone label readability is verified.
 - Backdrop and letterbox share paper color. All text sits on plain paper, never across a busy photo or transparent gradient. Official images may retain their native background if usage rules require it.
@@ -82,7 +94,7 @@ These treatments do not replace words where the financial distinction is necessa
 
 Calculated sRGB contrast on #F5F1E8: ink #202722 13.55:1; muted #576158 5.72:1; teal #226B5C 5.60:1; clay #965038 5.32:1; indigo #354F91 6.95:1. All specified text pairs exceed 4.5:1. These are token calculations, not image-background or browser-render tests. Do not lower essential-text opacity. Do not place teal on clay. Meaningful strokes need >=3:1 against the adjacent fill; if a later asset/background changes, recheck that pair.
 
-Provide a concise semantic scene description for assistive technology: what the visual shows, relevant value/period/definition, uncertainty, and main takeaway. Expose settled scene/beat descriptions without reading each animation frame. No focusable hidden buttons or focus popups on the canvas. Thai narration and the owner reading editions supply longer equivalents. All key distinctions must survive grayscale and reduced motion; no hover-only evidence or pointer-dependent continuation.
+Provide a concise semantic scene description for assistive technology: what the visual shows, relevant value/period/definition, uncertainty, and main takeaway. Expose settled scene/beat descriptions without reading each animation frame. No focusable hidden buttons or focus popups on the canvas. Thai narration and the owner reading editions supply longer equivalents; English in-app semantic descriptions remain separately required. All key distinctions must survive grayscale and reduced motion; no hover-only evidence or pointer-dependent continuation.
 
 Font sources, checked 1 October 2026:
 - Noto Sans Thai: https://github.com/google/fonts/tree/main/ofl/notosansthai
@@ -90,7 +102,7 @@ Font sources, checked 1 October 2026:
 - Noto Sans: https://github.com/google/fonts/tree/main/ofl/notosans
 - Latin license: https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/OFL.txt
 
-Both license files identify SIL OFL 1.1. Visual/Builder must pin actual files and source revision, retain notices, record local paths/hashes and verify Thai/Latin coverage from those binaries. Expected specimen includes “กำไรยั่งยืนหรือยัง”, “เบื้องต้น”, “ไตรมาส”, “เงินสด”, “Q2 2026”, “>11,500” and “80%”. The fallback is recovery, not permission to ship missing fonts. Do not use runtime Google Fonts or other network font requests.
+Both license files identify SIL OFL 1.1. Visual/Builder must pin actual files and source revision, retain notices, record local paths/hashes and verify Thai/Latin coverage from those binaries. Expected English specimen includes “Sustainable profits?”, “Preliminary”, “Cash flow”, “Q2 2026”, “>US$11,500” and “80%”. The fallback is recovery, not permission to ship missing fonts. Do not use runtime Google Fonts or other network font requests.
 
 ## Financial encoding contract
 
@@ -113,7 +125,7 @@ This table gives allowed visual jobs and forbidden implications, not final layou
 
 | Scene | Design job and appropriate family | Locked factual/visual boundary |
 |---|---|---|
-| S01 | Authentic company identity with a single open sustainability question, static on first paint | Official original asset; 7 Thai ordinary words plus at most one wordmark = 8. No triumphant chart or collapse imagery |
+| S01 | Authentic company identity with a single open sustainability question, static on first paint | Verified authentic licensed photo; 4 English question words plus generic company name = 5. No triumphant chart or collapse imagery |
 | S02 | Document-status/evidence boundary; distinguish submitted draft from unknown offer terms | No bell-ringing, live ticker, SEC approval stamp or invented S-1 facsimile. Submission is not completed listing |
 | S03 | Period-and-definition comparison with typographic/date anchors | No common magnitude axis across FY2025, Q2 and run-rate; keep preliminary/as-of visible if figures are shown |
 | S04 | Concrete job-to-payment concept; focus on why repeat use matters | If illustrative work is shown, label it illustrative within ordinary-copy budget. No invented successful-task KPI, real customer identity, current mix or retention |
@@ -129,9 +141,9 @@ A content arrow is optional and rare: maximum two visible at once, 3 logical px,
 
 Retain Content's meaning and stable scene IDs. Ordinary copy includes headings, model/entity labels, explanatory labels, scenario/metaphor markers, image text, wordmarks and attribution across every reveal, including repeated copies. The 0–8 target is scene-wide, not per beat. Content proposals are candidates, not a reason to add another heading. If a schematic needs a label, shorten/replace the proposed headline rather than add it above eight.
 
-Content candidate ordinary counts: S01 7 plus one wordmark; S02 8; S03 5; S04 5; S05 6; S06 7; S07 6; S08 7; S09 5. Thai segmentation is the meaningful linguistic segmentation recorded in 01_CONTENT.md. English multiword labels count as individual words. Punctuation is not a word; a mathematical relationship still needs to be inventoried as a visible mark. Source attribution counts as ordinary unless it is an indispensable data identity, with a specific reason.
+Content candidate ordinary counts: S01 5; S02 5; S03 4; S04 8; S05 5; S06 4; S07 5; S08 8; S09 5 (English Visual 1.0). English tokenization is recorded in 03_VISUAL_PLAN.md; no Thai canvas-language exception exists. English multiword labels count as individual words. Punctuation is not a word; a mathematical relationship still needs to be inventoried as a visible mark. Source attribution counts as ordinary unless it is an indispensable data identity, with a specific reason.
 
-In 03_VISUAL_PLAN.md enumerate exact ordinary copy, segmented tokens, count, every excluded label with necessity, excluded count and total. Preserve signs such as “>”, “เกือบ”, “ราว”, period labels and uncertainty. A numeric visual without these qualifications fails truthfulness even if it is sparse. Prefer fewer displayed figures with richer narration to a crowded chart. Do not shrink text, rasterize prose, cycle synonyms or hide crucial caveats in tooltips to pass the budget.
+In 03_VISUAL_PLAN.md enumerate exact ordinary copy, segmented tokens, count, every excluded label with necessity, excluded count and total. Preserve signs such as “>”, “Nearly”, “About”, period labels and uncertainty. A numeric visual without these qualifications fails truthfulness even if it is sparse. Prefer fewer displayed figures with richer narration to a crowded chart. Do not shrink text, rasterize prose, cycle synonyms or hide crucial caveats in tooltips to pass the budget.
 
 ## Motion grammar and stable-state behavior
 
@@ -172,7 +184,7 @@ The paper and ink edges preserve a contour over both dark and light portions of 
 
 Preferred asset is one official Anthropic or Claude wordmark/mark with verifiable original file provenance, not a recreated text logo. Use exactly one brand wordmark if keeping the Content question. Fit-contain with original aspect ratio; no stretching, recoloring, masking, 3D extrusion or redesign. Asset clear-space requirements take priority over suggested placement; adjust surrounding geometry, not the trademark.
 
-The logo or authentic relevant company image is the dominant identifying object, centered in the upper-middle region. The question sits below with generous negative space, at most two Thai lines. No faux IPO badge, ticker, dollar pile, AI robot stock art, fabricated launch scene or chart-shaped flourish. The cover must be present on initial state and R reset, normal and reduced-motion.
+The chosen authentic founder photograph is the dominant identifying object on the left, and the English question sits to its right in two short lines. Use the exact Visual Plan geometry. The old upper-middle logo placement is superseded by this narrow licensed-image adaptation. No faux IPO badge, ticker, dollar pile, AI robot stock art, fabricated launch scene or chart-shaped flourish. The cover must be present on initial state and R reset, normal and reduced-motion.
 
 Visual must resolve:
 1. Exact official source page and direct original asset URL, retrieval date, rights/usage basis and any attribution constraints.
@@ -200,7 +212,7 @@ These are targets, not observed results:
 | DS01 | Narration-first / clean canvas | Editorial evidence composition, no dashboards or persistent UI | AC-002, AC-005, AC-007 |
 | DS02 | Truthful metrics | Separate period/definition groups, no cross-basis magnitude chart | C02/C03/C06; AC-001 |
 | DS03 | Accounting integrity | No computed loss-to-cash waterfall; preliminary/outlook distinction retained | C02/C03/C04/C09/C12 |
-| DS04 | Thai readability | Locally packaged Noto pair, minimum 32 logical px, generous diacritic space | Font sources checked; binary/render test pending |
+| DS04 | English canvas readability | Locally packaged Noto pair, minimum 32 logical px, generous diacritic space | Font sources checked; binary/render test pending |
 | DS05 | Semantic color | Ink/teal/clay with labels and line styles; pointer-only indigo | Contrast calculations above; grayscale/image tests pending |
 | DS06 | Stable narration | Every reveal settles/holds; no auto-time or looping | AC-008..AC-012 pending runtime |
 | DS07 | Authentic opening | One original official asset; no generated reconstruction | AC-013/AC-023 pending Visual asset verification |
@@ -210,7 +222,7 @@ These are targets, not observed results:
 | DS11 | Desktop canvas | Fixed 16:9 fitted stage, no mobile reflow | Owner-approved artifact scope; AC-004 |
 | DS12 | Local delivery | Offline assets; no hosting requirement or external font loads | Builder package identity and AC-017/021 pending |
 
-No owner rule exception is introduced. The presenter dot is the existing v1.6 narrow clean-canvas exception.
+No owner rule exception is introduced. The presenter dot is the existing v1.7 narrow clean-canvas exception.
 
 ## Design gate review
 
@@ -234,7 +246,7 @@ Next actor: Agent 3 — Visual Director. Read README and current WORKFLOW_STATUS
 
 ---
 
-# Master instructions retained from v1.6
+# Master instructions retained from v1.7
 
 # 02_DESIGN_SYSTEM.md — Agent 2: Design
 
@@ -242,7 +254,7 @@ Design defines how the presentation behaves. Translate narration into a consiste
 
 ## Shared contract — mandatory for every agent
 
-This is one of five reusable workflow templates, version 1.6, dated 2026-10-01. The master copies live in 00_WORKFLOW, the reusable template library:
+This is one of five reusable workflow templates, version 1.7, dated 2026-10-01. The master copies live in 00_WORKFLOW, the reusable template library:
 https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 
 For a topic, Agent 1 copies all five templates into the chosen GitHub repository and fills their project sections. The five master templates remain reusable. Topic-specific technical files are maintained in GitHub; do not mirror them back into Drive.
@@ -253,6 +265,10 @@ For a topic, Agent 1 copies all five templates into the chosen GitHub repository
 WORKFLOW_FOLDER: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 WORKFLOW_FOLDER_ID: 1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 TEMPLATE_LIBRARY_URL: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+WEB_LANGUAGE: English
+NARRATION_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
 TOPIC_DRIVE_PARENT: https://drive.google.com/drive/folders/153uw4BMBT78VS6TQgGelanIzXPomkzZt
 TOPIC_DRIVE_PARENT_ID: 153uw4BMBT78VS6TQgGelanIzXPomkzZt
 ~~~
@@ -298,6 +314,23 @@ Later agents reuse that exact recorded owner folder and ID; never create new/fin
 - A Windows local agent may execute START.bat/STOP.bat and target-browser checks against the exact delivered archive. A cloud agent with actual Windows access may do the same; a Linux/macOS cloud run cannot certify Windows execution. Record actual Windows evidence and archive hash, not execution location as a proxy for OS.
 - Resume existing verified work when source/package bytes are unchanged. Complete the pending environment-specific checks and affected regressions; do not rebuild/restart the assignment solely because the executor changes. Changed runtime/assets/launchers require a new package identity and independent affected QA.
 - If a Windows check fails after a scoped cloud pass, record a stable finding and route Builder → independent QA retest. Preserve the previous evidence, but invalidate affected readiness/pass claims for that package. Keep owner acceptance separate from technical test evidence.
+
+### Language contract — English canvas, Thai owner editions
+
+~~~yaml
+WEB_LANGUAGE: English
+NARRATION_LANGUAGE: Thai
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
+~~~
+
+- All app-authored audience-facing presentation text is English: first cover, titles, annotations, diagram/chart labels, legends, units expressed in words, permitted attribution and any fallback/error text inside the Webapp. Keep the existing 0–8-word ordinary-copy target and clean-canvas rules.
+- On-page semantic descriptions, alternative text and accessible labels are English as well. Set the presentation document language to en. Browser/OS-owned interface text is outside this app contract.
+- Proper names, authentic brand wordmarks, numerals, currency/unit symbols and standard technical abbreviations retain their correct form. This is not permission to add Thai or mixed-language explanatory text to the canvas.
+- Audit text baked into images/video/screenshots and every reveal/hold/reset/fallback state. Prefer an authentic English-language asset/version or an appropriate truthful crop if source material contains other-language prose. Do not redraw, translate or materially edit an official logo/real image in a way that misrepresents it. An indispensable non-English source inscription requires an explicit recorded owner exception before it is used; do not silently relax English-only.
+- Spoken narration, both reading/research PDFs, final scene rationale and the owner quick-start are Thai by default. English technical terms and exact original source titles/quotations may remain where needed for precision. Editable narration/rationale remain Thai Google Docs.
+- Technical workflow specifications, source code and agent QA/build reports are not audience canvas or owner reading editions; their working language does not determine WEB_LANGUAGE.
+- Record any explicit owner language override and affected artifacts in status. Do not infer language from a topic, folder, execution environment, Thai narration or source publisher.
 
 ### Drive ownership and storage
 
@@ -374,10 +407,11 @@ Output: a filled 02_DESIGN_SYSTEM.md on the same GitHub branch. No new Drive fol
 
 ## Non-negotiable presentation rules
 
+0. **Language:** all audience-facing Webapp copy and semantic/accessibility descriptions are English. Thai is for narration and owner documents. Enforce the shared media-text/proper-name rules; do not infer canvas language from narration.
 1. **Narration-first:** the owner's voice carries the explanation. Visual timing follows the spoken idea and the presenter can settle, hold, pause narration during a stable hold, return to cover, and advance. Do not force an automatic slideshow to outrun narration.
 2. **Visual-first:** the scene's primary meaning comes from composition, objects, relationships, scale, or evidence. No document-like pages, paragraph slides, bullet stacks, or repeating the script onscreen.
 3. **16:9 desktop recording is the primary target:** use a 16:9 logical canvas, default reference size 1920×1080. Fit it into other browser sizes with neutral letterboxing; do not stretch, crop essential content, or reflow into a vertical slide.
-4. **Default visible copy target: 0–8 words per scene, excluding essential chart/data labels.** Zero is valid. Count ordinary headings, annotations, image text, logo wordmarks, and attribution across all reveals; do not evade the target by cycling through prose. Repeated copies count again. Only indispensable data labels, axes/units, values, and legends needed to read a truthful chart/data visual may be excluded; record their exact copy and necessity separately. The exception is not a license for dense labels or prose. Numeric values each consume one item when included in ordinary copy; attached units remain one item if presented as one label. Thai uses meaningful linguistic word segmentation, not whitespace-only counting. Record ordinary, excluded, and total counts in 03_VISUAL_PLAN.md.
+4. **Default visible copy target: 0–8 words per scene, excluding essential chart/data labels.** Zero is valid. Count ordinary headings, annotations, image text, logo wordmarks, and attribution across all reveals; do not evade the target by cycling through prose. Repeated copies count again. Only indispensable data labels, axes/units, values, and legends needed to read a truthful chart/data visual may be excluded; record their exact copy and necessity separately. The exception is not a license for dense labels or prose. Numeric values each consume one item when included in ordinary copy; attached units remain one item if presented as one label. An explicitly approved Thai-canvas override uses meaningful linguistic word segmentation, not whitespace-only counting. Record ordinary, excluded, and total counts in 03_VISUAL_PLAN.md.
 5. **Clean canvas:** no visible control panel, navigation bar, page/scene numbers, progress bar/dots, Next/Back buttons, UI/navigation arrows, playback bar, persistent menu, keyboard-hint overlay, persistent help/source panel, header/footer, watermark, developer overlay, or competing UI chrome. Explanatory content arrows are allowed for cause/effect, flow, dependencies, transfer, sequence or direction of change: give each a clear semantic job, use the minimum needed, keep it subordinate to the focal subject, and never style it as a navigation control or decorative clutter.
 The only clean-canvas exception is the required presenter pointer described below. It is not navigation, explanatory content, visible text or a developer overlay; do not add other UI under this exception.
 
@@ -395,6 +429,8 @@ Do not solve the ordinary-copy target by making labels tiny or moving readable t
 PROJECT_ID: <from status>
 CONTENT_INPUT_COMMIT: <verified SHA>
 DESIGN_VERSION: <version>
+WEB_LANGUAGE: English
+DOCUMENT_LANG_ATTRIBUTE: en
 DESIGN_INTENT: <how the visual language serves the thesis>
 CANVAS: 1920x1080
 ASPECT_RATIO: "16:9"
@@ -404,7 +440,7 @@ FOREGROUND: <hex token and use>
 ACCENT_PRIMARY: <hex token and semantic meaning>
 ACCENT_SECONDARY: <hex token and semantic meaning>
 MUTED: <hex token>
-FONT_PRIMARY: <font family, Thai/Latin coverage, license/source>
+FONT_PRIMARY: <font family with Latin coverage for English canvas, license/source; Thai coverage only if explicitly overridden>
 FONT_FALLBACK: <offline-safe fallback>
 TYPE_SCALE: <sizes on reference canvas; use as tokens>
 MIN_LABEL_SIZE: <default 32 logical px; justify topic exception>
@@ -434,7 +470,7 @@ Defaults are starting points, not performance claims or requirements to animate 
 
 ### Hierarchy and composition
 
-Describe dominant focal size, supporting object limits, placement, contrast, safe-area boundaries, and how an eye should move through a reveal. Make Thai glyphs/diacritics, numerals, and mixed-language text legible. Avoid brand-like decorative chrome.
+Describe dominant focal size, supporting object limits, placement, contrast, safe-area boundaries, and how an eye should move through a reveal. Make English labels, numerals and symbols legible. Thai glyph/diacritic checks apply to owner editions or an explicitly recorded canvas-language exception. Avoid brand-like decorative chrome.
 
 ### Medium decision rules
 
@@ -503,6 +539,5 @@ The non-negotiable rules stay in force. If an owner explicitly changes a rule, r
 - Forbidden UI/navigation arrows remain absent; any explanatory content arrows have a minimal documented semantic role and cannot resemble controls.
 - Publish artifacts then status: STAGE=READY_FOR_VISUAL; NEXT_ACTOR=Agent 3 — Visual Director.
 - NEXT_ACTION: “Read 01_CONTENT.md, 02_DESIGN_SYSTEM.md, 04_BUILD.md and 05_QA.md. Fill 03_VISUAL_PLAN.md scene by scene, including assets, reveal/settle/hold states, word counts, and factual boundaries. Do not build yet.”
-
 
 
