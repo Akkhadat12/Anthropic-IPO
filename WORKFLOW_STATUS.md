@@ -25,17 +25,17 @@ DRIVE_FOLDER_VERIFIED_AT: 2026-10-01T04:54:39Z
 
 ## Current workflow
 ```yaml
-STAGE: READY_FOR_DESIGN
+STAGE: READY_FOR_VISUAL
 BLOCKED_FROM_STAGE: null
-ACTIVE_ACTOR: Agent 1 Content/Research completed
-UPDATED_AT: 2026-10-01T04:57:00Z
-ARTIFACT_COMMIT: 6384d754ade1c931cae7dba2e62a5aab9234badc
+ACTIVE_ACTOR: Agent 2 Design completed
+UPDATED_AT: 2026-10-01T05:07:00Z
+ARTIFACT_COMMIT: aa74da74a0103a59ca7f2d53b2bc180191b55ed2
 CONTENT_SOURCE_COMMIT: 501f48afb1bddf098de95fa75f995dbd016d54c5
-LAST_VERIFIED_COMMIT: 6384d754ade1c931cae7dba2e62a5aab9234badc
-LAST_VERIFIED_SCOPE: Content source, claim register, full narration, published owner documents, document QA and artifact identities
-NEXT_ACTOR: Agent 2 Design
-NEXT_ACTION: "Read README.md, WORKFLOW_STATUS.md, 01_CONTENT.md, and 05_QA.md. Fill 02_DESIGN_SYSTEM.md for this topic, preserving the narration-first, visual-first, 16:9, clean-canvas and LOCAL_ZIP constraints. Do not build yet. Keep all nine scene IDs and factual boundaries. After the Design gate, the coordinator may dispatch Visual automatically."
-REQUIRED_INPUTS: [01_CONTENT.md, 02_DESIGN_SYSTEM.md, 05_QA.md, references/claim-register.md, references/source-register.md]
+LAST_VERIFIED_COMMIT: aa74da74a0103a59ca7f2d53b2bc180191b55ed2
+LAST_VERIFIED_SCOPE: Design 1.0 specification remote readback, upstream claim and scene alignment, token contrast calculations; not rendered or runtime QA
+NEXT_ACTOR: Agent 3 Visual Director
+NEXT_ACTION: "Read README.md and WORKFLOW_STATUS.md first, then all REQUIRED_INPUTS. Fill 03_VISUAL_PLAN.md for all nine scenes with exact assets, narration cues, geometry, entry/reveal/settle/hold/exit states, ordinary/excluded/total copy counts and factual boundaries. Verify authentic S01 asset provenance, rights, offline path and fallback before READY_FOR_BUILD. Do not build or change claims."
+REQUIRED_INPUTS: [01_CONTENT.md, 02_DESIGN_SYSTEM.md, 03_VISUAL_PLAN.md, 04_BUILD.md, 05_QA.md, references/claim-register.md, references/source-register.md]
 OPEN_FINDINGS: []
 QA_FINDINGS_REPORT_PATH: UNSET
 BLOCKERS: []
@@ -43,6 +43,9 @@ OWNER_ACTION_REQUIRED: null
 CONTENT_REVIEW_RESULT: PASS with limitations recorded
 RESEARCH_AS_OF: 2026-10-01T04:24:00Z
 CONTENT_VERSION: "1.1"
+DESIGN_VERSION: "1.0"
+DESIGN_REVIEW_RESULT: PASS_SPECIFICATION
+DESIGN_REVIEW_EVIDENCE: 02_DESIGN_SYSTEM.md#design-gate-review
 OWNER_DECISIONS:
   SCOPE: Approved Thai general audience; demand, financial definitions, compute obligations and evidence tests
   THESIS: "Approved question: ก่อน IPO: Anthropic โตแรง แต่กำไรยั่งยืนหรือยัง?"
@@ -62,10 +65,10 @@ The owner approved the proposed thesis, audience and duration with “ดีค�
 ```yaml
 EXECUTION_MODE: CLOUD
 EXECUTION_OS: Linux
-EXECUTION_RUNTIME: Bundled Python 3.12.14 for document work; authenticated connectors for repository and Drive
-EXECUTION_BROWSER: Cloud Chrome for read-only financial research
-EXECUTION_VERIFIED_AT: 2026-10-01T04:55:33Z
-EXECUTION_EVIDENCE: qa/owner-document-qa.json
+EXECUTION_RUNTIME: Authenticated GitHub connector for Design specification authoring; prior Content document runtime retained in its evidence
+EXECUTION_BROWSER: NOT_USED for Design rendering; font source and license pages read through web tools
+EXECUTION_VERIFIED_AT: 2026-10-01T05:07:00Z
+EXECUTION_EVIDENCE: 02_DESIGN_SYSTEM.md#design-gate-review
 REQUIRED_SERVICES_FOR_NEXT_ACTION: [GitHub]
 SERVICE_CAPABILITIES:
   GitHub:
@@ -94,7 +97,7 @@ WINDOWS_VERIFICATION_PACKAGE_SHA256: NOT_VERIFIED
 | references/claim-register.md | Content/Research | READY | 501f48afb1bddf098de95fa75f995dbd016d54c5 | Claim types, periods, denominators, limits and visual boundaries |
 | references/narration.json | Content/Research | READY | 501f48afb1bddf098de95fa75f995dbd016d54c5 | Full nine-scene narration mirrored from canonical Content |
 | references/reading-pack.json | Content/Research | READY | 501f48afb1bddf098de95fa75f995dbd016d54c5 | Canonical reading-edition inputs |
-| 02_DESIGN_SYSTEM.md | Design | TEMPLATE_READY | Seed v1.6 | No topic Design performed |
+| 02_DESIGN_SYSTEM.md | Design | READY | aa74da74a0103a59ca7f2d53b2bc180191b55ed2 | Design 1.0 tokens, hierarchy, truthful encoding, motion, keys, pointer, authentic cover contract and specification gate review |
 | 03_VISUAL_PLAN.md | Visual | TEMPLATE_READY | Seed v1.6 | No topic Visual work performed |
 | 04_BUILD.md | Builder | TEMPLATE_READY | Seed v1.6 | No build performed |
 | 05_QA.md | Independent QA | CRITERIA_READY | Seed v1.6 | Package acceptance criteria only |
@@ -168,8 +171,8 @@ Content/document checks are not runtime QA. No package, launcher, Windows or own
 
 ## Current handoff
 ```yaml
-LAST_HANDOFF_ARTIFACT_COMMIT: 6384d754ade1c931cae7dba2e62a5aab9234badc
-LAST_HANDOFF_EVIDENCE: [references/content-review.md, qa/owner-document-qa.json, references/owner-artifacts.json]
+LAST_HANDOFF_ARTIFACT_COMMIT: aa74da74a0103a59ca7f2d53b2bc180191b55ed2
+LAST_HANDOFF_EVIDENCE: [02_DESIGN_SYSTEM.md, references/content-review.md, qa/owner-document-qa.json, references/owner-artifacts.json]
 BOOTSTRAP_NOTES_PATH: references/bootstrap-notes.md
 WORKFLOW_HISTORY_PATH: references/workflow-history.md
 ```
@@ -182,3 +185,9 @@ WORKFLOW_HISTORY_PATH: references/workflow-history.md
 - Current revenue mix, retention, full profit-to-cash reconciliation and complete payment maturities remain unknown in reviewed sources
 - Multiyear commitments are not all debt due now; do not sum overlapping announcements
 - Scenarios are conditional analysis, with no invented probabilities or investment recommendations
+
+## Design handoff scope
+
+Design 1.0 passes specification review only. The remote artifact was read back at aa74da74a0103a59ca7f2d53b2bc180191b55ed2. Contrast tokens were calculated; no scene rendering, logo rights, packaged font binary, runtime, package, Windows launcher or owner rehearsal test was performed. The owner editions and source claims were not modified; their previously verified identities and timestamps above are retained rather than represented as newly reverified.
+
+Visual must resolve the exact authentic cover asset and font files, finalize geometry and scene-wide copy ledgers, and record every beat endpoint before READY_FOR_BUILD. These are downstream stage tasks, not completed Design evidence. The owner folder, LOCAL_ZIP scope, nine scenes and 560-second editorial estimate remain unchanged. No current Design blocker or essential owner decision remains.
