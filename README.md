@@ -25,3 +25,11 @@ TOPIC_DRIVE_PARENT: https://drive.google.com/drive/folders/153uw4BMBT78VS6TQgGel
 Historical main files and compatible prior web infrastructure are preserved unchanged under legacy/previous-assignment/. They are NOT current content, implementation, package, or QA evidence. Main and research-ipo-financials-models-2026 remain untouched. See references/bootstrap-notes.md.
 
 The owner supplies only this branch URL and “Continue this project from the current workflow state.” A continuation must never create a new branch or owner folder. Narration is Thai, presenter-controlled, with S01 authentic cover and clean 16:9 canvas. Final package and rationale are later Builder deliverables.
+
+## Current owner editions
+
+- [01_KNOWLEDGE_SUMMARY.pdf](https://drive.google.com/file/d/1qaeJGOwXOq-CTbdIa-tjQ_GcQd-oadOg/view?usp=drivesdk) — READY; source 501f48afb1bddf098de95fa75f995dbd016d54c5
+- [02_RESEARCH_AND_ANALYSIS.pdf](https://drive.google.com/file/d/1mCZXIh2qVqJH5Rwhwe03W9D-nULi9ahH/view?usp=drivesdk) — READY; source 501f48afb1bddf098de95fa75f995dbd016d54c5
+- [03A_NARRATION_SCRIPT](https://docs.google.com/document/d/1F9VdhHxINHjam8jgCi8795jbBj07Yqn2q_wmGIQaWGk/edit?usp=drivesdk) — IN_PROGRESS_NATIVE_VISUAL_QA; source 501f48afb1bddf098de95fa75f995dbd016d54c5
+
+Detailed identities and QA are in references/owner-artifacts.json. Scene rationale and runnable ZIP remain PENDING_BUILD.
