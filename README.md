@@ -12,7 +12,7 @@ WORKFLOW_STATE: WORKFLOW_STATUS.md
 OWNER_DRIVE_FOLDER: https://drive.google.com/drive/folders/1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
 OWNER_DRIVE_FOLDER_ID: 1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
 
-Read WORKFLOW_STATUS.md immediately after this file. This is the approved general-Thai-audience 8–10 minute Content assignment, not either prior website project. Follow NEXT_ACTOR and REQUIRED_INPUTS. The live specifications are 01_CONTENT.md through 05_QA.md. GitHub is canonical. No Design or Build has begun.
+Read WORKFLOW_STATUS.md immediately after this file. This is the approved general-Thai-audience 8–10 minute Content assignment, not either prior website project. Follow NEXT_ACTOR and REQUIRED_INPUTS. The live specifications are 01_CONTENT.md through 05_QA.md. GitHub is canonical. Consult current WORKFLOW_STATUS.md for the active stage; Build has not begun.
 
 DELIVERY_MODE: LOCAL_ZIP
 TARGET_OS: Windows
@@ -36,4 +36,8 @@ Detailed identities and QA are in references/owner-artifacts.json. Scene rationa
 
 ## Content handoff
 
-Content 1.1 is complete and independently reviewed. Read the live state for Design instructions. Owner narration is 9 scenes with an editorial 9:20 budget; actual read-through is NOT_RUN. No Design/Visual/Build or package QA has been claimed. Owner authorized automatic sequential stage continuation for this project.
+Content 1.1 is complete and independently reviewed. Read the live state for Design instructions. Owner narration is 9 scenes with an editorial 9:20 budget; actual read-through is NOT_RUN. Content/document verification does not establish Visual/Build or package QA. Owner authorized automatic sequential stage continuation for this project.
+
+## Design handoff
+
+Design 1.0 specifies an editorial 16:9 evidence canvas, Thai typography, semantic color, financial encoding boundaries, restrained presenter-triggered motion, an exact-tracking pointer and authentic cover requirements. See 02_DESIGN_SYSTEM.md and the current status. Exact cover asset verification and the scene-by-scene Visual Plan are the next stage; no implementation, package, Windows launch or rendered QA is claimed.
