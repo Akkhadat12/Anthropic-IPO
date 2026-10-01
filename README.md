@@ -9,8 +9,8 @@ BRANCH: project/anthropic-ipo-20261001-0426
 BRANCH_URL: https://github.com/Akkhadat12/Anthropic-IPO/tree/project/anthropic-ipo-20261001-0426
 TEMPLATE_VERSION: "1.6"
 WORKFLOW_STATE: WORKFLOW_STATUS.md
-OWNER_DRIVE_FOLDER: NOT_CREATED_YET
-OWNER_DRIVE_FOLDER_ID: NOT_CREATED_YET
+OWNER_DRIVE_FOLDER: https://drive.google.com/drive/folders/1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
+OWNER_DRIVE_FOLDER_ID: 1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
 
 Read WORKFLOW_STATUS.md immediately after this file. This is the approved general-Thai-audience 8–10 minute Content assignment, not either prior website project. Follow NEXT_ACTOR and REQUIRED_INPUTS. The live specifications are 01_CONTENT.md through 05_QA.md. GitHub is canonical. No Design or Build has begun.
 

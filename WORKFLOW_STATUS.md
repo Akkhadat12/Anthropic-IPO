@@ -13,8 +13,8 @@ BRANCH_URL: https://github.com/Akkhadat12/Anthropic-IPO/tree/project/anthropic-i
 TEMPLATE_VERSION: "1.6"
 WORKFLOW_FOLDER_ID: 1WcszSRTyebajZj1FuLE-wCuKehyInE8n
 TOPIC_DRIVE_PARENT_ID: 153uw4BMBT78VS6TQgGelanIzXPomkzZt
-OWNER_DRIVE_FOLDER: NOT_CREATED_YET
-OWNER_DRIVE_FOLDER_ID: NOT_CREATED_YET
+OWNER_DRIVE_FOLDER: https://drive.google.com/drive/folders/1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
+OWNER_DRIVE_FOLDER_ID: 1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
 STAGE: PLANNING
 BLOCKED_FROM_STAGE: null
 ACTIVE_ACTOR: Content/Research
@@ -28,6 +28,7 @@ OWNER_DECISIONS:
   DELIVERY: LOCAL_ZIP
   PUBLICATION: NOT_REQUESTED
   FINAL_REVIEW: PENDING
+  AUTOMATIC_STAGE_CONTINUATION: APPROVED for this project through sequential agents and QA fix cycles; no extra public hosting, purchases or access grants
 UPDATED_AT: 2026-10-01T04:26:00Z
 RESEARCH_AS_OF: 2026-10-01T04:24:00Z
 ARTIFACT_COMMIT: NOT_VERIFIED
@@ -42,8 +43,8 @@ EXECUTION_RUNTIME: Python bundled primary runtime; connector authoring
 EXECUTION_BROWSER: Cloud Chrome read-only research
 SERVICE_CAPABILITIES:
   GitHub: WRITE_VERIFIED_new_branch
-  Drive: READ_VERIFIED_parent_folder
-PENDING_SERVICE_TASKS: [create_owner_folder, publish_two_pdfs_and_narration_doc]
+  Drive: WRITE_VERIFIED_owner_folder_creation
+PENDING_SERVICE_TASKS: [publish_two_pdfs_and_narration_doc]
 NEXT_EXECUTION_PREFERENCE: ANY_CAPABLE
 DELIVERY_MODE: LOCAL_ZIP
 TARGET_OS: Windows
