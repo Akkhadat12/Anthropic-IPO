@@ -1,3 +1,70 @@
+# Anthropic IPO — Builder implementation 0.1.0 (provisional)
+
+This live implementation section fills the choices for the current project; the exact v1.7 master below is preserved. Runtime verification is BLOCKED by this executor's socket restriction; this is not READY_FOR_QA or a QA pass.
+
+```yaml
+PROJECT_ID: anthropic-ipo-20261001-0426
+CONTENT_INPUT_COMMIT: 501f48afb1bddf098de95fa75f995dbd016d54c5
+DESIGN_INPUT_COMMIT: bb63eb3943a8e901e791ddaa5887f5f35699cdb0
+VISUAL_INPUT_COMMIT: bb63eb3943a8e901e791ddaa5887f5f35699cdb0
+FRAMEWORK: Vanilla semantic HTML/CSS/JavaScript; dependency-free deterministic Python build
+RUNTIME_VERSION: Python 3.12.14; Node.js for developer tests only
+PACKAGE_MANAGER: NONE
+LOCKFILE_PATH: NOT_APPLICABLE_no_third_party_runtime_or_build_dependencies
+INSTALL_COMMAND: NONE_after_Python_prerequisite
+DEV_COMMAND: Build then launch packaged helper; no public dev server
+BUILD_COMMAND: python scripts/build.py
+OUTPUT_DIRECTORY: dist
+APP_ENTRY_PATH: src/app.mjs
+SCENE_DATA_PATH: references/visual-scenes.json
+ASSET_MANIFEST_PATH: assets/manifest.json
+CANVAS_STRATEGY: 1920x1080 logical stage; proportional fit; paper letterboxing
+STATE_MODEL: scene/beat/phase; generation cancellation; explicit finite animation/timers
+ANIMATION_ENGINE: Native Web Animations; opacity-only exact endpoints; no numerical interpolation
+REDUCED_MOTION_STRATEGY: Immediate identical endpoint and controls
+WEBGL_FALLBACK: NOT_APPLICABLE_2D_DOM_SVG
+TARGET_BROWSERS: Current Windows Chrome/Edge; Chromium 140+ planned; NOT_RUN
+WEB_LANGUAGE: English
+DOCUMENT_LANG_ATTRIBUTE: en
+OWNER_DOCUMENT_LANGUAGE: Thai
+QUICK_START_LANGUAGE: Thai
+PERFORMANCE_TARGETS: Ready under 2000ms on recorded desktop test host; no active scene animations/timers after hold; performance NOT_MEASURED
+LOCAL_RUNTIME: Python >=3.10 standard library
+LOCAL_RUNTIME_TESTED_VERSION: Static/build checks Python 3.12.14; live helper blocked
+WINDOWS_RUNTIME_PREREQUISITE: Install Python 3.10+ once from https://www.python.org/downloads/windows/
+SERVER_BIND: 127.0.0.1
+OFFLINE_AFTER_SETUP: true_by_design; actual offline runtime test NOT_RUN
+POINTER_IMPLEMENTATION_PATH: src/app.mjs and src/style.css
+COVER_ASSET_ID: A01_DARIO_TECHCRUNCH_2023_CC_BY_2_0
+PACKAGE_ASSEMBLY_PATH: scripts/package.py and delivery/
+PACKAGE_MANIFEST_PATH: delivery/manifest.json
+PACKAGE_VERSION: 0.1.0-provisional
+```
+
+## Implemented scene map
+
+| Scene | Runtime/source | Claims | Endpoints | Cover/pointer/fallback |
+|---|---|---|---|---|
+| S01 | src/app.mjs + exact visual-scenes.json | C02, C03, C04, C05 | 1 | Shared event-driven pointer; English semantic status; authentic A01 and byte-identical A01F |
+| S02 | src/app.mjs + exact visual-scenes.json | C01, C02, C10 | 2 | Shared event-driven pointer; English semantic status; SVG/DOM, no WebGL |
+| S03 | src/app.mjs + exact visual-scenes.json | C02, C03, C06 | 3 | Shared event-driven pointer; English semantic status; SVG/DOM, no WebGL |
+| S04 | src/app.mjs + exact visual-scenes.json | C07, C08, C11 | 3 | Shared event-driven pointer; English semantic status; SVG/DOM, no WebGL |
+| S05 | src/app.mjs + exact visual-scenes.json | C02, C12 | 3 | Shared event-driven pointer; English semantic status; SVG/DOM, no WebGL |
+| S06 | src/app.mjs + exact visual-scenes.json | C03, C04, C09, C12 | 3 | Shared event-driven pointer; English semantic status; SVG/DOM, no WebGL |
+| S07 | src/app.mjs + exact visual-scenes.json | C05, C13 | 2 | Shared event-driven pointer; English semantic status; SVG/DOM, no WebGL |
+| S08 | src/app.mjs + exact visual-scenes.json | A01 | 3 | Shared event-driven pointer; English semantic status; SVG/DOM, no WebGL |
+| S09 | src/app.mjs + exact visual-scenes.json | C10, C11, C12, A01 | 3 | Shared event-driven pointer; English semantic status; SVG/DOM, no WebGL |
+
+## Implementation choices and honest limits
+
+The build emits scene HTML from the unchanged authoritative ledger rather than hand-transcribing financial labels. All revealing objects preserve the prior necessary context. S01 is pre-rendered; other scene exits crossfade 350ms then settle 200ms. Same-scene reveals fade 650ms then settle 200ms. Reduced motion is immediate. Space during motion settles only; later Space advances. R cancels timers/animations and resets; final Space is inert. Optional Left/F are implemented; P is not. Pointer uses theme tokens and static dual edges in viewport CSS pixels, outside the stage transform.
+
+Source JavaScript modules are concatenated deterministically into one external classic script so there is no runtime module fetch dependency. There are no third-party package dependencies to lock, no backend/API/CDN/telemetry and no authoring dependencies in the end-user ZIP. Runtime assets are allowlisted from the verified manifest. The photo and both WOFFs retain their verified bytes and licenses.
+
+Builder state tests, source syntax checks, language/asset/copy checks and archive verification are separate from required browser/helper checks. The helper worker passed 15/15 real Python TCP loopback/security tests; actual shell Chromium launch was denied by socket() restrictions, including a reviewed escalation attempt. The supported cloud browser rejected file:// under its URL protocol policy; no workaround or public host was used. Windows execution, actual extracted-package browser geometry, pointer, offline and 30-second holds remain NOT_RUN/BLOCKED. See BUILD_NOTES.md and references/build/ for exact evidence. Independent QA has not started.
+
+---
+
 # 04_BUILD.md — Agent 4: Builder
 
 Build defines execution. This brief exists before implementation; Builder fills the project choices and records the actual result in BUILD_NOTES.md.

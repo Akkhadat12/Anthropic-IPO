@@ -1,0 +1,6 @@
+dist/
+delivery/*.zip
+delivery/extracted*/
+.local-server/
+__pycache__/
+*.pyc

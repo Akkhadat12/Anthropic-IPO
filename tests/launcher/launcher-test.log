@@ -1,0 +1,21 @@
+test_changed_manifest_requires_orderly_stop_before_start (test_launcher.LauncherIntegration.test_changed_manifest_requires_orderly_stop_before_start) ... ok
+test_concurrent_starts_reuse_one_instance (test_launcher.LauncherIntegration.test_concurrent_starts_reuse_one_instance) ... ok
+test_copied_state_never_controls_other_extraction (test_launcher.LauncherIntegration.test_copied_state_never_controls_other_extraction) ... ok
+test_http_security_and_no_unlisted_or_parent_files (test_launcher.LauncherIntegration.test_http_security_and_no_unlisted_or_parent_files) ... ok
+test_integrity_failure_fails_before_readiness (test_launcher.LauncherIntegration.test_integrity_failure_fails_before_readiness) ... ok
+test_manifest_listed_symlink_to_outside_is_rejected (test_launcher.LauncherIntegration.test_manifest_listed_symlink_to_outside_is_rejected) ... ok
+test_manifest_traversal_rejected (test_launcher.LauncherIntegration.test_manifest_traversal_rejected) ... ok
+test_occupied_port_preserves_unrelated_listener (test_launcher.LauncherIntegration.test_occupied_port_preserves_unrelated_listener) ... ok
+test_start_ready_repeat_stop_restart_and_foreign_cwd (test_launcher.LauncherIntegration.test_start_ready_repeat_stop_restart_and_foreign_cwd) ... ok
+test_stop_rejects_changed_instance_without_signals (test_launcher.LauncherIntegration.test_stop_rejects_changed_instance_without_signals) ... ok
+test_symlinked_app_directory_is_rejected (test_launcher.LauncherIntegration.test_symlinked_app_directory_is_rejected) ... ok
+test_verified_payload_is_immutable_in_memory (test_launcher.LauncherIntegration.test_verified_payload_is_immutable_in_memory) ... ok
+test_accepts_spaces_and_thai (test_launcher.PathRules.test_accepts_spaces_and_thai) ... ok
+test_rejects_absolute_traversal_windows_ads_and_controls (test_launcher.PathRules.test_rejects_absolute_traversal_windows_ads_and_controls) ... ok
+test_runtime_minimum_is_enforced (test_launcher.PathRules.test_runtime_minimum_is_enforced) ... Python 3.10 or newer is required. Install once from https://www.python.org/downloads/
+ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 5.982s
+
+OK

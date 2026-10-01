@@ -1,0 +1,16 @@
+{
+  "result": "PASS_STATIC_ONLY",
+  "scene_count": 9,
+  "endpoint_count": 23,
+  "language": "English app/Thai owner docs",
+  "asset_hashes": "MATCH",
+  "state_tests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "browser": "BLOCKED_SOCKET_RESTRICTION",
+  "cloud_browser_file_route": "BLOCKED_URL_POLICY",
+  "loopback": "NOT_RUN",
+  "Windows": "NOT_RUN",
+  "independent_QA": "NOT_RUN"
+}
