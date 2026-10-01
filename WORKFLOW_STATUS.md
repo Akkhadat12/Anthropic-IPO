@@ -34,18 +34,18 @@ DRIVE_FOLDER_VERIFIED_AT: 2026-10-01T04:54:39Z
 ```yaml
 STAGE: BLOCKED
 BLOCKED_FROM_STAGE: BUILDING
-ACTIVE_ACTOR: Agent 4 Builder; source and provisional owner package delivered
-UPDATED_AT: 2026-10-01T08:09:20Z
+ACTIVE_ACTOR: Agent 4 Builder; isolated-runtime verification blocked before browser page creation
+UPDATED_AT: 2026-10-01T11:50:28Z
 ARTIFACT_COMMIT: e2210041c93b8cbf5588eada5058fef60d0f6ad9
 CONTENT_SOURCE_COMMIT: 501f48afb1bddf098de95fa75f995dbd016d54c5
 LAST_VERIFIED_COMMIT: e2210041c93b8cbf5588eada5058fef60d0f6ad9
-LAST_VERIFIED_SCOPE: Exact source, reproducible archive, Drive byte readback, extracted Python HTTP payload hashes/lifecycle, 15 helper and 3 state tests; browser BLOCKED, Windows NOT_RUN
+LAST_VERIFIED_SCOPE: Isolated source rebuild matches recorded delivered hash; static checks, extracted Python HTTP hashes/lifecycle, 15 helper and 3 state tests PASS; Library transfer failed, browser BLOCKED before page creation, Windows NOT_RUN
 NEXT_ACTOR: Agent 4 Builder in a permitted browser-capable executor
 NEXT_ACTION: "Continue from exact provisional ZIP and BUILD_COMMIT, not legacy. Complete blocked extracted-package browser checks, fix defects and version package if needed; refresh rationale/identity then READY_FOR_QA. Only independent QA may award QA_PASS. Windows remains NOT_RUN until actual Windows execution."
 REQUIRED_INPUTS: [01_CONTENT.md, 02_DESIGN_SYSTEM.md, 03_VISUAL_PLAN.md, 04_BUILD.md, 05_QA.md, references/visual-scenes.json, assets/manifest.json, assets/manifest.md, assets/CREDITS.txt, references/visual-review/review.md, references/visual-review/v17-review.md, references/claim-register.md, references/source-register.md]
 OPEN_FINDINGS: []
 QA_FINDINGS_REPORT_PATH: UNSET
-BLOCKERS: ["Required rendered browser checks not run: Chromium startup socket() permission failure; supported cloud browser file scheme and loopback URL blocked. No public hosting or access-control workaround used."]
+BLOCKERS: ["Current isolated runtime Chromium aborts before page creation: SUID sandbox helper owned by nobody instead of root; no security changes or bypass attempted. All required rendered checks remain blocked. See references/build/runtime-20261001-1150/report.md."]
 OWNER_ACTION_REQUIRED: null
 CONTENT_REVIEW_RESULT: PASS with limitations recorded
 RESEARCH_AS_OF: 2026-10-01T04:24:00Z
@@ -80,9 +80,9 @@ The owner approved the proposed thesis, audience and duration with “ดีค�
 EXECUTION_MODE: CLOUD
 EXECUTION_OS: Linux
 EXECUTION_RUNTIME: Python 3.12.14 standard library; Node.js v24.19.0 pure-state tests; authenticated GitHub/Drive/Library publishing
-EXECUTION_BROWSER: BLOCKED_NOT_RUN; local Chromium startup socket restriction; supported cloud browser ERR_BLOCKED_BY_CLIENT for loopback
-EXECUTION_VERIFIED_AT: 2026-10-01T08:09:20Z
-EXECUTION_EVIDENCE: references/build/extracted-runtime-provisional.json
+EXECUTION_BROWSER: BLOCKED_NOT_RUN; Chromium 151.0.7922.173 aborts because SUID sandbox helper is not correctly owned; no page or screenshot
+EXECUTION_VERIFIED_AT: 2026-10-01T11:50:28Z
+EXECUTION_EVIDENCE: references/build/runtime-20261001-1150/report.md
 REQUIRED_SERVICES_FOR_NEXT_ACTION: [GitHub, permitted_browser_executor]
 SERVICE_CAPABILITIES:
   GitHub:
@@ -220,3 +220,10 @@ Passed: deterministic repeated ZIP assembly (byte-identical), all 16 ZIP entries
 Blocked: local installed Chromium exits before page creation with socket() Operation not permitted, including a reviewed escalation. Existing supported cloud browser rejects file:// by URL policy and reports net::ERR_BLOCKED_BY_CLIENT for actual loopback. Python TCP loopback itself works. No alias, proxy, public host, changed browser/network security or alternate flags were used to evade these restrictions. Browser geometry, motion/reduced motion, pointer, fullscreen, failure rendering, performance, 30-second holds and all actual Windows launcher execution remain unverified.
 
 This state is BLOCKED_FROM_STAGE=BUILDING, not READY_FOR_QA. Continue Builder validation in a permitted capable executor; then independent QA begins. Preserve Windows NOT_RUN and owner rehearsal pending. The delivered Thai quick-start/rationale clearly describe provisional scope. Neither file/asset identity nor helper tests establish QA_PASS or COMPLETE.
+
+
+## Isolated-runtime continuation — 2026-10-01 11:50 UTC
+
+Builder rechecked capabilities in a separate scratch clone. The recorded 544,191-byte ZIP was rebuilt from the frozen BUILD_COMMIT and matches the existing SHA-256 exactly. Library materialization failed; this run does not claim a fresh delivered-file download. Static checks, 3 state tests, 15 helper tests, and freshly extracted app HTTP/lifecycle checks passed on Linux. Chromium aborts before page creation due to its SUID sandbox helper ownership; no security settings were changed. No screenshots or render evidence exist for this run. See [report and test matrix](references/build/runtime-20261001-1150/report.md) and [extracted runtime evidence](references/build/runtime-20261001-1150/extracted-runtime.json).
+
+The stage remains BLOCKED_FROM_STAGE=BUILDING. Independent QA was not started because the Builder gate has not passed. Existing source/package/Library/Drive identities are unchanged; Windows launcher/owner smoke remain NOT_RUN. The mounted Mob-Control repository was left unchanged.

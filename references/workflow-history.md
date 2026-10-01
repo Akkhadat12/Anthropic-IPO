@@ -23,3 +23,8 @@ BUILDING published at aa7fae10bc0a6bb4b67b7bcf1567b617f6bb797a. Source implement
 Source/manifest/reproducible archive/Drive byte readback verified. State tests3/3 and real helper integration/security tests15/15 passed. Final exact extracted HTTP app hashes and start/repeat/status/stop/restart passed on Linux. Thai native rationale created in existing owner folder, same nine scenes and exact package identity. No claims, visual ledger or asset bytes changed; old branches/main/legacy preserved.
 
 Required rendered checks remain blocked by recorded browser capability restrictions; actual Windows launchers and independent QA are NOT_RUN. Workflow stays BLOCKED_FROM_STAGE=BUILDING. No READY_FOR_QA/QA_PASS/COMPLETE award. Continue in a permitted browser-capable executor with exact final archive before independent QA.
+
+
+## 2026-10-01 11:50 UTC — isolated runtime recheck
+
+Continued from c11466e2c4a3ac8f7cf5186e0a17db02d33b8f5b. Rebuilt frozen source e2210041c93b8cbf5588eada5058fef60d0f6ad9: exact existing ZIP hash/size matched. Static, state 3/3, launcher 15/15 and extracted Linux HTTP/lifecycle passed. Library transfer failed; no fresh delivered-file readback claimed. Chromium sandbox-helper ownership blocks page creation. No host security changes, installs or public hosting. Remains BLOCKED_FROM_STAGE=BUILDING; separate independent QA and Windows checks NOT_RUN. Evidence: references/build/runtime-20261001-1150/report.md and extracted-runtime.json.
