@@ -68,3 +68,13 @@
 เซิร์ฟเวอร์ฟังเฉพาะ 127.0.0.1 ไม่เปิดให้เครื่องอื่นในเครือข่าย อ่านและให้บริการเฉพาะไฟล์ app ที่ผ่าน SHA-256 ใน manifest ไม่แสดงรายการโฟลเดอร์ ไม่ให้เปิดไฟล์ส่วนอื่นของเครื่อง ไม่รับ symlink/junction ในไฟล์แพ็กเกจ และเก็บเนื้อหาที่ตรวจแล้วไว้ในหน่วยความจำระหว่างการทำงาน
 
 ไฟล์ manifest ใช้ตรวจความตรงกันของข้อมูล ไม่ใช่ลายเซ็นรับรองผู้สร้าง ให้ใช้ ZIP จากแหล่งที่เชื่อถือได้เท่านั้น ผู้ที่มีสิทธิ์แก้ไฟล์ทั้งหมดในบัญชีเดียวกันย่อมเปลี่ยนตัวโปรแกรมหรือรหัสชั่วคราวได้ คู่มือนี้จึงไม่อ้างว่าป้องกันผู้ดูแลเครื่องหรือมัลแวร์ในบัญชีเดียวกันได้
+
+## เครดิตภาพและสิทธิ์ใช้งาน
+
+อ่านเครดิตฉบับเต็มในไฟล์ [CREDITS.txt](CREDITS.txt) ที่อยู่ข้างคู่มือนี้ และเก็บไฟล์นี้ไปกับแพ็กเกจหรือภาพ/วิดีโอที่ส่งออกเสมอ หากเผยแพร่วิดีโอให้นำเครดิตไปไว้ในคำอธิบายหรือเอกสารประกอบ ไม่มีแผงเครดิตบนผืนภาพนำเสนอ
+
+ภาพหน้าปกคือ Dario Amodei ที่งาน TechCrunch Disrupt วันที่ 20 กันยายน 2023 ไม่ใช่ภาพเหตุการณ์ IPO ปี 2026 และไม่สื่อว่าบุคคลหรือบริษัทรับรองเนื้อหา
+
+TechCrunch Disrupt 2023 – Day 2. Photo: Kimberly White/Getty Images for TechCrunch, © 2023 Getty Images. Licensed CC BY 2.0. Source: https://www.flickr.com/photos/techcrunch/53202070940/ ; license: https://creativecommons.org/licenses/by/2.0/ . Changes: source proportionally resized to a 1200×800 JPEG for offline packaging; displayed with fit-contain, no crop, recoloring, mirroring or generative edits.
+
+ฟอนต์ Noto Sans และ Noto Sans Thai จัดส่งพร้อมใบอนุญาต SIL Open Font License 1.1 ใน app/assets/fonts/ โปรดเก็บใบอนุญาตไว้เมื่อนำไฟล์ฟอนต์ไปแจกจ่ายต่อ

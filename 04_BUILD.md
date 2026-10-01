@@ -1,4 +1,4 @@
-# Anthropic IPO — Builder implementation 0.1.0 (provisional)
+# Anthropic IPO — Builder implementation 0.1.1 (provisional)
 
 This live implementation section fills the choices for the current project; the exact v1.7 master below is preserved. Runtime verification is BLOCKED by this executor's socket restriction; this is not READY_FOR_QA or a QA pass.
 
@@ -38,7 +38,7 @@ POINTER_IMPLEMENTATION_PATH: src/app.mjs and src/style.css
 COVER_ASSET_ID: A01_DARIO_TECHCRUNCH_2023_CC_BY_2_0
 PACKAGE_ASSEMBLY_PATH: scripts/package.py and delivery/
 PACKAGE_MANIFEST_PATH: delivery/manifest.json
-PACKAGE_VERSION: 0.1.0-provisional
+PACKAGE_VERSION: 0.1.1-provisional
 ```
 
 ## Implemented scene map

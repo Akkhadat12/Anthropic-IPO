@@ -4,7 +4,7 @@
 Provisional build, not runtime-certified and not READY_FOR_QA. No independent QA_PASS is claimed. The user selected LOCAL_ZIP for Windows; no public hosting is required or used. Main, old branches and legacy/ remain unchanged.
 
 ## Reproduce from BUILD_COMMIT
-Obtain the exact source SHA recorded in delivery/package-identity.json. With Python >=3.10 installed: `python scripts/build.py`; `python tests/static_check.py`; `python scripts/package.py 0.1.0-provisional`; `python tests/archive_check.py delivery/anthropic-ipo-20261001-0426-0.1.0-provisional-local.zip`. Node is optional for developer tests: `node --test tests/state.test.mjs`. No pip/npm install or network is required for build/package or ordinary launch. Source JavaScript is bundled by simple deterministic concatenation, no third-party toolchain.
+Obtain the exact source SHA recorded in delivery/package-identity.json. With Python >=3.10 installed: `python scripts/build.py`; `python tests/static_check.py`; `python scripts/package.py 0.1.1-provisional`; `python tests/archive_check.py delivery/anthropic-ipo-20261001-0426-0.1.1-provisional-local.zip`. Node is optional for developer tests: `node --test tests/state.test.mjs`. No pip/npm install or network is required for build/package or ordinary launch. Source JavaScript is bundled by simple deterministic concatenation, no third-party toolchain.
 
 The ZIP root has prebuilt app/, START.bat, STOP.bat, serve.py, README_TH.md, CREDITS.txt and manifest.json. Manifest records exact BUILD_COMMIT, version and per-file SHA-256; the archive hash is external to avoid self-reference. ZIP entries are sorted with fixed date and permissions. Technical source, caches, old projects, unlicensed logos, source research captures and credentials are excluded.
 
