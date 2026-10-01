@@ -27,6 +27,7 @@ Accessed: 2026-10-01 UTC
 URL: https://www.bloomberg.com/news/articles/2026-08-14/anthropic-revenue-ahead-of-ipo-surges-over-14-fold-in-second-quarter
 Status: Reporter reviewed investor documents; full story read in authorized signed-in cloud browser
 Claims: C03
+Accessible same-story alternate: https://news.bloomberglaw.com/artificial-intelligence/anthropic-revenue-surges-to-over-11-5-billion-in-second-quarter
 Limits: Preliminary Q2 figures may change; no GAAP/cash reconciliation supplied
 
 ## SRC04 Anthropic Expects an Operating Profit This Quarter FT Says

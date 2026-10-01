@@ -97,7 +97,7 @@
         "paragraphs": [
           "Bloomberg ระบุ Q2 2026 adjusted operating income เป็นบวก จากเอกสารที่ยังเป็นเบื้องต้น ต่อมา 13 กันยายน Bloomberg อ้าง FT ว่าบริษัทคาด Q3 จะเป็นบวกต่อเนื่อง นี่คือหลักฐานที่ขัดกับการเล่าเรื่องว่าบริษัทยังขาดทุนแบบเดิมในทุกนิยาม [SRC03, SRC04]",
           "แต่ยังไม่มีจำนวน adjusted profit และ reconciliation ทุกรายการไปสู่ GAAP net income หรือ cash flow ข่าว Q3 ก่อนสิ้นงวดจึงเป็น outlook ไม่ใช่ผลจริงที่ยืนยันแล้ว ไม่ควรพูดว่าได้กำไรสองไตรมาสแล้วโดยไม่มี caveat",
-          "ข่าวเดียวกันระบุ gross margin มากกว่า 80% ก่อน partner revenue-sharing และ model training costs ห้ามเรียกว่ากำไรหลังต้นทุนทุกอย่าง และห้ามอนุมานว่า adjusted operating income ตัดค่าใช้จ่ายสองกลุ่มนี้ด้วย เพราะนิยาม gross margin ไม่เท่ากับนิยาม operating income [SRC04]"
+          "กำไรขั้นต้นสะท้อนรายได้หลังต้นทุนที่นิยามกำหนดในระดับหนึ่ง ไม่ใช่กำไรหลังค่าใช้จ่ายทั้งหมด ข่าวเดียวกันระบุ gross margin มากกว่า 80% ก่อน partner revenue-sharing และ model training costs ห้ามเรียกว่ากำไรหลังต้นทุนทุกอย่าง และห้ามอนุมานว่า adjusted operating income ตัดค่าใช้จ่ายสองกลุ่มนี้ด้วย เพราะเป็นคนละตัวชี้วัด [SRC04]"
         ]
       },
       {
@@ -158,7 +158,8 @@
       "url": "https://www.bloomberg.com/news/articles/2026-08-14/anthropic-revenue-ahead-of-ipo-surges-over-14-fold-in-second-quarter",
       "status": "Reporter reviewed investor documents; full story read in authorized signed-in cloud browser",
       "supports": "C03",
-      "limit": "Preliminary Q2 figures may change; no GAAP/cash reconciliation supplied"
+      "limit": "Preliminary Q2 figures may change; no GAAP/cash reconciliation supplied",
+      "alternate_url": "https://news.bloomberglaw.com/artificial-intelligence/anthropic-revenue-surges-to-over-11-5-billion-in-second-quarter"
     },
     {
       "id": "SRC04",

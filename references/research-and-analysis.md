@@ -42,7 +42,7 @@ Bloomberg ระบุ Q2 2026 adjusted operating income เป็นบวก �
 
 แต่ยังไม่มีจำนวน adjusted profit และ reconciliation ทุกรายการไปสู่ GAAP net income หรือ cash flow ข่าว Q3 ก่อนสิ้นงวดจึงเป็น outlook ไม่ใช่ผลจริงที่ยืนยันแล้ว ไม่ควรพูดว่าได้กำไรสองไตรมาสแล้วโดยไม่มี caveat
 
-ข่าวเดียวกันระบุ gross margin มากกว่า 80% ก่อน partner revenue-sharing และ model training costs ห้ามเรียกว่ากำไรหลังต้นทุนทุกอย่าง และห้ามอนุมานว่า adjusted operating income ตัดค่าใช้จ่ายสองกลุ่มนี้ด้วย เพราะนิยาม gross margin ไม่เท่ากับนิยาม operating income [SRC04]
+กำไรขั้นต้นสะท้อนรายได้หลังต้นทุนที่นิยามกำหนดในระดับหนึ่ง ไม่ใช่กำไรหลังค่าใช้จ่ายทั้งหมด ข่าวเดียวกันระบุ gross margin มากกว่า 80% ก่อน partner revenue-sharing และ model training costs ห้ามเรียกว่ากำไรหลังต้นทุนทุกอย่าง และห้ามอนุมานว่า adjusted operating income ตัดค่าใช้จ่ายสองกลุ่มนี้ด้วย เพราะเป็นคนละตัวชี้วัด [SRC04]
 
 ## ภาระกำลังผลิตมีทั้งขนาด ระยะเวลา และเงื่อนไข
 
