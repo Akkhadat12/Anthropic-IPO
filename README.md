@@ -1,9 +1,27 @@
-# Start here — Web Build agent
+# ก่อน IPO Anthropic โตแรง แต่กำไรยั่งยืนหรือยัง
 
-This `main` branch is the current **Anthropic IPO — Can Frontier AI Economics Become Sustainable?** assignment. The owner approved a combined Gate 2 thesis: Claude's growing revenue may be starting to create operating leverage, while frontier research and advance compute commitments still demand substantial capital; durable economics require verified GAAP profit and cash generation after growth investment. The presenter site is published at https://anthropic-ipo-two-clocks.vercel.app. Build notes are in [BUILD_NOTES.md](BUILD_NOTES.md). An independent QA pass is recorded in [07_WEB_QA_REPORT.md](07_WEB_QA_REPORT.md); that report is not a final acceptance until its listed corrections are retested.
+PROJECT: Anthropic IPO
+PROJECT_ID: anthropic-ipo-20261001-0426
+BOOTSTRAP_MODE: FRESH
+REPOSITORY: https://github.com/Akkhadat12/Anthropic-IPO
+DEFAULT_BRANCH: main
+BRANCH: project/anthropic-ipo-20261001-0426
+BRANCH_URL: https://github.com/Akkhadat12/Anthropic-IPO/tree/project/anthropic-ipo-20261001-0426
+TEMPLATE_VERSION: "1.6"
+WORKFLOW_STATE: WORKFLOW_STATUS.md
+OWNER_DRIVE_FOLDER: NOT_CREATED_YET
+OWNER_DRIVE_FOLDER_ID: NOT_CREATED_YET
 
-Read [04_BUILD_WEB.md](04_BUILD_WEB.md) **in full** for the actual implementation brief, [03_STORY_STRUCTURE.md](03_STORY_STRUCTURE.md) for the arc and estimated 10:20 spoken timing, [02_RESEARCH_AND_ANALYSIS.md](02_RESEARCH_AND_ANALYSIS.md) and [01_KNOWLEDGE_SUMMARY.md](01_KNOWLEDGE_SUMMARY.md) for evidence, and [05_QA.md](05_QA.md) for acceptance. The reading packs also have mobile PDFs: [01_KNOWLEDGE_SUMMARY.pdf](01_KNOWLEDGE_SUMMARY.pdf) and [02_RESEARCH_AND_ANALYSIS.pdf](02_RESEARCH_AND_ANALYSIS.pdf). The numbered research documents are still on this branch, along with the published site and [07_WEB_QA_REPORT.md](07_WEB_QA_REPORT.md).
+Read WORKFLOW_STATUS.md immediately after this file. This is the approved general-Thai-audience 8–10 minute Content assignment, not either prior website project. Follow NEXT_ACTOR and REQUIRED_INPUTS. The live specifications are 01_CONTENT.md through 05_QA.md. GitHub is canonical. No Design or Build has begun.
 
-Selected authentic source assets are [Project Rainier interior](references/project-rainier-interior.png) for the cover and [Project Rainier exterior](references/project-rainier-exterior.png) for Scene 5; exact chart inputs are in [references/chart-data.csv](references/chart-data.csv). Their original URLs and scene jobs are in the per-scene inventory in [04_BUILD_WEB.md](04_BUILD_WEB.md). The [matching owner-facing Drive folder](https://drive.google.com/drive/folders/1vKcwzFf1fWNRvZbU02hqiYKB46MBpXCP) holds the reading PDFs and the Thai rationale, which the owner accepted as a Google Doc: [06_SCENE_RATIONALE.docx](https://docs.google.com/document/d/1grcgF9jbovWbEG0_ASc12Te_xeT81PlGqjhEyiG6nik/edit).
+DELIVERY_MODE: LOCAL_ZIP
+TARGET_OS: Windows
+PUBLIC_DEPLOYMENT_REQUIRED: false
+OFFLINE_AFTER_SETUP: true
 
-The website, build notes, and rationale are already published. Settled desktop and phone captures of the live site are in [qa-evidence/](qa-evidence/). Do not rebuild the site from the original brief. Use [07_WEB_QA_REPORT.md](07_WEB_QA_REPORT.md) for the open QA items.
+WORKFLOW_FOLDER: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+TOPIC_DRIVE_PARENT: https://drive.google.com/drive/folders/153uw4BMBT78VS6TQgGelanIzXPomkzZt
+
+Historical main files and compatible prior web infrastructure are preserved unchanged under legacy/previous-assignment/. They are NOT current content, implementation, package, or QA evidence. Main and research-ipo-financials-models-2026 remain untouched. See references/bootstrap-notes.md.
+
+The owner supplies only this branch URL and “Continue this project from the current workflow state.” A continuation must never create a new branch or owner folder. Narration is Thai, presenter-controlled, with S01 authentic cover and clean 16:9 canvas. Final package and rationale are later Builder deliverables.

@@ -1,6 +1,6 @@
-# 05_QA.md — Agent 5: QA and Acceptance
+# 01_CONTENT.md — Agent 1: Content and Research
 
-QA defines acceptance from the beginning. A file existing or a site looking attractive is not evidence that the presentation is ready.
+Content defines truth and narration. This file is an executable stage brief plus a fillable project specification.
 
 ## Shared contract — mandatory for every agent
 
@@ -128,169 +128,334 @@ Return the branch URL, handoff commit, next action, and any real blocker.
 
 The prompt is sufficient only when the agent has access to the repo and the services required by its stage. Missing credentials are reported precisely; they are never assumed.
 
-## Role, inputs, and outputs
+## Mission and inputs
 
-Read README/status, 01–05, BUILD_NOTES, asset provenance, package manifest, finding records and owner documents. At READY_FOR_QA publish QA before testing.
+Turn the topic into an evidence-supported story that the owner can narrate naturally. Define what the audience should understand before choosing visual techniques.
 
-QA edits only reports and state. It never changes runtime/launchers, builds its own fixes or rewrites acceptance requirements to pass. Reuse the owner folder; technical evidence stays in GitHub.
+Minimum bootstrap inputs: the workflow folder, TOPIC, and GITHUB_REPOSITORY. Follow START_HERE.md's mandatory FRESH policy. Inspect old repository state only to avoid collisions and protect existing work; it cannot select this run's role or supply completed outputs. Propose assumptions for unspecified audience, duration and scope, respecting the decision gates below. Owner-facing narration and final scene rationale must be editable Thai Google Docs. Use Thai narration by default; honor an explicit owner language override and record it. Do not infer a language from folder names.
 
-Independently obtain the exact recorded ZIP and verify PACKAGE_SHA256, source/version and manifest. Extract into a clean directory and run the prebuilt payload through loopback HTTP in your own environment. The source checkout is supplementary evidence, not a substitute for the delivered package. Cloud localhost is not the owner's computer or a portable download URL.
+Use the supplied existing repository; Agent 1 creates a new normal uniquely named branch from an appropriate existing base for each FRESH PROJECT_ID, records DEFAULT_BRANCH/base/BRANCH_URL, and preserves history and compatible infrastructure. Never create a replacement repository or resume an old branch automatically. If access prevents bootstrap, record a precise blocker and preserve existing work.
 
-## Cross-environment QA continuation
+## Bootstrap a new topic
 
-QA may run locally or in cloud; it remains independent of Builder. Record actual environment and distinguish executed checks, inspection and owner reports. Synchronize the exact branch safely, verify the delivered archive identity, and review prior evidence before deciding what remains.
-
-For an unchanged package, a Windows-capable QA executor may finish launcher/target-browser checks and necessary regressions using existing independently verified evidence. It does not need to rerun unrelated checks solely because its location changed. Validate all reused evidence against the same package/source and report the combined scope honestly.
-
-Record Windows evidence and tested archive hash in both the QA report and status. A failed Windows check creates/reopens a stable finding and routes to Builder; prior cloud-only pass claims cannot establish Windows readiness. Changed runtime/launcher bytes require a new identified ZIP and affected independent retesting.
-
-## Gate 0 — source, archive and delivery identity
-
-- Verify remote repo/default/assignment branch, bootstrap history and artifact commits; inspect changes since previous QA.
-- Verify the observed owner package URL/file ID, archive SHA-256, package version, BUILD_COMMIT and manifest/payload hashes. Independently extract the actual delivered archive, including launcher/helper and assets.
-- Record QA_TESTED_COMMIT, QA_TESTED_PACKAGE_SHA256 and actual environment. Keep local URL/port as run evidence only; publish the persistent package link for owner use.
-- Confirm owner folder IDs and all five expected deliverables: two PDFs, narration Doc, rationale Doc and current ZIP. Documents align with source/package and rationale describes actual visuals.
-- Missing assets, archive/download identity mismatch, stale source, inaccessible required artifacts or unrun mandatory package checks prevents QA_PASS.
-- A Windows launcher test requires actual Windows execution. If unavailable, record WINDOWS_LAUNCHER_TEST_RESULT=NOT_RUN and scope QA_PASS to the tested payload/helper/environment. Provide an owner launch/stop/restart/offline smoke check; final Windows readiness/COMPLETE stays pending until evidence exists.
-
-## Acceptance matrix
-
-All mandatory rows must pass. Mark NOT_RUN/BLOCKED honestly. Use NOT_APPLICABLE only with a concrete reason, such as no 3D or no audio; never use it for clean canvas, narration, 16:9, mandatory Spacebar/R, stable hold or copy-target rules. Left Arrow/F may be NOT_APPLICABLE when absent; optional absence is not a defect.
-
-| ID | Area | Test procedure | Pass condition | Evidence |
-|---|---|---|---|---|
-| AC-001 | Facts | Trace each material narration/visual claim to the register; compare exact values, units, dates, uncertainty, and source | Claims are supported; inference/metaphor cannot be mistaken for measured evidence | Claim/source audit |
-| AC-002 | Story alignment | Rehearse every scene with the full narration and cue map | Visual explains the scene takeaway at the correct spoken beat; no contradiction or distracting competition | Cue-by-cue notes |
-| AC-003 | Scene coverage | Compare scene IDs across Content, Visual Plan, extracted runtime and rationale | All required scenes/beats exist and agree; S01 is the first actual cover; no invented filler | Coverage table |
-| AC-004 | 16:9 | Inspect at 1920×1080, 1280×720, and at least one non-16:9 viewport | Proportional 16:9 stage, neutral letterboxing, no stretch/crop/scroll | Viewport screenshots |
-| AC-005 | Composition | Inspect entry, reveals, settled hold, and exit for every scene | Clear focal hierarchy, safe margins, no overlap/clipping; Thai marks and numerals render correctly | Scene/state screenshots |
-| AC-006 | Copy target and essential labels | Inventory ordinary copy across all scene states/media, excluded essential chart/data labels, and total counts | Ordinary copy targets 0–8 words; excluded chart/data labels are indispensable, minimal and justified; no prose disguised as labels; Thai segmentation recorded | Ordinary/excluded/total copy table |
-| AC-007 | Clean canvas and arrow distinction | Inspect start, transitions, hold, hover/focus, recording view and final scene; classify each arrow as content or UI | UI/navigation arrows and other arrow controls are forbidden. No control panel, navigation bar, Next/Back buttons, page/scene numbers, progress bars/dots, persistent menu/help/source panel, keyboard hints, playback bar, watermark or developer overlay. The only permitted presenter overlay is the specified non-blocking pointer; it cannot become navigation or chrome. Explanatory content arrows are allowed only when minimal, with a clear semantic relationship, subordinate to the focal subject and unlike controls | Screenshots and arrow-role notes |
-| AC-008 | Simplified hidden keyboard | Test mandatory Spacebar/R with rapid/repeated input, editable targets/modifiers and full forward flow without clicking; test optional Left Arrow/F only if implemented | Spacebar completes/settles active motion when applicable and then reveals/advances; R cancels motion and returns to cover initial state. Optional Left/F absence passes; implemented controls are deterministic with no exposed UI, required object clicks, races or unintended scrolling | Input trace and implemented-key list |
-| AC-009 | Purposeful motion | Rehearse the normal Transition → Reveal → Settle → Hold sequence against narration and its specified meaning | Motion explains a planned change, reaches semantic endpoints and allows indefinite stable narration hold; no decorative perpetual looping/drift/spin/parallax | Beat observations |
-| AC-010 | Settle/hold | Use Spacebar to settle each active beat; hold each scene at least 30 seconds; test R-to-cover cancellation | Semantic endpoint is complete and remains stable indefinitely until input; no hidden auto-advance | Hold recording/notes |
-| AC-011 | Input recovery | Press R during motion, repeat Spacebar and advance near first/final scene boundaries; test previous-scene recovery only if Left Arrow is implemented | Old timers cancel; cover reset and final-scene forward boundary are deterministic; optional previous-scene behavior is settled; no ghost objects or double transitions | State/input evidence |
-| AC-012 | Reduced motion | Enable reduced-motion preference and repeat scene/control checks | Same meaning/endpoints and hold control with motion reduced; no loss of data | Settings and screenshots |
-| AC-013 | Media/assets | Inspect actual fonts, image/video crops, load failures and WebGL fallback if relevant | Correct licensed/provenanced assets; no missing media; fallback preserves factual meaning | Asset audit/failure exercise |
-| AC-014 | Accessibility | Check contrast, non-color distinctions, semantic descriptions, keyboard operation and owner reading equivalents | Information remains understandable and usable without adding visible canvas UI | Accessibility notes |
-| AC-015 | Performance | Use recorded browser/device/viewport conditions; measure startup and motion; observe held scenes | Meets agreed targets, avoids narration-disrupting jank, and does not keep needless rendering active in hold | Measured values/trace |
-| AC-016 | Runtime reliability | Review console/network; rehearse a full run including fullscreen and media behavior | No uncaught app errors, broken runtime requests, stuck scenes or playback surprises | Logs without secrets |
-| AC-017 | Package identity/delivery | Download the recorded archive, compute SHA-256, inspect manifest and file hashes, extract cleanly and serve its payload | Actual delivered bytes match PACKAGE_SHA256/version/BUILD_COMMIT; source checkout and a public URL cannot substitute for the ZIP | Download/hash/manifest/clean-extraction evidence |
-| AC-018 | Fresh-state/storage/handoff | Inspect remote assignment branch/status, bootstrap notes and recorded topic Drive/artifact identities | New assignment state does not treat old thesis/scenes/stage/QA/build/package/next action as current; history and appropriate infrastructure are preserved, cleanup is scoped to the new branch and ambiguities are documented. GitHub owns technical workspace; the recorded owner folder/ID is reused under 01_PROJECTS, owner editions are current, no topic folders/outputs are placed in 00_WORKFLOW and technical files are not mirrored into owner folders; links resolve | Bootstrap/repo/Drive audit |
-| AC-019 | Owner deliverables | Open PDFs, narration/rationale Docs and current ZIP; compare with source and packaged scenes | All five artifacts are current/readable/accessible; Thai Docs are editable and package instructions disclose prerequisites | Artifact readback |
-| AC-020 | Secret hygiene | Inspect changed files, logs, ZIP and evidence for credential values | No secrets disclosed; only names/configuration state recorded | Bounded inspection notes |
-| AC-021 | Local package/offline/recovery | Run cleanly extracted prebuilt payload with external requests unavailable; inspect launcher/helper; test missing runtime/occupied port/repeat start/stop/restart under available OS | Required assets/fonts/media are local; loopback-only server; no install/build at ordinary launch; paths are portable and unrelated processes remain untouched. Record exact Windows execution scope separately | Package/network/helper tests and launcher notes |
-| AC-022 | Presenter pointer | Check tracking in fitted/fullscreen stage, contrast over images, stage exit/reentry/blur, hold/reset, hover/click and touch/keyboard-only behavior; optional P if present | One theme-appropriate visible dot tracks hotspot without lag/trail/pulse; no duplicate native cursor in stage, restored outside/failure; non-blocking/non-focusable; no navigation side effect | Pointer screenshots and input trace |
-| AC-023 | Authentic first cover | Inspect packaged S01 initial state and R reset; audit actual asset origin/rights, resolution/crop, offline availability and fallback | Cover is first and shows a relevant authentic original logo/character/image; no invented/generated reconstruction used for the required authentic image; sources/rights and copy budget agree | Asset provenance and initial/reset screenshots |
-
-Browser-owned fullscreen notifications and browser chrome are outside app UI. Do not promise their removal. Verify the owner can enter fullscreen, wait for notifications to clear, and record a clean canvas. A visible in-app overlay is still a defect.
-
-AC-021 includes mandatory portable-payload/helper/offline checks. An unavailable Windows host is disclosed as a pending target-machine validation, never silently marked passed; it is a final-delivery check before COMPLETE. Do not weaken package requirements to obtain QA_PASS.
-
-Performance targets must be defined by Builder/design or recorded before measurement. If none exist, record a reasoned target and actual measured conditions/results; do not claim a fabricated benchmark. A 30-second hold test supplements inspection of state logic; it alone cannot prove an indefinite hold.
-
-## Fillable QA run
-
-~~~yaml
-PROJECT_ID: <from status>
-QA_RUN_ID: <stable ID>
-TESTED_AT: <timestamp with offset>
-REPOSITORY: <actual>
-DEFAULT_BRANCH: <verified>
-BRANCH: <exact assignment branch>
-BRANCH_URL: <recorded continuation URL>
-QA_TESTED_COMMIT: <verified BUILD_COMMIT>
-QA_TESTED_PACKAGE_SHA256: <computed archive SHA-256>
-PACKAGE_VERSION: <verified>
-PACKAGE_FILE_ID: <actual>
-PACKAGE_DOWNLOAD_URL: <observed persistent owner link>
-MANIFEST_PATH: <package-relative path>
-QA_TARGET_URL: <observed loopback run URL, evidence only>
-QA_ENVIRONMENT: <actual OS/runtime/browser>
-EXECUTION_MODE: <LOCAL/CLOUD/UNKNOWN>
-REUSED_EVIDENCE: <same-package report paths and verified scope, or NONE>
-PENDING_SERVICE_TASKS: <actual tasks or []>
-CONTENT_COMMIT: <verified>
-VISUAL_PLAN_COMMIT: <verified>
-BROWSER_OS_DEVICE: <actual>
-VIEWPORTS: [<dimensions>]
-MOTION_PREFERENCE: <normal/reduced runs>
-BUILD_PACKAGE_CHECKS: <actual procedures/results>
-OFFLINE_CHECK: <actual network-disabled procedure/result>
-WINDOWS_LAUNCHER_TEST_RESULT: <PASS/FAIL/NOT_RUN>
-WINDOWS_LAUNCHER_TEST_EVIDENCE: <path/reason>
-OWNER_WINDOWS_SMOKE_RESULT: <recorded result or NOT_RUN>
-REPORT_PATH: qa/<run-id>/report.md
-RESULT: NOT_RUN
-~~~
-
-### Acceptance results
-
-| Check ID | PASS/FAIL/BLOCKED/NOT_RUN/NOT_APPLICABLE | Tested scope | Actual observation | Evidence path | Finding ID |
-|---|---|---|---|---|---|
-| AC-001 | <result> | <scope> | <observed> | qa/<run-id>/<file> | <QA-001 or null> |
-
-### Scene/state and copy audit
-
-| Scene | Narration/claim IDs | Entry/reveal/settle/hold checked | Ordinary copy / essential labels across scene | Ordinary / excluded / total counts and method | Stable hold | Evidence | Result |
-|---|---|---|---|---|---|---|---|
-| S01 | <IDs> | <states> | <copy or empty; essential labels if any> | <ordinary target 0–8; excluded and total; Thai segmentation> | <observed> | <path> | <result> |
-
-## Stable QA finding and retest protocol
-
-Every material finding receives a stable project-wide QA-001, QA-002, QA-003, etc. Allocate monotonically, never reuse or renumber, and retain the same ID through correction and retest. Acceptance check IDs AC-001 etc. are separate from finding IDs.
-
-| Finding ID | Affected scene/scope | Severity | Expected behavior | Observed behavior | Evidence | Required correction | Tested commit | Current status |
-|---|---|---|---|---|---|---|---|---|
-| QA-001 | <scene/beat or scope> | <severity> | <requirement> | <actual> | qa/<run>/<path> | <specific correction> | <exact SHA> | OPEN |
-
-For each finding retain reproduction steps, responsible actor, per-ID Builder response, exact fix commit(s), retest archive hash/version/source/environment/time, and independent retest result.
-
-Statuses: OPEN → FIX_IN_PROGRESS → FIXED_PENDING_RETEST → CLOSED; a failed retest returns to REOPENED. Only QA changes a finding to CLOSED after independent retesting. Builder's own checks cannot close it. Material findings remain in OPEN_FINDINGS until closed; no waived or cosmetic relabeling of a material failure produces QA_PASS.
-
-Severity:
-- BLOCKER: missing access/identity/evidence prevents a meaningful check.
-- CRITICAL: wrong claim/data, unusable navigation, unusable package, or exposed secrets.
-- MAJOR: violation of a mandatory design rule, missing scene, clipping, unstable hold, or narration-disrupting motion/performance.
-- MINOR: polish issue that does not violate a mandatory requirement or impair understanding.
-
-Mandatory requirement failures cannot be downgraded to MINOR to gain a pass. Keep optional polish separate from acceptance.
-
-For failures:
-1. Set QA_FAIL and QA_RESULT=FAIL. Preserve the failed archive version/hash and tested source/environment. Keep every open material ID, including FIXED_PENDING_RETEST/REOPENED, in OPEN_FINDINGS.
-2. Route to Builder with exact IDs, correction/regression scope and upstream factual/design routes. Invalidate affected artifacts.
-3. Builder publishes FIXING, records per-ID fix commits/responses, assembles/verifies a new versioned ZIP and returns READY_FOR_QA.
-4. QA independently obtains the newly identified archive, verifies its hashes/source, extracts cleanly, retests each ID and affected regressions, and rechecks mandatory identity/cover/pointer/clean-canvas/keyboard/hold/offline gates.
-5. Only close findings with evidence. Failed retests retain the same ID as REOPENED. Missing checks remain BLOCKED/NOT_RUN.
-6. Preserve previous run evidence and continue until QA_PASS with no open material findings.
-
-QA must not change runtime or launchers to close its own findings. A material discovery after pass reopens its stable ID or creates a new ID, records the affected package and returns QA_FAIL.
-
-## Pass, final review, and delivery
-
-Set QA_PASS only when all applicable mandatory package/scene checks pass independently on the exact delivered archive, all five owner artifacts are current/accessibly recorded, no unresolved material findings or blocked mandatory checks remain, and tested hash/source/environment/evidence are recorded.
-
-QA_PASS is scoped to actual environments tested. If Windows execution is unavailable, do not claim START.bat/STOP.bat passed. Include the pending target-machine check prominently in the handoff.
-
-Publish artifacts then status; NEXT_ACTOR=Owner — Final review/rehearsal and Windows smoke.
-NEXT_ACTION: “Download the verified ZIP, extract it, follow README_TH, open START.bat, check first cover/pointer/fullscreen/Spacebar/R, stop and restart with the supplied launcher, and test offline after prerequisite setup. Rehearse against the Thai narration/rationale and record final acceptance.”
-
-COMPLETE requires agreed delivery, owner review and verified target-Windows launch/stop/restart evidence, with no required unfinished work. Preserve folder/package/finding identities if a target-machine failure requires another fix/retest. Public hosting is not required and Vercel access cannot prevent this local route from passing.
-
-## Compact QA handoff format
+1. Inspect the actual DEFAULT_BRANCH and existing branches; generate a unique PROJECT_ID and record BOOTSTRAP_MODE=FRESH. Create a new normal unique assignment branch from an appropriate existing base and record its name/URL and base commit. Keep main/default read-only unless explicitly instructed otherwise. Start PLANNING/Content with fresh README/status and copies of these five current templates; keep Build specifications and QA criteria from the start. Preserve old branches/history and compatible infrastructure; clean only clearly stale assignment files on the new branch and document ambiguity in references/bootstrap-notes.md.
+2. Verify WORKFLOW_FOLDER=00_WORKFLOW and TOPIC_DRIVE_PARENT=01_PROJECTS using the exact URLs/IDs above. Read START_HERE.md and all five specifications from 00_WORKFLOW. Agent 1 creates exactly one <Topic Name> - <PROJECT_ID> folder directly under 01_PROJECTS and persists the returned OWNER_DRIVE_FOLDER URL/ID in README/status. Never create a topic folder inside 00_WORKFLOW. Retries recover this same run's recorded folder; a matching topic name from an older run does not justify reuse.
+3. Create the repo structure below. Store only necessary, legally usable reference excerpts/assets and source metadata; do not indiscriminately copy copyrighted material.
+4. Produce content and the three owner reading/narration deliverables. Mark 06_SCENE_RATIONALE=PENDING_BUILD.
+5. Verify and publish the repository handoff using the shared commit procedure.
 
 ~~~text
-Result: <QA_PASS / QA_FAIL / BLOCKED>
-Tested package: <observed download link, version, SHA-256, source commit>
-Environment: <actual OS/runtime/browser; Windows launcher tested or pending>
-Evidence: <repo-relative report and scene evidence paths>
-Owner documents: <observed URLs and current/stale state>
-Open findings: <stable QA-001-style IDs and impact, or none>
-Next actor/action: <concrete task>
-Branch and handoff commit: <actual branch URL and H>
+repo/
+├─ README.md
+├─ WORKFLOW_STATUS.md
+├─ 01_CONTENT.md
+├─ 02_DESIGN_SYSTEM.md
+├─ 03_VISUAL_PLAN.md
+├─ 04_BUILD.md
+├─ 05_QA.md
+├─ BUILD_NOTES.md              # created/filled by Builder
+├─ references/                # source register, permitted reference material
+├─ assets/                    # runtime assets and provenance
+├─ src/                       # implementation when built
+└─ qa/                        # reports and evidence
 ~~~
 
-A passing QA run confirms the documented scope and environment. It does not certify unseen browser/device combinations or package bytes that changed afterward.
+Existing deployment caches are historical and never required for LOCAL_ZIP. Ignore credentials, build caches and launcher process files. Record runtime prerequisites and package identity in status.
+
+## Research and story procedure
+
+- Separate knowledge summary (what is known), research and analysis (evidence, interpretation, counterarguments), narration (spoken story), and visual purpose (what must become understandable).
+- Verify time-sensitive claims against dated primary sources. Record publication/event date, access date, and scope. Distinguish fact, estimate, inference, analogy, and opinion.
+- Build a claim register. Every material factual assertion or numerical comparison in narration or visuals must map to a claim ID and supporting source. Record uncertainty, limitations, contrary evidence, units, denominator, period, geography, and rounding.
+- Develop an evidence-supported thesis. Explain the strongest counterargument and what would change the conclusion. Unsupported certainty must be removed or qualified.
+- Obtain essential scope/thesis choices if they are genuinely unresolved. Reuse decisions the owner already made; routine scene, style, and implementation decisions belong to the agents.
+- Write a hook, context, explanation, evidence, implications, and a closing takeaway appropriate to the topic. Avoid rigid scene counts or padding to reach a duration.
+- Require an authentic cover image: identify a relevant official logo, original character artwork, or real photograph from a verifiable source. Record source and rights; do not generate/reconstruct the required authentic image. The packaged image must be visible in the initial S01 state and after R reset. The owner may choose a subject; Content defines the relevance and Visual selects the actual asset.
+- Divide narration into stable scene IDs S01, S02, etc. Define S01 as the cover so that R has an unambiguous destination; the cover is part of the story and follows the same clean-canvas and copy rules. One scene has one audience takeaway, but may contain multiple reveal beats. IDs are internal metadata, never visible page numbers.
+- Narration carries explanation and nuance. Visuals carry relationships, scale, mechanisms, or evidence. Do not write slides as paragraphs or repeat the spoken script onscreen.
+- Supply proposed ordinary visible copy targeting 0–8 words per scene, excluding essential chart/data labels. Separate indispensable labels/units/numbers from ordinary copy; justify the minimum data labels needed for truthful reading and do not use the exception for prose. A scene may be entirely text-free. For Thai, count meaningful linguistic words rather than whitespace chunks; document segmentation where ambiguous.
+- Estimate pacing from an actual read-through where possible. A presenter can hold longer than the estimate; avoid assuming narration audio or automatic timing exists.
+- Do not select 3D merely for appearance. State the understanding needed; Agent 3 chooses the appropriate visual medium.
+
+## Fillable project specification
+
+Replace placeholders with real values; maintain these sections alongside the instructions.
+
+~~~yaml
+BOOTSTRAP_MODE: FRESH
+PROJECT_ID: <unique identifier for this fresh assignment>
+PROJECT_TITLE: <title>
+AUDIENCE: <who and prior knowledge>
+OWNER: <provided name or UNSET>
+NARRATION_LANGUAGE: <language>
+TARGET_DURATION: <range and read-through estimate>
+FORMAT: narration-led local web presentation
+DELIVERY_MODE: LOCAL_ZIP
+TARGET_OS: Windows
+OFFLINE_AFTER_SETUP: true
+COVER_SCENE_ID: S01
+COVER_IMAGE_SUBJECT: <authentic relevant image/official logo/character subject>
+COVER_ASSET_REQUIREMENT: authentic_original_required
+SCOPE: <included questions>
+OUT_OF_SCOPE: <excluded questions>
+THESIS: <one defensible sentence>
+AUDIENCE_TAKEAWAY: <what changes in understanding>
+OWNER_SCOPE_DECISION: <decision/evidence or PENDING>
+OWNER_THESIS_DECISION: <decision/evidence or PENDING>
+RESEARCH_AS_OF: <ISO date/time with timezone>
+~~~
+
+### Source register
+
+| Source ID | Title / publisher | Direct URL | Published / event date | Accessed | Supports | Limits / reliability |
+|---|---|---|---|---|---|---|
+| SRC01 | <source> | <verified URL> | <dates> | <date> | <claim IDs> | <limits> |
+
+### Claim register
+
+| Claim ID | Exact claim | Type | Source IDs and location | Unit / period / denominator | Uncertainty / opposing evidence | Allowed visual interpretation |
+|---|---|---|---|---|---|---|
+| C01 | <claim> | FACT/INFERENCE/ESTIMATE/ANALOGY | <sources and page/section> | <scope> | <limits> | <what may be shown> |
+
+### Story outline
+
+| Beat | Audience question | Takeaway | Evidence / claim IDs | Why this beat follows |
+|---|---|---|---|---|
+| <beat> | <question> | <takeaway> | <IDs> | <logic> |
+
+### Repeat for every scene
+
+~~~yaml
+SCENE_ID: S01
+SCENE_PURPOSE: <one audience takeaway>
+NARRATION: |
+  <complete natural spoken text; not abbreviated slide bullets>
+CLAIM_IDS: [<IDs>]
+ESTIMATED_SPOKEN_SECONDS: <number and measurement basis>
+PRESENTER_CUES: <when to reveal, settle, hold, and advance>
+VISUAL_JOB: <understanding the visual must supply>
+VISIBLE_COPY_PROPOSAL: <ordinary copy, target 0–8 words or empty>
+VISIBLE_WORD_COUNT: <ordinary copy count; Thai segmentation if relevant>
+ESSENTIAL_DATA_LABELS: <exact indispensable chart/data labels; or NONE>
+ESSENTIAL_LABEL_REASON: <why each excluded label is necessary>
+TOTAL_VISIBLE_WORD_COUNT: <ordinary copy plus excluded labels>
+FACTUAL_BOUNDARIES: <what the visual must not imply>
+TRANSITION_REASON: <how the next idea follows>
+~~~
+
+## Owner-facing Drive deliverables
+
+Write these into the exact OWNER_DRIVE_FOLDER:
+
+| Name | Format | Contents | Responsible |
+|---|---|---|---|
+| 01_KNOWLEDGE_SUMMARY.pdf | PDF | Concise knowledge map, definitions, key facts, uncertainties, source links | Agent 1 |
+| 02_RESEARCH_AND_ANALYSIS.pdf | PDF | Claim/evidence analysis, thesis, counterarguments, limitations, dated references | Agent 1 |
+| 03A_NARRATION_SCRIPT | Google Doc | Editable Thai rehearsal-ready script with scene IDs, pacing/cues, pronunciation notes if needed; no code | Agent 1 |
+| 06_SCENE_RATIONALE | Google Doc | Final Thai explanation of the actual built visuals and pointer; created after build | Agent 4 |
+| <PROJECT_ID>-<PACKAGE_VERSION>-local.zip | ZIP | Prebuilt Webapp, START.bat/STOP.bat, runtime helper, packaged authentic cover/assets, manifest and Thai quick-start | Agent 4 |
+
+Include project/version and source commit in each owner edition. Owner documents can contain full explanations, source citations, and cue labels; the 0–8-word ordinary-copy target applies to the audience scene canvas, with a justified exception for essential chart/data labels, not these documents. Verify PDF readability and all document links.
+
+## README.md starter — create in the topic repo
+
+~~~markdown
+# <PROJECT_TITLE>
+
+PROJECT: <real topic/project name>
+BOOTSTRAP_MODE: FRESH
+PROJECT_ID: <unique ID for this fresh assignment>
+REPOSITORY: <actual GitHub repo URL>
+DEFAULT_BRANCH: <verified repository default branch; read-only by default>
+BRANCH: <actual active branch>
+BRANCH_URL: <actual branch URL>
+WORKFLOW_STATE: WORKFLOW_STATUS.md
+
+WORKFLOW_FOLDER: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+WORKFLOW_FOLDER_ID: 1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+TEMPLATE_LIBRARY_URL: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+TOPIC_DRIVE_PARENT: https://drive.google.com/drive/folders/153uw4BMBT78VS6TQgGelanIzXPomkzZt
+TOPIC_DRIVE_PARENT_ID: 153uw4BMBT78VS6TQgGelanIzXPomkzZt
+OWNER_DRIVE_FOLDER: <actual per-topic folder URL>
+OWNER_DRIVE_FOLDER_ID: <actual per-topic folder ID>
+
+Open this README.md first, then WORKFLOW_STATUS.md immediately after.
+Infer your role from NEXT_ACTOR and NEXT_ACTION before doing any work.
+The owner supplies only the current GitHub branch URL and “Continue this project from the current workflow state.”.
+Read the stage's REQUIRED_INPUTS before work; discover Drive/package metadata and open QA findings from status.
+Never ask the owner to repeat any role, thesis, instruction, URL, path, finding, scene number, or build state already recorded.
+Use the five specifications on this branch and repo-relative paths.
+GitHub is the canonical agent workspace. Drive contains owner-facing editions.
+Only Agent 1 creates this run's topic folder; later agents reuse its exact recorded ID.
+BOOTSTRAP_MODE=FRESH records this assignment's origin. A branch-URL continuation never creates a new run or restarts this one.
+Setup/build/run instructions: <repo-relative path, added by Builder>
+Presentation keyboard guide: <repo-relative path, added by Builder>
+~~~
+
+## WORKFLOW_STATUS.md starter — create in the topic repo
+
+This is a status schema, not a sixth master-template deliverable. Agent 1 creates the live file from it; every later agent updates the same file. YAML blocks keep values explicit; use ISO 8601 timestamps with offset, for example +07:00 for Bangkok when appropriate.
+
+~~~~markdown
+# WORKFLOW_STATUS
+
+## Identity and storage
+~~~yaml
+SCHEMA_VERSION: 7
+PROJECT: <real topic/project name>
+BOOTSTRAP_MODE: FRESH
+PROJECT_ID: <unique ID for this fresh assignment>
+PROJECT_TITLE: <real title>
+REPOSITORY: <actual repo URL>
+DEFAULT_BRANCH: <verified repository default branch>
+BRANCH: <actual new normal assignment branch>
+BRANCH_URL: <actual branch URL>
+TEMPLATE_VERSION: "1.6"
+WORKFLOW_FOLDER: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+WORKFLOW_FOLDER_ID: 1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+TEMPLATE_LIBRARY_URL: https://drive.google.com/drive/folders/1WcszSRTyebajZj1FuLE-wCuKehyInE8n
+TOPIC_DRIVE_PARENT: https://drive.google.com/drive/folders/153uw4BMBT78VS6TQgGelanIzXPomkzZt
+TOPIC_DRIVE_PARENT_ID: 153uw4BMBT78VS6TQgGelanIzXPomkzZt
+OWNER_DRIVE_FOLDER: <actual topic folder URL>
+OWNER_DRIVE_FOLDER_ID: <actual topic folder ID>
+DRIVE_FOLDER_CREATED_BY: Agent 1
+DRIVE_FOLDER_VERIFIED_AT: <timestamp>
+~~~
+
+## Current workflow
+~~~yaml
+STAGE: PLANNING
+BLOCKED_FROM_STAGE: null
+ACTIVE_ACTOR: Agent 1 — Content/Research
+UPDATED_AT: <timestamp>
+ARTIFACT_COMMIT: NOT_VERIFIED
+LAST_VERIFIED_COMMIT: NOT_VERIFIED
+LAST_VERIFIED_SCOPE: <exact files/checks inspected>
+NEXT_ACTOR: Agent 1 — Content/Research
+NEXT_ACTION: <concrete task, output paths, finding IDs/regressions if relevant, and exit criteria>
+REQUIRED_INPUTS: [01_CONTENT.md, 05_QA.md]
+OPEN_FINDINGS: [] # stable QA-001-style IDs; empty means None
+QA_FINDINGS_REPORT_PATH: UNSET
+BLOCKERS: [] # empty means None
+OWNER_ACTION_REQUIRED: null
+OWNER_DECISIONS:
+  SCOPE: <decision plus evidence, or PENDING>
+  THESIS: <decision plus evidence, or PENDING>
+  FINAL_REVIEW: PENDING
+  DELIVERY: LOCAL_ZIP
+  PUBLICATION: NOT_REQUESTED
+~~~
+
+## Execution environment and pending service tasks
+~~~yaml
+EXECUTION_MODE: UNKNOWN # LOCAL/CLOUD/UNKNOWN; record actual context
+EXECUTION_OS: NOT_VERIFIED
+EXECUTION_RUNTIME: NOT_VERIFIED
+EXECUTION_BROWSER: NOT_VERIFIED
+EXECUTION_VERIFIED_AT: UNSET
+EXECUTION_EVIDENCE: UNSET # repo-relative report; distinguish executed/inspected/reported
+REQUIRED_SERVICES_FOR_NEXT_ACTION: []
+SERVICE_CAPABILITIES: {} # service -> state, scope, evidence, verified_at; no credentials
+PENDING_SERVICE_TASKS: [] # task ID, role, required capability, artifact path/ID, state, next action
+NEXT_EXECUTION_PREFERENCE: ANY_CAPABLE # preference only, not role assignment
+WINDOWS_VERIFICATION_ACTOR: UNSET
+WINDOWS_VERIFICATION_PACKAGE_SHA256: NOT_VERIFIED
+~~~
+
+Capability states: READ_VERIFIED, WRITE_VERIFIED, READ_ONLY, BLOCKED, NOT_VERIFIED, NOT_REQUIRED. Pending service tasks retain their identity until verified complete. Record evidence rather than assuming a connector exists in the next environment.
+
+## Repository deliverables
+| Path | Actor | State | Source/artifact commit | Verified evidence | Invalidated by |
+|---|---|---|---|---|---|
+| 01_CONTENT.md | Agent 1 | PENDING | NOT_VERIFIED | <path> | null |
+| 02_DESIGN_SYSTEM.md | Agent 2 | PENDING | NOT_VERIFIED | <path> | null |
+| 03_VISUAL_PLAN.md | Agent 3 | PENDING | NOT_VERIFIED | <path> | null |
+| 04_BUILD.md | Agent 4 | TEMPLATE_READY | NOT_VERIFIED | <path> | null |
+| 05_QA.md | Agent 5 | CRITERIA_READY | NOT_VERIFIED | <path> | null |
+| BUILD_NOTES.md | Agent 4 | PENDING | NOT_VERIFIED | <path> | null |
+| src/ and assets/ | Agent 4 | PENDING | NOT_VERIFIED | <paths> | null |
+| qa/ | Agent 5 | PENDING | NOT_VERIFIED | <paths> | null |
+| delivery/ launchers, helper and manifest | Agent 4 | PENDING | NOT_VERIFIED | <paths> | null |
+
+## Owner-facing Drive deliverables
+| Name | Type | Actor | State | File ID | Observed URL | Source commit | Verified at |
+|---|---|---|---|---|---|---|---|
+| 01_KNOWLEDGE_SUMMARY.pdf | PDF | Agent 1 | PENDING | UNSET | UNSET | NOT_VERIFIED | UNSET |
+| 02_RESEARCH_AND_ANALYSIS.pdf | PDF | Agent 1 | PENDING | UNSET | UNSET | NOT_VERIFIED | UNSET |
+| 03A_NARRATION_SCRIPT | Google Doc | Agent 1 | PENDING | UNSET | UNSET | NOT_VERIFIED | UNSET |
+| 06_SCENE_RATIONALE | Google Doc | Agent 4 | PENDING_BUILD | UNSET | UNSET | NOT_VERIFIED | UNSET |
+| <PROJECT_ID>-<PACKAGE_VERSION>-local.zip | ZIP | Agent 4 | PENDING_BUILD | UNSET | UNSET | NOT_VERIFIED | UNSET |
+
+## Local package and build identity
+~~~yaml
+DELIVERY_MODE: LOCAL_ZIP
+TARGET_OS: Windows
+PUBLIC_DEPLOYMENT_REQUIRED: false
+OFFLINE_AFTER_SETUP: true
+LOCAL_RUNTIME: UNSET # choose Python 3 by default or a documented Node.js alternative
+LOCAL_RUNTIME_TESTED_VERSION: UNSET
+WINDOWS_RUNTIME_PREREQUISITE: UNSET
+FRAMEWORK: UNSET
+INSTALL_COMMAND: UNSET # Builder setup only
+BUILD_COMMAND: UNSET # Builder setup only
+OUTPUT_DIRECTORY: UNSET
+BUILD_COMMIT: NOT_VERIFIED
+FIX_COMMITS_BY_FINDING: {}
+PACKAGE_VERSION: UNSET
+PACKAGE_PATH: UNSET # repo-relative assembly/output path
+PACKAGE_MANIFEST_PATH: UNSET
+PACKAGE_FILE_ID: UNSET
+PACKAGE_DOWNLOAD_URL: NOT_DELIVERED_YET # observed persistent owner link
+PACKAGE_SHA256: NOT_VERIFIED
+PACKAGE_STATE: NOT_BUILT # NOT_BUILT/IN_PROGRESS/READY/STALE/FAILED/BLOCKED
+PACKAGE_IDENTITY_EVIDENCE: UNSET
+LAST_PACKAGE_VERIFIED_AT: UNSET
+POINTER_MODE: theme_adaptive_presenter_dot
+POINTER_SPEC_PATH: 02_DESIGN_SYSTEM.md
+COVER_SCENE_ID: S01
+COVER_ASSET_ID: UNSET
+~~~
+
+## QA identity and owner verification
+~~~yaml
+QA_TESTED_COMMIT: NOT_VERIFIED
+QA_TESTED_PACKAGE_SHA256: NOT_VERIFIED
+QA_PACKAGE_VERSION: UNSET
+QA_ENVIRONMENT: UNSET
+QA_TARGET: extracted_package_on_loopback
+QA_TARGET_URL: UNSET # local run observation only; never an owner handoff link
+QA_REPORT_PATH: UNSET
+QA_RESULT: NOT_RUN
+QA_VERIFIED_AT: UNSET
+QA_FINDING_STATES: {}
+WINDOWS_LAUNCHER_TEST_RESULT: NOT_RUN
+WINDOWS_LAUNCHER_TEST_EVIDENCE: UNSET
+OWNER_WINDOWS_SMOKE_RESULT: NOT_RUN
+OWNER_WINDOWS_SMOKE_EVIDENCE: UNSET
+~~~
+
+## Current handoff
+~~~yaml
+LAST_HANDOFF_ARTIFACT_COMMIT: <real SHA or NOT_VERIFIED>
+LAST_HANDOFF_EVIDENCE: <repo-relative report paths>
+BOOTSTRAP_NOTES_PATH: references/bootstrap-notes.md # chosen base/commit, scoped cleanup, preserved ambiguities
+WORKFLOW_HISTORY_PATH: references/workflow-history.md
+~~~
+Keep one current-state summary here. Append historical handoffs in WORKFLOW_HISTORY_PATH and detailed QA runs in qa/; do not append chat transcripts.
+~~~~
+
+When copying this nested Markdown example, use the section text as a normal file, removing the outer example fence only. Preserve the inner YAML fences.
+
+Allowed artifact states: PENDING, TEMPLATE_READY, CRITERIA_READY, IN_PROGRESS, READY, STALE, FAILED, BLOCKED. A template is not a completed stage. Update the skeleton with real metadata as work happens.
+
+## Exit criteria and handoff
+
+- Scope/thesis decisions are recorded or essential unresolved decisions are explicitly blocked.
+- Claims are traceable; narration is complete; each scene has purpose, cues, and text budget.
+- All five templates, README.md, and live WORKFLOW_STATUS.md exist in the remote topic repo.
+- The exact topic folder and the three reading/narration artifacts are verified and recorded; narration is editable Thai and rationale is scheduled as final Thai.
+- Commit/push content artifacts and then status. Set STAGE=READY_FOR_DESIGN, NEXT_ACTOR=Agent 2 — Design.
+- NEXT_ACTION: “Read README.md, WORKFLOW_STATUS.md, 01_CONTENT.md, and 05_QA.md. Fill 02_DESIGN_SYSTEM.md for this topic, preserving the narration-first, visual-first, 16:9 and clean-canvas constraints. Do not build yet.”
 
 
 
