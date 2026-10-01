@@ -25,3 +25,14 @@ Helper integration/security worker passed 15/15 real Python TCP loopback tests o
 Use exact delivered ZIP/hash and BUILD_COMMIT. The supported existing cloud browser may inspect the actual package over its permitted HTTP loopback URL; file:// remains disallowed. Extract fresh; validate manifest before running. A permitted executor must execute serve.py start/status/stop, occupied-port/repeat-start/restart/path-with-Thai tests and browser_check.py against extracted loopback app; inspect all scene/reveal states and proper fallback, repeat/modified keys, pointer, reduced motion and fullscreen. Run independent QA only after Builder’s required checks are complete. Windows launchers must be run on actual Windows when available; until then WINDOWS_LAUNCHER_TEST_RESULT and OWNER_WINDOWS_SMOKE_RESULT remain NOT_RUN. The owner must rehearse Thai narration: 560 seconds is editorial only.
 
 The package/rationale URLs and exact source/archive identities are recorded in delivery/package-identity.json and WORKFLOW_STATUS.md after verified upload, not guessed here.
+
+## Final provisional identity and Builder results
+
+BUILD_COMMIT e2210041c93b8cbf5588eada5058fef60d0f6ad9; version0.1.1-provisional; SHA256 e36c0843d8287046c9427f12abd729aef73d26337696f7044670d189c1cee327; 544191 bytes. The exact archive was reassembled byte-identically, downloaded from the same owner Drive file, and rehashed. All16 archive entries and manifest hashes passed. Source app/helper bytes are unchanged from v0.1.0; v0.1.1 adds required complete photo credit/reference in Thai README and updated manifest identity.
+
+Final exact extracted app HTTP byte hashes, readiness, repeated start/status/stop/restart passed on Linux/Python3.12.14. Source state tests3/3 and helper integration/security tests15/15 passed. See references/build/extracted-runtime-provisional.json and package-static-verification.json. Supported existing cloud browser returned ERR_BLOCKED_BY_CLIENT on its loopback navigation; file URLs are disallowed and separately launched Chromium failed before page creation. See browser-capability.md. These do not prevent delivering recoverable provisional bytes, but rendered acceptance stays blocked. Windows and independent QA remain NOT_RUN.
+
+Owner ZIP: https://drive.google.com/file/d/1bPfzQVZOwyVdFtf_ct-sIUspe-u-py6a/view?usp=drivesdk
+Thai rationale: https://docs.google.com/document/d/1Z3WMwvWmJtbiyQ3cnKJycZC9gxj6oLZV1qUShaJ-zNo/edit?usp=drivesdk
+
+Metadata/document-only handoff updates after BUILD_COMMIT do not alter the frozen runtime/launcher inputs. Rebuild from BUILD_COMMIT, not the later metadata HEAD, to reproduce the exact ZIP identity.

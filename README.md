@@ -18,7 +18,7 @@ WORKFLOW_STATE: WORKFLOW_STATUS.md
 OWNER_DRIVE_FOLDER: https://drive.google.com/drive/folders/1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
 OWNER_DRIVE_FOLDER_ID: 1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz
 
-Read WORKFLOW_STATUS.md immediately after this file. This is the approved general-Thai-audience 8–10 minute Content assignment, not either prior website project. Follow NEXT_ACTOR and REQUIRED_INPUTS. The live specifications are 01_CONTENT.md through 05_QA.md. GitHub is canonical. Consult current WORKFLOW_STATUS.md for the active stage; Build has not begun.
+Read WORKFLOW_STATUS.md immediately after this file. This is the approved general-Thai-audience 8–10 minute Content assignment, not either prior website project. Follow NEXT_ACTOR and REQUIRED_INPUTS. The live specifications are 01_CONTENT.md through 05_QA.md. GitHub is canonical. Consult current WORKFLOW_STATUS.md for the active stage; Builder has delivered a provisional offline package, with rendered-browser and Windows verification still pending.
 
 DELIVERY_MODE: LOCAL_ZIP
 TARGET_OS: Windows
@@ -38,7 +38,7 @@ The owner supplies only this branch URL and “Continue this project from the cu
 - [02_RESEARCH_AND_ANALYSIS.pdf](https://drive.google.com/file/d/1mCZXIh2qVqJH5Rwhwe03W9D-nULi9ahH/view?usp=drivesdk) — READY; source 501f48afb1bddf098de95fa75f995dbd016d54c5
 - [03A_NARRATION_SCRIPT](https://docs.google.com/document/d/1F9VdhHxINHjam8jgCi8795jbBj07Yqn2q_wmGIQaWGk/edit?usp=drivesdk) — READY; source 501f48afb1bddf098de95fa75f995dbd016d54c5
 
-Detailed identities and QA are in references/owner-artifacts.json. Scene rationale and runnable ZIP remain PENDING_BUILD.
+Detailed identities and scoped verification are in references/owner-artifacts.json and delivery/package-identity.json. The current provisional ZIP has verified byte identity; see live status for the rationale and remaining runtime gate.
 
 ## Content handoff
 
@@ -52,3 +52,13 @@ Design 1.0 specifies an editorial 16:9 evidence canvas, Thai typography, semanti
 
 Visual 1.0 contains nine English-canvas scene plans and 23 presenter-controlled beat endpoints, paired with unchanged Thai narration. The owner explicitly chose English scene copy. The cover uses a verified CC BY 2.0 photograph of Dario Amodei at TechCrunch Disrupt 2023 with accompanying credits; no restricted official logo ships. The exact scene geometry/copy and offline asset/font hashes are in 03_VISUAL_PLAN.md, references/visual-scenes.json and assets/manifest.json. Static storyboard review is documented under references/visual-review/; it is not browser, package or Windows QA. Follow WORKFLOW_STATUS.md for the live next actor.
 
+
+## Builder provisional package
+
+Source build: e2210041c93b8cbf5588eada5058fef60d0f6ad9. Package version: 0.1.1-provisional. [Download the current local ZIP](https://drive.google.com/file/d/1bPfzQVZOwyVdFtf_ct-sIUspe-u-py6a/view?usp=drivesdk). SHA-256: e36c0843d8287046c9427f12abd729aef73d26337696f7044670d189c1cee327. 544,191 bytes. Drive download is byte-identical to the locally verified archive; full manifest/source identity is in delivery/package-identity.json.
+
+The package includes prebuilt app, both Windows launchers, standard-library Python helper, Thai quick-start and complete photo/font credits. Install Python 3.10+ once from its official site; ordinary launch does not install/build/download dependencies. Source rebuild: check out the exact BUILD_COMMIT, run `python scripts/package.py 0.1.1-provisional`, then verify the archive hash above.
+
+Three pure state tests and 15 real helper integration/security tests passed. Final extracted package HTTP payload hashes and launch/repeat/status/stop/restart passed on Linux. These checks do not certify rendered appearance, motion, pointer, browser offline behavior or Windows .bat execution. The current executor's browser routes are blocked; no public hosting or security workaround was used. The workflow remains blocked from BUILDING until a permitted executor completes rendered checks, then independent QA follows. No QA_PASS or COMPLETE is claimed.
+
+[06_SCENE_RATIONALE](https://docs.google.com/document/d/1Z3WMwvWmJtbiyQ3cnKJycZC9gxj6oLZV1qUShaJ-zNo/edit?usp=drivesdk) is the editable Thai rationale for this provisional package, with exact source/hash, full credits and honest runtime limits.

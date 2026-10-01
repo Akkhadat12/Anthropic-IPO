@@ -1,6 +1,6 @@
 # Anthropic IPO — Builder implementation 0.1.1 (provisional)
 
-This live implementation section fills the choices for the current project; the exact v1.7 master below is preserved. Runtime verification is BLOCKED by this executor's socket restriction; this is not READY_FOR_QA or a QA pass.
+This live implementation section fills the choices for the current project; the exact v1.7 master below is preserved. Rendered-browser verification is BLOCKED by the recorded executor/browser restrictions. Real Python loopback/helper and extracted-package checks passed; this is not READY_FOR_QA or a QA pass.
 
 ```yaml
 PROJECT_ID: anthropic-ipo-20261001-0426
@@ -30,7 +30,7 @@ OWNER_DOCUMENT_LANGUAGE: Thai
 QUICK_START_LANGUAGE: Thai
 PERFORMANCE_TARGETS: Ready under 2000ms on recorded desktop test host; no active scene animations/timers after hold; performance NOT_MEASURED
 LOCAL_RUNTIME: Python >=3.10 standard library
-LOCAL_RUNTIME_TESTED_VERSION: Static/build checks Python 3.12.14; live helper blocked
+LOCAL_RUNTIME_TESTED_VERSION: Python 3.12.14; real helper tests15/15 and final extracted HTTP hashes/lifecycle PASS
 WINDOWS_RUNTIME_PREREQUISITE: Install Python 3.10+ once from https://www.python.org/downloads/windows/
 SERVER_BIND: 127.0.0.1
 OFFLINE_AFTER_SETUP: true_by_design; actual offline runtime test NOT_RUN
@@ -61,7 +61,7 @@ The build emits scene HTML from the unchanged authoritative ledger rather than h
 
 Source JavaScript modules are concatenated deterministically into one external classic script so there is no runtime module fetch dependency. There are no third-party package dependencies to lock, no backend/API/CDN/telemetry and no authoring dependencies in the end-user ZIP. Runtime assets are allowlisted from the verified manifest. The photo and both WOFFs retain their verified bytes and licenses.
 
-Builder state tests, source syntax checks, language/asset/copy checks and archive verification are separate from required browser/helper checks. The helper worker passed 15/15 real Python TCP loopback/security tests; actual shell Chromium launch was denied by socket() restrictions, including a reviewed escalation attempt. The supported cloud browser rejected file:// under its URL protocol policy; no workaround or public host was used. Windows execution, actual extracted-package browser geometry, pointer, offline and 30-second holds remain NOT_RUN/BLOCKED. See BUILD_NOTES.md and references/build/ for exact evidence. Independent QA has not started.
+Builder state tests, source syntax checks, language/asset/copy checks and archive verification are separate from required browser/helper checks. The helper worker passed 15/15 real Python TCP loopback/security tests; actual shell Chromium launch was denied by socket() restrictions, including a reviewed escalation attempt. The supported cloud browser rejected file:// under its URL protocol policy; no workaround or public host was used. Windows execution, actual browser geometry, pointer, offline and 30-second holds remain NOT_RUN/BLOCKED. See BUILD_NOTES.md and references/build/ for exact evidence. Independent QA has not started.
 
 ---
 

@@ -32,20 +32,20 @@ DRIVE_FOLDER_VERIFIED_AT: 2026-10-01T04:54:39Z
 
 ## Current workflow
 ```yaml
-STAGE: BUILDING
-BLOCKED_FROM_STAGE: null
-ACTIVE_ACTOR: Agent 4 Builder
-UPDATED_AT: 2026-10-01T07:36:41Z
-ARTIFACT_COMMIT: bb63eb3943a8e901e791ddaa5887f5f35699cdb0
+STAGE: BLOCKED
+BLOCKED_FROM_STAGE: BUILDING
+ACTIVE_ACTOR: Agent 4 Builder; source and provisional owner package delivered
+UPDATED_AT: 2026-10-01T08:09:20Z
+ARTIFACT_COMMIT: e2210041c93b8cbf5588eada5058fef60d0f6ad9
 CONTENT_SOURCE_COMMIT: 501f48afb1bddf098de95fa75f995dbd016d54c5
-LAST_VERIFIED_COMMIT: bb63eb3943a8e901e791ddaa5887f5f35699cdb0
-LAST_VERIFIED_SCOPE: Visual 1.1 and v1.7 exact-master migration remote readback; licensed optimized asset hashes, English all-state copy, static storyboard and independent focused review; runtime NOT_RUN
-NEXT_ACTOR: Agent 4 Builder
-NEXT_ACTION: "Read README/status and REQUIRED_INPUTS. Publish BUILDING, fill 04_BUILD implementation choices, implement the English 9-scene presentation with Thai narration and all v1.7 language/asset/pointer/hold rules. Build the prebuilt LOCAL_ZIP, launchers/helper, BUILD_NOTES, package identity and Thai rationale in the existing owner folder. Verify extracted/offline package and return READY_FOR_QA only with real archive/source/Drive identity. No public hosting."
+LAST_VERIFIED_COMMIT: e2210041c93b8cbf5588eada5058fef60d0f6ad9
+LAST_VERIFIED_SCOPE: Exact source, reproducible archive, Drive byte readback, extracted Python HTTP payload hashes/lifecycle, 15 helper and 3 state tests; browser BLOCKED, Windows NOT_RUN
+NEXT_ACTOR: Agent 4 Builder in a permitted browser-capable executor
+NEXT_ACTION: "Continue from exact provisional ZIP and BUILD_COMMIT, not legacy. Complete blocked extracted-package browser checks, fix defects and version package if needed; refresh rationale/identity then READY_FOR_QA. Only independent QA may award QA_PASS. Windows remains NOT_RUN until actual Windows execution."
 REQUIRED_INPUTS: [01_CONTENT.md, 02_DESIGN_SYSTEM.md, 03_VISUAL_PLAN.md, 04_BUILD.md, 05_QA.md, references/visual-scenes.json, assets/manifest.json, assets/manifest.md, assets/CREDITS.txt, references/visual-review/review.md, references/visual-review/v17-review.md, references/claim-register.md, references/source-register.md]
 OPEN_FINDINGS: []
 QA_FINDINGS_REPORT_PATH: UNSET
-BLOCKERS: []
+BLOCKERS: ["Required rendered browser checks not run: Chromium startup socket() permission failure; supported cloud browser file scheme and loopback URL blocked. No public hosting or access-control workaround used."]
 OWNER_ACTION_REQUIRED: null
 CONTENT_REVIEW_RESULT: PASS with limitations recorded
 RESEARCH_AS_OF: 2026-10-01T04:24:00Z
@@ -79,11 +79,11 @@ The owner approved the proposed thesis, audience and duration with “ดีค�
 ```yaml
 EXECUTION_MODE: CLOUD
 EXECUTION_OS: Linux
-EXECUTION_RUNTIME: Authenticated GitHub connector; Linux Python Pillow RAQM/fontTools for static visual proof and asset checks
-EXECUTION_BROWSER: NOT_RUN; Chromium launch blocked before page creation by executor socket restriction
-EXECUTION_VERIFIED_AT: 2026-10-01T07:34:00Z
-EXECUTION_EVIDENCE: references/visual-review/review.md
-REQUIRED_SERVICES_FOR_NEXT_ACTION: [GitHub]
+EXECUTION_RUNTIME: Python 3.12.14 standard library; Node.js v24.19.0 pure-state tests; authenticated GitHub/Drive/Library publishing
+EXECUTION_BROWSER: BLOCKED_NOT_RUN; local Chromium startup socket restriction; supported cloud browser ERR_BLOCKED_BY_CLIENT for loopback
+EXECUTION_VERIFIED_AT: 2026-10-01T08:09:20Z
+EXECUTION_EVIDENCE: references/build/extracted-runtime-provisional.json
+REQUIRED_SERVICES_FOR_NEXT_ACTION: [GitHub, permitted_browser_executor]
 SERVICE_CAPABILITIES:
   GitHub:
     state: WRITE_VERIFIED
@@ -91,7 +91,7 @@ SERVICE_CAPABILITIES:
     evidence: README.md and references/bootstrap-notes.md
   Google_Drive:
     state: WRITE_VERIFIED
-    scope: One owner folder, two PDF uploads and native Thai script import
+    scope: Same owner folder; prior three editions retained; provisional ZIP update and native Thai rationale verified
     evidence: references/owner-artifacts.json
   Bloomberg:
     state: READ_VERIFIED
@@ -113,11 +113,11 @@ WINDOWS_VERIFICATION_PACKAGE_SHA256: NOT_VERIFIED
 | references/reading-pack.json | Content/Research | READY | 501f48afb1bddf098de95fa75f995dbd016d54c5 | Canonical reading-edition inputs |
 | 02_DESIGN_SYSTEM.md | Design / Visual scoped alignment | READY | bb63eb3943a8e901e791ddaa5887f5f35699cdb0 | Design 1.1 English canvas and verified licensed-photo alignment; original design basis aa74da74 |
 | 03_VISUAL_PLAN.md | Visual | READY | bb63eb3943a8e901e791ddaa5887f5f35699cdb0 | Nine English scenes, 23 cue endpoints, exact geometry/copy/holds, asset/rights and static review |
-| 04_BUILD.md | Builder | TEMPLATE_READY | bb63eb3943a8e901e791ddaa5887f5f35699cdb0 | Exact v1.7 master; no build performed |
+| 04_BUILD.md | Builder | IMPLEMENTED_PROVISIONAL | e2210041c93b8cbf5588eada5058fef60d0f6ad9 | Filled choices; v1.7 master preserved; browser blocked |
 | 05_QA.md | Independent QA | CRITERIA_READY | bb63eb3943a8e901e791ddaa5887f5f35699cdb0 | Exact v1.7 master including AC-024; runtime/package tests NOT_RUN |
 | qa/owner-document-qa.json | Content document QA | READY | 6384d754ade1c931cae7dba2e62a5aab9234badc | All local and native exported document pages inspected |
-| BUILD_NOTES.md and runtime source | Builder | PENDING | NOT_VERIFIED | Historical files under legacy/ are not current implementation |
-| delivery package | Builder | PENDING | NOT_VERIFIED | LOCAL_ZIP has not been built |
+| BUILD_NOTES.md and runtime source | Builder | COMMITTED | e2210041c93b8cbf5588eada5058fef60d0f6ad9 | Nine scenes/23 endpoints; source tests and limitations |
+| delivery package | Builder | DELIVERED_PROVISIONAL | e2210041c93b8cbf5588eada5058fef60d0f6ad9 | Exact archive/Drive byte identity; rendered checks blocked |
 
 ## Owner-facing Drive deliverables
 | Name | Type | Actor | State | File ID | Observed URL | Source commit | Verified at |
@@ -125,8 +125,8 @@ WINDOWS_VERIFICATION_PACKAGE_SHA256: NOT_VERIFIED
 | 01_KNOWLEDGE_SUMMARY.pdf | PDF | Content/Research | READY | 1qaeJGOwXOq-CTbdIa-tjQ_GcQd-oadOg | https://drive.google.com/file/d/1qaeJGOwXOq-CTbdIa-tjQ_GcQd-oadOg/view?usp=drivesdk | 501f48afb1bddf098de95fa75f995dbd016d54c5 | 2026-10-01T04:54:39Z |
 | 02_RESEARCH_AND_ANALYSIS.pdf | PDF | Content/Research | READY | 1mCZXIh2qVqJH5Rwhwe03W9D-nULi9ahH | https://drive.google.com/file/d/1mCZXIh2qVqJH5Rwhwe03W9D-nULi9ahH/view?usp=drivesdk | 501f48afb1bddf098de95fa75f995dbd016d54c5 | 2026-10-01T04:54:39Z |
 | 03A_NARRATION_SCRIPT | Google Doc | Content/Research | READY | 1F9VdhHxINHjam8jgCi8795jbBj07Yqn2q_wmGIQaWGk | https://docs.google.com/document/d/1F9VdhHxINHjam8jgCi8795jbBj07Yqn2q_wmGIQaWGk/edit?usp=drivesdk | 501f48afb1bddf098de95fa75f995dbd016d54c5 | 2026-10-01T04:55:33Z |
-| 06_SCENE_RATIONALE | Google Doc | Builder | PENDING_BUILD | UNSET | UNSET | NOT_VERIFIED | UNSET |
-| anthropic-ipo-20261001-0426-PACKAGE_VERSION-local.zip | ZIP | Builder | PENDING_BUILD | UNSET | UNSET | NOT_VERIFIED | UNSET |
+| 06_SCENE_RATIONALE | Google Doc | Builder | READY_PROVISIONAL | 1Z3WMwvWmJtbiyQ3cnKJycZC9gxj6oLZV1qUShaJ-zNo | https://docs.google.com/document/d/1Z3WMwvWmJtbiyQ3cnKJycZC9gxj6oLZV1qUShaJ-zNo/edit?usp=drivesdk | e2210041c93b8cbf5588eada5058fef60d0f6ad9 | 2026-10-01T08:08:28Z |
+| anthropic-ipo-20261001-0426-0.1.1-provisional-local.zip | ZIP | Builder | DELIVERED_PROVISIONAL | 1bPfzQVZOwyVdFtf_ct-sIUspe-u-py6a | https://drive.google.com/file/d/1bPfzQVZOwyVdFtf_ct-sIUspe-u-py6a/view?usp=drivesdk | e2210041c93b8cbf5588eada5058fef60d0f6ad9 | 2026-10-01T08:09:20Z |
 
 Knowledge PDF: 3 pages. Analysis PDF: 5 pages. Script: native editable Google Doc, 9 scenes; its 11-page native PDF export passed visual review. Source commit is recorded in every edition. Native Thai date chips render the Buddhist year 2569 for the same Gregorian 2026 timestamps. Reuse these file IDs when refreshing editions; do not create duplicates.
 
@@ -136,25 +136,25 @@ DELIVERY_MODE: LOCAL_ZIP
 TARGET_OS: Windows
 PUBLIC_DEPLOYMENT_REQUIRED: false
 OFFLINE_AFTER_SETUP: true
-LOCAL_RUNTIME: UNSET
-LOCAL_RUNTIME_TESTED_VERSION: UNSET
-WINDOWS_RUNTIME_PREREQUISITE: UNSET
-FRAMEWORK: UNSET
-INSTALL_COMMAND: UNSET
-BUILD_COMMAND: UNSET
-OUTPUT_DIRECTORY: UNSET
-BUILD_COMMIT: NOT_VERIFIED
+LOCAL_RUNTIME: Python >=3.10 standard library
+LOCAL_RUNTIME_TESTED_VERSION: Python 3.12.14 on Linux; extracted HTTP hashes and lifecycle PASS
+WINDOWS_RUNTIME_PREREQUISITE: Python 3.10+ installed once from https://www.python.org/downloads/windows/
+FRAMEWORK: Dependency-free HTML/CSS/JavaScript generated from approved scene ledger
+INSTALL_COMMAND: NONE after Python prerequisite
+BUILD_COMMAND: python scripts/build.py
+OUTPUT_DIRECTORY: dist
+BUILD_COMMIT: e2210041c93b8cbf5588eada5058fef60d0f6ad9
 FIX_COMMITS_BY_FINDING: {}
-PACKAGE_VERSION: UNSET
-PACKAGE_PATH: UNSET
-PACKAGE_MANIFEST_PATH: UNSET
-PACKAGE_FILE_ID: UNSET
-PACKAGE_DOWNLOAD_URL: NOT_DELIVERED_YET
-PACKAGE_SHA256: NOT_VERIFIED
-PACKAGE_STATE: NOT_BUILT
-PACKAGE_IDENTITY: NOT_VERIFIED
-PACKAGE_IDENTITY_EVIDENCE: UNSET
-LAST_PACKAGE_VERIFIED_AT: UNSET
+PACKAGE_VERSION: 0.1.1-provisional
+PACKAGE_PATH: delivery/anthropic-ipo-20261001-0426-0.1.1-provisional-local.zip
+PACKAGE_MANIFEST_PATH: delivery/manifest.json
+PACKAGE_FILE_ID: 1bPfzQVZOwyVdFtf_ct-sIUspe-u-py6a
+PACKAGE_DOWNLOAD_URL: https://drive.google.com/file/d/1bPfzQVZOwyVdFtf_ct-sIUspe-u-py6a/view?usp=drivesdk
+PACKAGE_SHA256: e36c0843d8287046c9427f12abd729aef73d26337696f7044670d189c1cee327
+PACKAGE_STATE: BUILT_DELIVERED_PROVISIONAL
+PACKAGE_IDENTITY: VERIFIED
+PACKAGE_IDENTITY_EVIDENCE: delivery/package-identity.json
+LAST_PACKAGE_VERIFIED_AT: 2026-10-01T08:09:20Z
 POINTER_MODE: theme_adaptive_presenter_dot
 POINTER_SPEC_PATH: 02_DESIGN_SYSTEM.md
 COVER_SCENE_ID: S01
@@ -181,12 +181,12 @@ OWNER_WINDOWS_SMOKE_RESULT: NOT_RUN
 OWNER_WINDOWS_SMOKE_EVIDENCE: UNSET
 ```
 
-Content/document checks are not runtime QA. No package, launcher, Windows or owner acceptance test has been claimed.
+Content/document checks are not runtime QA. At the historical Visual handoff no package, launcher, Windows or owner acceptance test had been claimed; current Builder checks are scoped below.
 
 ## Current handoff
 ```yaml
-LAST_HANDOFF_ARTIFACT_COMMIT: bb63eb3943a8e901e791ddaa5887f5f35699cdb0
-LAST_HANDOFF_EVIDENCE: [03_VISUAL_PLAN.md, references/visual-scenes.json, assets/manifest.json, references/visual-review/review.md, references/visual-review/independent-review.md, references/visual-review/v17-review.md, references/visual-review/v17-migration.json]
+LAST_HANDOFF_ARTIFACT_COMMIT: e2210041c93b8cbf5588eada5058fef60d0f6ad9
+LAST_HANDOFF_EVIDENCE: [BUILD_NOTES.md, delivery/manifest.json, delivery/package-identity.json, references/build/extracted-runtime-provisional.json, references/build/package-static-verification.json, tests/launcher/LAUNCHER_TEST_REPORT.md]
 BOOTSTRAP_NOTES_PATH: references/bootstrap-notes.md
 WORKFLOW_HISTORY_PATH: references/workflow-history.md
 ```
@@ -204,8 +204,19 @@ WORKFLOW_HISTORY_PATH: references/workflow-history.md
 
 All five exact v1.7 master contracts are preserved, with Drive IDs/revision times/content hashes in references/visual-review/v17-migration.json. Schema is 8. English applies to canvas, semantic/alt/accessibility, reset and fallback text; HTML lang=en is mandatory. Thai remains the narration, owner PDFs, rationale and quick-start language. There is no source-inscription exception. All 23 normal endpoints and semantic-only fallback policies have explicit LANGUAGE_AUDIT fields. AC-024 is a future mandatory independent package check.
 
-The completed static scene review and focused v1.7 review are separate from runtime QA. Actual browser rendering, controls/motion/reduced motion, pointer tracking, holds, offline/helper/ZIP identity, Windows launch/stop/restart and owner rehearsal remain NOT_RUN. No package exists; LOCAL_ZIP state remains NOT_BUILT with no invented hash/download link. The 560 seconds remain an editorial estimate.
+The completed static scene review and focused v1.7 review are separate from runtime QA. Actual browser rendering, controls/motion/reduced motion, pointer tracking, holds, offline/helper/ZIP identity, Windows launch/stop/restart and owner rehearsal remain NOT_RUN. At that Visual handoff no package existed; the then-current LOCAL_ZIP state was NOT_BUILT. Current Builder package identity is recorded above. The 560 seconds remain an editorial estimate.
 
 Only on-screen/canvas/cover fields and master/language contracts changed upstream. Thai spoken narration is byte-unchanged and source/claim-register content is preserved. The three existing owner editions remain current for their substantive Thai content, retain the same Drive IDs and earlier verified timestamps, and were not re-uploaded or represented as newly verified. Main, other branches, legacy files, owner folder and source facts remain unchanged.
 
 Builder must use the committed optimized asset derivatives and their current hashes, never the rejected press-kit logos. Complete photo attribution must accompany package/exports through CREDITS and the Thai README/rationale, with actual resizing disclosed and no claim that the 2023 event photo depicts the IPO. No credits UI belongs on the recording canvas. No Vercel/public hosting dependency is authorized or required.
+
+
+## Builder provisional delivery and actual capability boundary
+
+The prior Visual-stage NOT_RUN statements above describe the historical Visual handoff. Builder has now implemented and committed the nine-scene/23-endpoint app and a reproducible prebuilt archive. The actual current package is identified in the fields above; it is not yet a rendered-verified delivery. Source, asset allowlist, archive hashes, full downloaded Drive bytes and owner-folder identity agree. No sharing permissions were changed.
+
+Passed: deterministic repeated ZIP assembly (byte-identical), all 16 ZIP entries/path/hash checks, English HTML text/attribute audit, verified licensed local photo/WOFF/OFL hashes, pure state-machine 3/3 tests, real Python helper integration/security 15/15 tests, and actual extracted final package HTTP payload byte hashes plus start/repeat-start/status/stop/restart. These do not prove rendered appearance, browser offline behavior or Windows.
+
+Blocked: local installed Chromium exits before page creation with socket() Operation not permitted, including a reviewed escalation. Existing supported cloud browser rejects file:// by URL policy and reports net::ERR_BLOCKED_BY_CLIENT for actual loopback. Python TCP loopback itself works. No alias, proxy, public host, changed browser/network security or alternate flags were used to evade these restrictions. Browser geometry, motion/reduced motion, pointer, fullscreen, failure rendering, performance, 30-second holds and all actual Windows launcher execution remain unverified.
+
+This state is BLOCKED_FROM_STAGE=BUILDING, not READY_FOR_QA. Continue Builder validation in a permitted capable executor; then independent QA begins. Preserve Windows NOT_RUN and owner rehearsal pending. The delivered Thai quick-start/rationale clearly describe provisional scope. Neither file/asset identity nor helper tests establish QA_PASS or COMPLETE.

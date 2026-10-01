@@ -1,0 +1,24 @@
+{
+  "PROJECT_ID": "anthropic-ipo-20261001-0426",
+  "PACKAGE_VERSION": "0.1.1-provisional",
+  "BUILD_COMMIT": "e2210041c93b8cbf5588eada5058fef60d0f6ad9",
+  "LOCAL_RUNTIME": "Python >=3.10 standard library",
+  "STATUS": "PROVISIONAL_RUNTIME_NOT_VERIFIED",
+  "files": {
+    "CREDITS.txt": "5e9d2914f0e1091244a07c5de0d6e748a07c65add0931198bd6ba415975a9e23",
+    "README_TH.md": "61aaba7750953d69516b93b93d801bcc7b2efa42aae599732b7500c8bff90c27",
+    "START.bat": "d4c56790d5fddf8431c33bcd66e132205eb1ae121bc43397fe72bf2f5a9bd8ff",
+    "STOP.bat": "86f6af1a9c6db902355e04ac428f36cd07bb0a4670835805631ab3057c5e0935",
+    "app/app.js": "d30f19815cbff027cfe470f0f0f87a500466d3b1db559d30befe0810e7b00d6e",
+    "app/assets/CREDITS.txt": "5e9d2914f0e1091244a07c5de0d6e748a07c65add0931198bd6ba415975a9e23",
+    "app/assets/fonts/NotoSans-OFL.txt": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+    "app/assets/fonts/NotoSans-Subset.woff": "e96134d989ae22e3a0ff0dbab05440092d1f97dbe963cd456c5c3bacc483db2d",
+    "app/assets/fonts/NotoSansThai-OFL.txt": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+    "app/assets/fonts/NotoSansThai-Subset.woff": "0f82314f5dffe90580195bb70f1e45a2e224f786b9d5d18fc71af9203160e5cf",
+    "app/assets/photos/dario-amodei-techcrunch-2023-fallback.jpg": "395a3bc4b0e4ccaae1d3c6cb05e1aa39d10bb235288335551e91a67ab8289a2e",
+    "app/assets/photos/dario-amodei-techcrunch-2023.jpg": "395a3bc4b0e4ccaae1d3c6cb05e1aa39d10bb235288335551e91a67ab8289a2e",
+    "app/index.html": "39a85e4aedb9c61b3eb7b9406c4643860f1ece181c8f88dc61c54de80191612b",
+    "app/style.css": "7779115b48100bc55731a3df77b2e4201750157794c2557707c9b3a344b7defe",
+    "serve.py": "4c7c15717f65632ea374701428f782903ce7adf294e91de0cfe07315e1af4a60"
+  }
+}

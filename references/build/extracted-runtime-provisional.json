@@ -1,0 +1,26 @@
+{
+  "extracted_package_sha256": "e36c0843d8287046c9427f12abd729aef73d26337696f7044670d189c1cee327",
+  "BUILD_COMMIT": "e2210041c93b8cbf5588eada5058fef60d0f6ad9",
+  "HTTP_payload_hashes": "MATCH",
+  "files": [
+    "app/app.js",
+    "app/assets/CREDITS.txt",
+    "app/assets/fonts/NotoSans-OFL.txt",
+    "app/assets/fonts/NotoSans-Subset.woff",
+    "app/assets/fonts/NotoSansThai-OFL.txt",
+    "app/assets/fonts/NotoSansThai-Subset.woff",
+    "app/assets/photos/dario-amodei-techcrunch-2023-fallback.jpg",
+    "app/assets/photos/dario-amodei-techcrunch-2023.jpg",
+    "app/index.html",
+    "app/style.css"
+  ],
+  "repeat_start_status_stop_restart": "PASS",
+  "state_results": [
+    "Already running: http://127.0.0.1:8765/",
+    "Running: http://127.0.0.1:8765/",
+    "Stopped this package's server.",
+    "Ready: http://127.0.0.1:8766/"
+  ],
+  "browser": "NOT_RUN; local Chromium startup socket failure and cloud browser ERR_BLOCKED_BY_CLIENT",
+  "Windows": "NOT_RUN"
+}

@@ -1,0 +1,10 @@
+{
+  "reproducible_archive_sha256": "e36c0843d8287046c9427f12abd729aef73d26337696f7044670d189c1cee327",
+  "repeated_assembly_same_source": "BYTE_IDENTICAL",
+  "all_html_text_and_attributes_language": "English; no Thai code points",
+  "secret_pattern_scan": "No credential values matched",
+  "archive_allowlist": "16 exact expected files; no caches, git, source checkout, logos, legacy or absolute paths",
+  "limitations": "Pattern scan is bounded, not a guarantee against every possible secret format; rendered browser and Windows are unverified",
+  "BUILD_COMMIT": "e2210041c93b8cbf5588eada5058fef60d0f6ad9",
+  "documentation_fix": "v0.1.1 adds full photo credit/reference to Thai README; app/helper byte-identical to v0.1.0"
+}
