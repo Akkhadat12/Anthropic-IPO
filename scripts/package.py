@@ -20,6 +20,6 @@ with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED,compresslevel=9)as z:
  for p,data in sorted(payload.items()):
   info=zipfile.ZipInfo(root+'/'+p,(2026,10,1,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o100644<<16;z.writestr(info,data,compresslevel=9)
 sha=hashlib.sha256(out.read_bytes()).hexdigest()
-evidence={'path':out.name,'root_folder':root,'bytes':out.stat().st_size,'sha256':sha,'BUILD_COMMIT':commit,'PACKAGE_VERSION':version,'manifest':manifest,'windows':'NOT_RUN','browser':'BLOCKED_SOCKET_RESTRICTION','loopback':'BLOCKED_SOCKET_RESTRICTION'}
+evidence={'path':out.name,'root_folder':root,'bytes':out.stat().st_size,'sha256':sha,'BUILD_COMMIT':commit,'PACKAGE_VERSION':version,'manifest':manifest,'windows':'NOT_RUN','browser':'NOT_RUN_BY_ASSEMBLY','loopback':'NOT_RUN_BY_ASSEMBLY'}
 (ROOT/'delivery/manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');(ROOT/'delivery/package-identity.json').write_text(json.dumps(evidence,indent=2)+'\n')
 print(json.dumps({k:v for k,v in evidence.items()if k!='manifest'},indent=2))
