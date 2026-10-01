@@ -1,0 +1,255 @@
+{
+  "knowledge": {
+    "title": "ทำความเข้าใจ Anthropic ก่อน IPO",
+    "purpose": "ชุดความรู้สำหรับผู้เล่าและผู้ชมทั่วไป",
+    "intro": "Anthropic ผู้สร้าง Claude มีหลักฐานการเติบโตเร็วและสัญญาณกำไรดำเนินงานแบบปรับปรุงแล้วที่ดีขึ้น แต่ข้อมูลที่เข้าถึงยังไม่พอให้ยืนยันกำไรสุทธิและเงินสดอย่างยั่งยืน ชุดอ่านนี้ช่วยแยกตัวเลขต่างนิยามและต่างช่วงเวลา ก่อนตีความข่าว IPO",
+    "sections": [
+      {
+        "heading": "สถานะ IPO ที่ยืนยันได้",
+        "paragraphs": [
+          "Anthropic ประกาศยื่นร่าง S-1 แบบ confidential ต่อ SEC เมื่อ 1 มิถุนายน 2026 โดยจำนวนหุ้นและราคาเสนอขายยังไม่กำหนดในประกาศนั้น การยื่นร่างเป็นขั้นตอนเตรียมเสนอขาย ไม่ใช่หลักฐานว่าการเข้าตลาดเสร็จแล้ว [SRC01]",
+          "ข้อมูลที่ Reuters เปิดเผยปลายกันยายนมาจาก prospectus ที่ผู้สื่อข่าวได้อ่าน จึงมีน้ำหนักกว่าเพียงข่าวลือ แต่ทีมยังหาเอกสาร S-1 ฉบับสาธารณะเพื่ออ่านงบและหมายเหตุเต็มโดยตรงไม่พบ ณ วันตัดข้อมูล ข้อจำกัดนี้ไม่ได้แปลว่าไม่มีข้อมูลการเงินเผยแพร่เลย [SRC02, SRC05]"
+        ]
+      },
+      {
+        "heading": "ข่าวใหม่อาจเป็นข้อมูลของงวดเก่า",
+        "paragraphs": [
+          "FY2025: Reuters รายงานเมื่อ 28–29 กันยายนว่ารายได้เกือบ 4,600 ล้านดอลลาร์ และผลขาดทุนสุทธิราว 42,000 ล้านดอลลาร์ ซึ่งรวมรายการบัญชีไม่ใช่เงินสดราว 34,000 ล้านดอลลาร์ ตัวเลขเหล่านี้เป็นข้อมูลปี 2025 ที่เพิ่งเป็นข่าว [SRC02]",
+          "Q2 2026: Bloomberg รายงานเมื่อ 14 สิงหาคมว่ารายได้เบื้องต้นมากกว่า 11,500 ล้านดอลลาร์ และ adjusted operating income เป็นบวก เป็นงวดธุรกิจใหม่กว่า FY2025 แม้ข่าวเผยแพร่ก่อน และตัวเลขยังอาจเปลี่ยน [SRC03]",
+          "สิ้นกรกฎาคม 2026: Reuters รายงาน annual revenue run-rate มากกว่า 65,000 ล้านดอลลาร์ คือการปรับจังหวะรายได้ระยะสั้นให้เป็นภาพรายปี ไม่ใช่รายได้ที่รับรู้ครบทั้งปีแล้ว [SRC06]",
+          "Q3 2026: ข่าว 13 กันยายนอ้าง FT ว่าบริษัทคาด adjusted operating profit ต่อเนื่องอีกไตรมาส ข่าวก่อนปิดงวดนี้ต้องเรียกว่า outlook ไม่ใช่ผล Q3 ที่ประกาศแล้ว [SRC04]"
+        ]
+      },
+      {
+        "heading": "คำศัพท์ที่ต้องแยกให้ออก",
+        "paragraphs": [
+          "Revenue คือรายได้ของช่วงเวลาที่ระบุ ส่วน run-rate คือภาพรายปีที่คำนวณจากจังหวะช่วงสั้น การเติบโตของสองชุดนี้ห้ามนำมาเทียบข้ามฐานแล้วเรียก growth ของรายได้ทั้งปี",
+          "Adjusted operating income คือกำไรจากการดำเนินงานตามนิยามที่ปรับบางรายการ ต้องเห็นรายการปรับจึงจะเชื่อมกับกำไรตามมาตรฐานบัญชีได้ ส่วน net income ยังรวมรายการนอกการดำเนินงาน ภาษี และผลบัญชีอื่น",
+          "Cash flow แสดงการรับและจ่ายเงินจริง ขาดทุนสุทธิไม่เท่ากับ cash burn และหักรายการ non-cash เพียงรายการเดียวก็ยังไม่ใช่งบกระแสเงินสด",
+          "Commitment คือข้อผูกพันในอนาคตตามสัญญา ต้องอ่านเงื่อนไข วันครบกำหนด และวิธีรับรู้บัญชี ไม่เท่ากับหนี้ที่ต้องชำระทั้งหมดวันนี้",
+          "Private post-money valuation คือมูลค่าบริษัทตามรอบระดมทุนเอกชน ไม่ใช่ราคาเสนอขายหุ้น IPO หรือมูลค่าหุ้นในตลาด และเงินระดมทุนไม่ใช่รายได้จากลูกค้า [SRC09]"
+        ]
+      },
+      {
+        "heading": "ธุรกิจขายอะไรและข้อจำกัดของข้อมูล",
+        "paragraphs": [
+          "Claude มีบริการผู้ใช้โดยตรง เครื่องมือนักพัฒนา และช่องทางคลาวด์ ในกุมภาพันธ์บริษัทระบุ Claude Code run-rate มากกว่า 2,500 ล้านดอลลาร์ โดย enterprise use มากกว่าครึ่งของรายได้ Claude Code ตัวเลขนี้ยืนยันความสำคัญในเวลานั้น แต่ไม่ใช่ product mix เดือนตุลาคม [SRC07]",
+          "Reuters ระบุลูกค้าสองรายคิดเป็นรายได้เกือบหนึ่งในสี่ใน FY2025 ต้องติดป้ายปี 2025 และไม่สมมติว่าความกระจุกตัวปี 2026 เท่าเดิม ยังไม่มี current mix, retention/NRR และข้อมูลรายได้หลังส่วนแบ่งช่องทางเพียงพอในหลักฐานที่ตรวจ [SRC02]"
+        ]
+      },
+      {
+        "heading": "Compute เป็นโอกาสและความเสี่ยงพร้อมกัน",
+        "paragraphs": [
+          "Compute คือกำลังประมวลผลสำหรับฝึกและให้บริการโมเดล การจองล่วงหน้าอาจช่วยรองรับความต้องการและลดความเสี่ยงขาดกำลังผลิต แต่ถ้าลูกค้าโตช้ากว่าคาด ภาระขั้นต่ำก็อาจกดดันธุรกิจ",
+          "Reuters รายงาน commitments อย่างน้อย 518,000 ล้านดอลลาร์ในราวหนึ่งทศวรรษ ประมาณ 80% ยกเลิกไม่ได้หรือจ่ายแม้ไม่ใช้ ตัวเลขนี้ไม่ใช่ค่าใช้จ่ายปีเดียว และยังไม่มีตารางจ่ายรายปีครบพอที่จะหารเฉลี่ยแทนกระแสเงินสดจริง [SRC05]"
+        ]
+      },
+      {
+        "heading": "อ่านข่าวถัดไปด้วยคำถามสามชุด",
+        "paragraphs": [
+          "หนึ่ง ลูกค้าเดิมยังอยู่และใช้จ่ายเพิ่มไหม บริษัทเหลือรายได้หลังจ่ายช่องทางเท่าไร",
+          "สอง กำไรแบบปรับปรุงแล้วต่างจากกำไรสุทธิอย่างไร และการดำเนินงานสร้างหรือใช้เงินสดเท่าไร",
+          "สาม ภาระ compute ต้องจ่ายเมื่อไร ปรับลดได้แค่ไหน และใช้กำลังที่จองไว้คุ้มหรือไม่",
+          "รายงานนี้เป็นความรู้และการวิเคราะห์ธุรกิจ ไม่ใช่คำแนะนำซื้อขายหรือราคาเป้าหมายหุ้น"
+        ]
+      }
+    ]
+  },
+  "analysis": {
+    "title": "วิเคราะห์การเติบโตและความยั่งยืนของ Anthropic",
+    "purpose": "ชุดวิเคราะห์หลักฐาน ข้อโต้แย้ง และเงื่อนไขที่เปลี่ยนข้อสรุป",
+    "intro": "แกนที่เจ้าของอนุมัติคือ ก่อน IPO Anthropic โตแรง แต่กำไรยั่งยืนหรือยัง สำหรับคนทั่วไปและบทเล่า 8–10 นาที ข้อสรุปที่เหมาะกับหลักฐานคือรายได้โตเร็วและมีสัญญาณ adjusted operating profit แต่ยังต้องตรวจการแปลงเป็นกำไรสุทธิและเงินสด โดยไม่ใช้ผลขาดทุนปีเก่าฟันธงธุรกิจปัจจุบัน",
+    "sections": [
+      {
+        "heading": "ระดับหลักฐานและวันตัดข้อมูล",
+        "paragraphs": [
+          "ตัดข้อมูล 1 ตุลาคม 2026 ข้อมูลหลักมาจากประกาศบริษัท Reuters ที่อ่าน confidential prospectus และ Bloomberg ที่อ่านเอกสารนักลงทุน ข่าว Q3 margin เป็น Bloomberg/Reuters อ้าง FT จึงเป็นสายข้อมูลเดียวกัน ไม่ใช่การตรวจงบอิสระหลายชุด [SRC01–SRC07, SRC12]",
+          "ทีมอ่านข่าว Bloomberg ฉบับเต็มผ่านบัญชีที่เข้าถึงได้แล้ว แต่ยังไม่มีงบ Anthropic เต็มพร้อมหมายเหตุและความเห็นผู้สอบบัญชี จึงไม่เรียกตัวเลขในข่าวว่า audited ด้วยตัวเอง ผล SEC ที่เป็นเอกสารคู่ค้าและกองทุนไม่ใช่งบ Anthropic [SRC03, SRC04, SRC08]"
+        ]
+      },
+      {
+        "heading": "แยกแกนเวลา ก่อนตัดสินการเติบโต",
+        "paragraphs": [
+          "FY2025 revenue เกือบ 4,600 ล้านดอลลาร์เป็นผลทั้งปีที่ Reuters เพิ่งรายงานปลายกันยายน ส่วน Q2 2026 revenue เบื้องต้นมากกว่า 11,500 ล้านดอลลาร์เป็นผลช่วงสามเดือนที่ Bloomberg รายงานในสิงหาคม ข่าวล่าสุดกับงวดล่าสุดจึงต้องแยก [SRC02, SRC03]",
+          "Run-rate มากกว่า 65,000 ล้านดอลลาร์ ณ สิ้นกรกฎาคมเป็นอัตรารายได้ปรับเป็นรายปี ไม่ใช่ยอด FY2026 ที่รับรู้แล้ว และไม่ใช่ backlog รับประกัน ภาพที่สมเหตุผลคือธุรกิจโตเร็ว ไม่ใช่การสร้าง growth rate ข้ามนิยาม [SRC06]",
+          "Series H เดือนพฤษภาคมระดมทุน 65,000 ล้านดอลลาร์ที่ post-money valuation 965,000 ล้านดอลลาร์ เป็นการเงินทุนและมูลค่าเอกชน ไม่ควรนำไปเทียบกับรายได้เดือนอื่นเพื่อฟันธงราคาหุ้น IPO ว่าถูกหรือแพง [SRC09]"
+        ]
+      },
+      {
+        "heading": "ความต้องการจริงยังต้องผ่านการทดสอบคุณภาพรายได้",
+        "paragraphs": [
+          "Claude Code เป็นหลักฐานเชิงผลิตภัณฑ์ที่มีน้ำหนัก บริษัทประกาศเดือนกุมภาพันธ์ว่า run-rate มากกว่า 2,500 ล้านดอลลาร์ และ enterprise use มากกว่าครึ่งของรายได้ผลิตภัณฑ์ แต่เราไม่ทราบสัดส่วนล่าสุด API, Code, subscriptions และ partner channel แยกกัน [SRC07]",
+          "ข้อวิเคราะห์คือเครื่องมือที่ช่วยให้งานสำเร็จและเข้าไปอยู่ในกระบวนการประจำอาจมีโอกาสให้ลูกค้าจ่ายซ้ำ อย่างไรก็ตามยังต้องทดสอบด้วย retention, cohort spending, ความง่ายในการย้ายโมเดล และราคาต่อผลงานที่ใช้ได้จริง ไม่ใช้ความเก่งของ benchmark แทนหลักฐานกำไร",
+          "Reuters รายงาน FY2025 ลูกค้าสองรายสร้างรายได้เกือบหนึ่งในสี่และหลายรายไม่มีข้อผูกมัดใช้ต่อระยะยาว นี่เป็นเหตุให้ถามถึงความกระจุกตัว ไม่ใช่หลักฐานว่าลูกค้าจะหายหรือ concentration ปีปัจจุบันเหมือนเดิม [SRC02]",
+          "Revenue presentation ผ่านพาร์ตเนอร์อาจต่างกันระหว่างบริษัท ดังนั้น headline revenue ไม่พอสำหรับเปรียบเทียบ economics [SRC10]"
+        ]
+      },
+      {
+        "heading": "ขาดทุนสุทธิไม่ใช่เงินสดที่ใช้เท่ากัน",
+        "paragraphs": [
+          "Reuters รายงาน net loss FY2025 ราว 42,000 ล้านดอลลาร์ รวมรายการ non-cash ราว 34,000 ล้านดอลลาร์จากการเพิ่มมูลค่าตราสาร financing ที่อาจแปลงเป็นหุ้น Operating loss มากกว่า 8,000 ล้านดอลลาร์มีฐานที่ผู้สื่อข่าวอธิบายแยกต่างหาก [SRC02]",
+          "ห้ามใช้ 42,000 ล้านเป็น cash burn หรือเอา 42,000 ลบ 34,000 แล้วตั้งชื่อผลต่างว่า operating cash flow เพราะยังมีเงินทุนหมุนเวียน ค่าเสื่อม หุ้นพนักงาน การจ่ายล่วงหน้า และรายการอื่นซึ่งเราไม่มีข้อมูลครบ",
+          "Non-cash ไม่ได้แปลว่าไม่มีความหมายต่อผู้ถือหุ้น รายละเอียดสิทธิแปลงสภาพและ dilution ต้องตรวจจากเอกสารจริงก่อนตีความ ส่วนยอดเงินสดและเงินลงทุนระยะสั้น 20,280 ล้านดอลลาร์ ณ สิ้นปี 2025 ไม่ใช่ยอดเงินคงเหลือเดือนตุลาคม หลังระดมทุนและใช้จ่ายเพิ่มแล้ว [SRC02]"
+        ]
+      },
+      {
+        "heading": "หลักฐานกำไรใหม่ต้องให้เครดิตและอ่านนิยาม",
+        "paragraphs": [
+          "Bloomberg ระบุ Q2 2026 adjusted operating income เป็นบวก จากเอกสารที่ยังเป็นเบื้องต้น ต่อมา 13 กันยายน Bloomberg อ้าง FT ว่าบริษัทคาด Q3 จะเป็นบวกต่อเนื่อง นี่คือหลักฐานที่ขัดกับการเล่าเรื่องว่าบริษัทยังขาดทุนแบบเดิมในทุกนิยาม [SRC03, SRC04]",
+          "แต่ยังไม่มีจำนวน adjusted profit และ reconciliation ทุกรายการไปสู่ GAAP net income หรือ cash flow ข่าว Q3 ก่อนสิ้นงวดจึงเป็น outlook ไม่ใช่ผลจริงที่ยืนยันแล้ว ไม่ควรพูดว่าได้กำไรสองไตรมาสแล้วโดยไม่มี caveat",
+          "ข่าวเดียวกันระบุ gross margin มากกว่า 80% ก่อน partner revenue-sharing และ model training costs ห้ามเรียกว่ากำไรหลังต้นทุนทุกอย่าง และห้ามอนุมานว่า adjusted operating income ตัดค่าใช้จ่ายสองกลุ่มนี้ด้วย เพราะนิยาม gross margin ไม่เท่ากับนิยาม operating income [SRC04]"
+        ]
+      },
+      {
+        "heading": "ภาระกำลังผลิตมีทั้งขนาด ระยะเวลา และเงื่อนไข",
+        "paragraphs": [
+          "Reuters ระบุภาระอย่างน้อย 518,000 ล้านดอลลาร์ในราวสิบปี ประมาณ 80% ยกเลิกไม่ได้หรือจ่ายแม้ไม่ใช้ ช่วงสัญญา Google เม.ย. 2026–ก.ค. 2033, Amazon พ.ค. 2026–เม.ย. 2036 และ Microsoft พ.ย. 2026–พ.ค. 2033 ยังไม่ใช่ cash-maturity schedule รายปี [SRC05]",
+          "บทวิเคราะห์ต้องเห็นทั้งสองด้าน การจองกำลังผลิตอาจเป็นข้อได้เปรียบถ้าความต้องการสูงและ compute ขาดแคลน แต่ทำให้ความผิดพลาดในการคาด demand มีต้นทุน ภาระ xAI ที่รายงานว่าส่วนใหญ่ยกเลิกได้ด้วย notice 90 วันก็ไม่แข็งตัวเท่าก้อนอื่น [SRC05]",
+          "หลักฐานสาธารณะจาก Akamai 8-K วันที่ 24 กันยายนระบุ commitment 11,600 ล้านดอลลาร์ ระยะเริ่มต้นเจ็ดปีนับจากวันเริ่มบริการ โดยขึ้นกับการส่งมอบและ availability พร้อมสิทธิยกเลิกตามเหตุผิดสัญญา/ระบบขัดข้องบางกรณี ไม่ใช่การรับประกันว่าปรับลดได้ตามใจ [SRC08]",
+          "ยัง reconcile ก้อน Akamai กับยอดรวม Reuters ไม่ได้ จึงไม่บวกยอดใหม่เอง ประกาศ AWS เดิมมากกว่า 100,000 ล้านดอลลาร์ก็อาจทับกับก้อน Amazon ในยอดรวม ไม่ใช่ภาระเพิ่มอีกก้อน ส่วน capex ของผู้ขายเป็นต้นทุนผู้ขาย ไม่ใช่ commitment เพิ่มของ Anthropic [SRC08, SRC11]"
+        ]
+      },
+      {
+        "heading": "สามสถานการณ์เพื่อทดสอบ ไม่ใช่การพยากรณ์",
+        "paragraphs": [
+          "เติบโตพร้อมสร้างเงินสด หากลูกค้าใช้ซ้ำ รายได้สุทธิหลังช่องทางโต ต้นทุนต่องานลด และ capacity ถูกใช้งานคุ้ม จะสนับสนุนความยั่งยืน ต้องเห็น reconciliation และ cash flow ดีขึ้นจริง",
+          "โตดีแต่ยังต้องเติมทุน หากรายได้เพิ่มแต่ต้องลงทุน training และ capacity ต่อเนื่อง adjusted profit อาจดีขึ้นขณะที่ free cash flow ยังติดลบ เราไม่ถือความต้องการทุนต่อเป็นความล้มเหลวโดยอัตโนมัติ",
+          "Demand หรือราคาขายต่ำกว่าที่วางแผน หากลูกค้าหลักลดใช้ คู่แข่งกดราคา หรือ capacity ใช้ไม่เต็ม ภาระขั้นต่ำอาจกดดันเงินสด ต้องทดสอบด้วย utilization, concentration และ maturity schedule",
+          "สถานการณ์เหล่านี้เป็นข้อวิเคราะห์ ไม่ใส่ความน่าจะเป็น ราคาเป้าหมาย หรือเส้น forecast ที่ไม่มีแหล่ง"
+        ]
+      },
+      {
+        "heading": "อะไรจะเปลี่ยนข้อสรุป",
+        "paragraphs": [
+          "ข้อสรุปจะแข็งแรงขึ้นถ้าเอกสารเปิดเผยแสดงรายได้ที่รักษาลูกค้าได้ รายได้หลังส่วนแบ่งช่องทางที่โต พร้อม GAAP profit และ cash generation ที่สอดคล้องกับ commitments ตามกำหนด",
+          "ข้อสรุปจะอ่อนลงถ้า concentration เพิ่ม ต้นทุนขั้นต่ำและเงินจ่ายล่วงหน้าโตเร็วกว่ารายได้สุทธิ หรือ margin ที่ปรับรายการไว้ไม่แปลงเป็น cash flow",
+          "รายการที่ยังไม่ทราบอย่างชัดเจนคือ current product/channel mix, current concentration, NRR/churn, full adjusted-to-GAAP bridge, cash-flow statement งวดล่าสุด, commitment annual maturities และเงื่อนไขเสนอขายสุดท้าย ข้อมูลที่ขาดไม่ใช่หลักฐานว่าธุรกิจไม่ดี แต่เป็นขอบเขตความเชื่อมั่นของการวิเคราะห์",
+          "ข้อสรุปของเรื่องคือมีสัญญาณการเติบโตและ adjusted operating profit ที่ดีขึ้น แต่ความยั่งยืนยังต้องพิสูจน์ด้วยกำไรและเงินสดหลังต้นทุนที่เกี่ยวข้องทั้งหมด"
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "SRC01",
+      "title": "Anthropic confidential draft S-1 announcement",
+      "publisher": "Anthropic",
+      "date": "2026-06-01",
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+      "status": "Company primary announcement",
+      "supports": "C01",
+      "limit": "Confirms confidential submission; not public prospectus, SEC approval, price or listing date"
+    },
+    {
+      "id": "SRC02",
+      "title": "Anthropic IPO prospectus shows sweeping AI vision and surging costs",
+      "publisher": "Reuters via MarketScreener",
+      "date": "2026-09-28; updated 2026-09-29",
+      "url": "https://www.marketscreener.com/news/anthropic-s-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-ce785addd98afe2c",
+      "status": "Reporter reviewed non-public prospectus",
+      "supports": "C02,C08,C14",
+      "limit": "Team did not inspect full financial statements, notes or auditor opinion; FY2025 not current quarter"
+    },
+    {
+      "id": "SRC03",
+      "title": "Anthropic Revenue Surges to Over 11.5 Billion in Second Quarter",
+      "publisher": "Bloomberg",
+      "date": "2026-08-14",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-14/anthropic-revenue-ahead-of-ipo-surges-over-14-fold-in-second-quarter",
+      "status": "Reporter reviewed investor documents; full story read in authorized signed-in cloud browser",
+      "supports": "C03",
+      "limit": "Preliminary Q2 figures may change; no GAAP/cash reconciliation supplied"
+    },
+    {
+      "id": "SRC04",
+      "title": "Anthropic Expects an Operating Profit This Quarter FT Says",
+      "publisher": "Bloomberg reporting Financial Times",
+      "date": "2026-09-13",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-13/anthropic-sees-adjusted-operating-profit-this-quarter-ft-says",
+      "status": "Secondary relay of FT sources; full Bloomberg story read",
+      "supports": "C04,C09",
+      "limit": "Q3 expectation before period end, not completed result; source does not quantify profit or all adjustments"
+    },
+    {
+      "id": "SRC05",
+      "title": "Anthropic 518 billion AI buildout and cancellation terms",
+      "publisher": "Reuters via MarketScreener",
+      "date": "2026-09-29",
+      "url": "https://www.marketscreener.com/news/anthropic-s-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows-ce785adddd8bf124",
+      "status": "Reporter reviewed confidential prospectus",
+      "supports": "C05,C13,C15",
+      "limit": "No complete annual cash-maturity schedule; cannot add other announcements without reconciliation"
+    },
+    {
+      "id": "SRC06",
+      "title": "Anthropic revenue run rate tops 65 billion source says",
+      "publisher": "Reuters via Investing.com",
+      "date": "2026-08-17",
+      "url": "https://www.investing.com/news/stock-market-news/anthropic-revenue-run-rate-tops-65-billion-source-says-4864031",
+      "status": "Person familiar with matter",
+      "supports": "C06",
+      "limit": "Annualized pace at end-July, not FY revenue, contracted backlog or current October figure"
+    },
+    {
+      "id": "SRC07",
+      "title": "Anthropic Series G funding announcement",
+      "publisher": "Anthropic",
+      "date": "2026-02-12",
+      "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+      "status": "Company primary announcement",
+      "supports": "C07",
+      "limit": "Historical February Claude Code/enterprise metrics; not current product mix"
+    },
+    {
+      "id": "SRC08",
+      "title": "Akamai Form 8-K commitment and termination conditions",
+      "publisher": "Akamai investor relations SEC filing",
+      "date": "2026-09-24; agreement 2026-09-18",
+      "url": "https://www.ir.akamai.com/static-files/db805670-271e-406b-91a5-e0b4ed226b5a",
+      "status": "Primary public counterparty filing Item1.01",
+      "supports": "C16",
+      "limit": "Counterparty contract evidence, not Anthropic financial statements; full MSA announced for later 10-Q"
+    },
+    {
+      "id": "SRC09",
+      "title": "Anthropic Series H funding announcement",
+      "publisher": "Anthropic",
+      "date": "2026-05-28",
+      "url": "https://www.anthropic.com/news/series-h",
+      "status": "Company primary announcement",
+      "supports": "C17",
+      "limit": "Private post-money valuation and May run-rate; funding amount not operating revenue"
+    },
+    {
+      "id": "SRC10",
+      "title": "Anthropic and OpenAI revenue presentation explained",
+      "publisher": "Axios",
+      "date": "2026-09-03",
+      "url": "https://www.axios.com/2026/09/03/anthropic-and-openais-revenue-chasm-explained",
+      "status": "Media accounting explanation",
+      "supports": "C18",
+      "limit": "Full accounting policy and current channel shares not independently reconciled"
+    },
+    {
+      "id": "SRC11",
+      "title": "Anthropic and Amazon expand compute collaboration",
+      "publisher": "Anthropic",
+      "date": "2026-04-20 updated 2026-04-21",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "status": "Company primary announcement",
+      "supports": "C19",
+      "limit": "May overlap Reuters Amazon commitment; do not add"
+    },
+    {
+      "id": "SRC12",
+      "title": "Anthropic profitability outlook FT report",
+      "publisher": "Reuters via Investing.com",
+      "date": "2026-09-13",
+      "url": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+      "status": "Reuters relay of same FT story",
+      "supports": "C04,C09",
+      "limit": "Reuters says unable to verify independently; not independent corroboration of FT"
+    }
+  ],
+  "cutoff": "2026-10-01T04:24:00Z"
+}
