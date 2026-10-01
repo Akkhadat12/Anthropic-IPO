@@ -32,11 +32,12 @@
     "url": "https://docs.google.com/document/d/1F9VdhHxINHjam8jgCi8795jbBj07Yqn2q_wmGIQaWGk/edit?usp=drivesdk",
     "mime_type": "application/vnd.google-apps.document",
     "responsible": "Content/Research",
-    "state": "IN_PROGRESS_NATIVE_VISUAL_QA",
+    "state": "READY",
     "source_commit": "501f48afb1bddf098de95fa75f995dbd016d54c5",
-    "verified_at": "2026-10-01T04:54:39Z",
+    "verified_at": "2026-10-01T04:55:33Z",
     "native_export_pages": 11,
     "native_export_sha256": "6a29757d6a637b81c8d45cfaa226afc93705dc40a3947d1e34eb6ca775d1a4a1",
-    "readback": "9scenes,18datechips,23nativebulletparagraphs,sourcecommitverified"
+    "readback": "9scenes,18datechips,23nativebulletparagraphs,sourcecommitverified",
+    "native_visual_qa": "PASS all11exportedpages"
   }
 ]

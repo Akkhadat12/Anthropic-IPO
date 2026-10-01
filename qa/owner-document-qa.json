@@ -1,0 +1,93 @@
+{
+  "project_id": "anthropic-ipo-20261001-0426",
+  "content_version": "1.1",
+  "content_source_commit": "501f48afb1bddf098de95fa75f995dbd016d54c5",
+  "verified_at": "2026-10-01T04:55:33Z",
+  "independent_content_review": {
+    "result": "No high/critical factual findings",
+    "resolved": [
+      "Added plain-language gross-margin definition",
+      "Preserved distinct exclusions across gross/operating metrics",
+      "Added accessible BloombergLaw alternate",
+      "Trimmed dense narration scenes S04/S06/S08"
+    ],
+    "residual": "Spoken duration remains editorial; actualreadthroughNOT_RUN"
+  },
+  "owner_editions": [
+    {
+      "name": "01_KNOWLEDGE_SUMMARY.pdf",
+      "type": "PDF",
+      "file_id": "1qaeJGOwXOq-CTbdIa-tjQ_GcQd-oadOg",
+      "url": "https://drive.google.com/file/d/1qaeJGOwXOq-CTbdIa-tjQ_GcQd-oadOg/view?usp=drivesdk",
+      "mime_type": "application/pdf",
+      "responsible": "Content/Research",
+      "state": "READY",
+      "source_commit": "501f48afb1bddf098de95fa75f995dbd016d54c5",
+      "verified_at": "2026-10-01T04:54:39Z",
+      "pages": 3,
+      "sha256": "1fe9244fd61535ecc3d0743f121b7edac253df00851e91c73ffe1d9faffcda5b"
+    },
+    {
+      "name": "02_RESEARCH_AND_ANALYSIS.pdf",
+      "type": "PDF",
+      "file_id": "1mCZXIh2qVqJH5Rwhwe03W9D-nULi9ahH",
+      "url": "https://drive.google.com/file/d/1mCZXIh2qVqJH5Rwhwe03W9D-nULi9ahH/view?usp=drivesdk",
+      "mime_type": "application/pdf",
+      "responsible": "Content/Research",
+      "state": "READY",
+      "source_commit": "501f48afb1bddf098de95fa75f995dbd016d54c5",
+      "verified_at": "2026-10-01T04:54:39Z",
+      "pages": 5,
+      "sha256": "2853c1c552aea62ac3006b67cf6ad53840906e4e5a44778a47e0d301e7a0af29"
+    },
+    {
+      "name": "03A_NARRATION_SCRIPT",
+      "type": "Google Doc",
+      "file_id": "1F9VdhHxINHjam8jgCi8795jbBj07Yqn2q_wmGIQaWGk",
+      "url": "https://docs.google.com/document/d/1F9VdhHxINHjam8jgCi8795jbBj07Yqn2q_wmGIQaWGk/edit?usp=drivesdk",
+      "mime_type": "application/vnd.google-apps.document",
+      "responsible": "Content/Research",
+      "state": "READY",
+      "source_commit": "501f48afb1bddf098de95fa75f995dbd016d54c5",
+      "verified_at": "2026-10-01T04:55:33Z",
+      "native_export_pages": 11,
+      "native_export_sha256": "6a29757d6a637b81c8d45cfaa226afc93705dc40a3947d1e34eb6ca775d1a4a1",
+      "readback": "9scenes,18datechips,23nativebulletparagraphs,sourcecommitverified",
+      "native_visual_qa": "PASS all11exportedpages"
+    }
+  ],
+  "checks": {
+    "all_source_ids_resolve": true,
+    "nine_narration_scenes": true,
+    "spoken_paragraphs": 61,
+    "source_commit_in_all_editions": true,
+    "all_local_render_pages_reviewed": 19,
+    "native_google_doc_export_pages_reviewed": 11,
+    "thai_latin_font_fix_verified": true,
+    "clickable_sources_verified": true,
+    "google_doc_native_mime_verified": true,
+    "google_doc_dates_verified": 18,
+    "google_doc_native_bullet_paragraphs": 23,
+    "google_doc_date_note": "Native Thai date chips displayBuddhist2569 forGregorian2026; timestamps verified",
+    "pdf_provider_readback": true,
+    "owner_folder_parent_verified": true,
+    "public_access_broadening": false
+  },
+  "scope": "Document/Content QA only. This is not independent runtime/package QA and does not grant QA_PASS.",
+  "not_run": [
+    "Measured spoken read-through",
+    "Design stage",
+    "Visual stage",
+    "Build stage",
+    "PackageQA",
+    "Windows launcher execution",
+    "Owner final review"
+  ],
+  "execution": {
+    "mode": "CLOUD",
+    "os": "Linux",
+    "python": "3.12.14 bundled primary runtime",
+    "browser": "Cloud Chrome for research only",
+    "render": "Bundled LibreOffice andPoppler; nativeGoogleDocsPDFexport"
+  }
+}
