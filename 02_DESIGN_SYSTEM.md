@@ -1,3 +1,241 @@
+# Anthropic IPO — current Design specification
+
+This filled topic specification is authoritative for Design 1.0. The v1.6 master contract below is retained for reference; its angle-bracket fields are template examples, not unresolved live Design choices. Content and narration remain unchanged. This is a specification-only handoff, not a Visual Plan, rendered concept approval, implementation, or runtime QA.
+
+## Identity and design intent
+
+~~~yaml
+PROJECT_ID: anthropic-ipo-20261001-0426
+BRANCH: project/anthropic-ipo-20261001-0426
+CONTENT_INPUT_COMMIT: 501f48afb1bddf098de95fa75f995dbd016d54c5
+CONTENT_HANDOFF_COMMIT: 87d4628046d15a1ab887be99b37eafe3489ce71d
+CONTENT_ARTIFACT_COMMIT: 6384d754ade1c931cae7dba2e62a5aab9234badc
+DESIGN_VERSION: "1.0"
+DESIGN_INTENT: "An editorial financial explanation: isolate the evidence, distinguish its clock and definition, then ask what it can prove."
+AUDIENCE: Thai general audience
+CANVAS: 1920x1080
+ASPECT_RATIO: "16:9"
+SAFE_AREA: "x=96..1824; y=54..1026. Preferred text zone x=144..1776; y=108..972."
+BACKGROUND: "#F5F1E8 warm paper; neutral evidence field"
+FOREGROUND: "#202722 ink; primary text and measured evidence"
+ACCENT_PRIMARY: "#226B5C deep teal; documented demand or positive operating signal, never certainty of future returns"
+ACCENT_SECONDARY: "#965038 clay; obligation, cost boundary or conditional pressure, never automatic failure"
+MUTED: "#576158 secondary evidence; remains fully readable"
+POINTER_COLOR: "#354F91 indigo; presenter attention only, never a data category"
+FONT_PRIMARY: "Noto Sans Thai 400/600 for Thai; Noto Sans 400/600 for Latin and numerals; package both locally with OFL notices"
+FONT_FALLBACK: "Packaged Noto Sans Thai/Noto Sans first; Tahoma, Arial, sans-serif emergency system fallback only"
+TYPE_SCALE: "display 96; focal number 120; concept 64; data value 56; direct label 40; minimum label 32 logical px"
+MIN_LABEL_SIZE: 32
+LINE_HEIGHT: "Thai 1.45; Latin/numerals 1.25; do not clip glyph bounds"
+MAX_TEXT_WIDTH: "0.58 of canvas (1114 px) for a focal phrase; 0.80 only for one data group"
+SPACING_SCALE: [12, 24, 36, 48, 72, 96, 144]
+OBJECT_STYLE: "Flat 2D editorial geometry; 3–4 px ink outlines; square ends; no glass, glow, beveled tiles or decorative shadows"
+DATA_ENCODING: "Position and direct labels first; magnitude only within the same metric, period and unit; no decorative area scaling"
+COMPOSITION_GRID: "12 invisible columns; 96 px outer margin; 24 px gutters; focal anchors at x=480, 960, 1440"
+MOTION_EASING: "cubic-bezier(0.22,1,0.36,1); controlled deceleration, no bounce/overshoot"
+ENTRY_DURATION_MS: 500
+REVEAL_DURATION_MS: 650
+SETTLE_DURATION_MS: 200
+EXIT_DURATION_MS: 350
+HOLD: indefinite_until_presenter_input
+REDUCED_MOTION: "Immediate identical semantic endpoint; optional opacity-only fade <=100 ms, no translation"
+AUDIO_POLICY: "Live Thai narration; no soundtrack, sound effects, autoplay audio or synthetic voice"
+POINTER_MODE: theme_adaptive_presenter_dot
+POINTER_DIAMETER_CSS_PX: 14
+POINTER_EDGE_OR_HALO: "2 CSS px #F5F1E8 inner edge and 1 CSS px #202722 outer edge; static, no glow"
+COVER_ASSET_STYLE: authentic_original_image_required
+COVER_IMAGE_PLACEMENT: "Dominant authentic mark within x=336..1584,y=216..540; focal question below within x=336..1584,y=612..828"
+DELIVERY_MODE: LOCAL_ZIP
+TARGET_OS: Windows
+OFFLINE_AFTER_SETUP: true
+PUBLIC_DEPLOYMENT_REQUIRED: false
+COVER_ASSET_ID: UNSET
+COVER_ASSET_VERIFICATION: PENDING_VISUAL
+FONT_BINARY_AND_RENDER_VERIFICATION: PENDING_VISUAL_BUILD
+~~~
+
+The story is a sequence of questions, not a dashboard. Use open space, direct labels and purposeful juxtaposition. No equal-weight card grid, corporate pitch-deck chrome, hero statistics strip, investment-terminal imitation, speculative stock ticker or repeated title-and-bullets layout. Do not treat Anthropic's visual identity as endorsement of this independent explanation.
+
+## Hierarchy, composition and Thai typography
+
+- Maintain one dominant subject per beat, approximately 45–65% of the usable width. A supporting item may use at most 25%; the eye should not need to choose between simultaneous animations.
+- Preferred reading direction is left-to-right for relationships and top-to-bottom for qualification. Use the same anchor when a later beat changes evidentiary status. Empty space represents separation, not a quantified distance.
+- A scene may have one focal phrase plus its explanatory object, or a directly labeled data group. Do not add a standing header, footer or source strip. Sources and full caveats remain in the narration, accessible description, source register and eventual rationale; indispensable period/definition caveats stay beside displayed data.
+- No repeated panel boxes around unrelated subjects. A document silhouette is allowed only for an actual document-status concept and must not imitate an inspected confidential filing. It needs a truthful label; don't display fabricated document text.
+- Essential objects stay inside the 5% safe area. Text prefers the larger inner margin. Keep at least 24 logical px around Thai glyph bounds and 48 px between unrelated label groups. Fit the complete line box, including tone marks and descenders; never crop by tight bounding rectangles.
+- Thai text uses meaningful editorial line breaks. Never split a Thai word, tone-mark cluster, fiscal-year label or value-plus-unit. Avoid tracking/letter-spacing and synthetic bold. Default 600 headings, 400 labels; no thin 300, condensed width or Thai italics.
+- Numbers use the same aligned numeral style within a scene; decimal and grouping conventions must match source precision. No animated counting through invented intermediate figures. Prefer million-dollar units consistent with narration; if a billion-dollar shorthand is used, Visual must document conversion and prominently supply its unit. Do not show extra significant digits.
+- At 1280×720 the stage scales to two-thirds, so a 32 logical px minimum is about 21 CSS px. Smaller viewports preserve the exact 16:9 layout with neutral paper letterboxing; no portrait reflow, cropping or scrollbar. Mobile is not a separate redesign target for this owner-approved desktop recording artifact. Do not claim small-phone label readability is verified.
+- Backdrop and letterbox share paper color. All text sits on plain paper, never across a busy photo or transparent gradient. Official images may retain their native background if usage rules require it.
+
+## Semantic color and accessibility
+
+Color is a secondary cue. Ink means evidence, teal highlights demand/positive operating signals, clay highlights obligations/cost constraints. These meanings stay constant across scenes; teal must not mean buy and clay must not mean sell. Indigo is reserved for the pointer.
+
+Every distinction also has a direct label and/or meaningful line treatment:
+- Reported completed-period evidence: solid outline plus exact period and metric.
+- Preliminary result: solid outline with the visible qualification beside the metric. A solid shape alone never implies audited.
+- Outlook: open/dashed boundary plus the explicit outlook label, never a filled "achieved" bar.
+- Unknown information: explicit unknown label or an open question, not a zero, empty financial bar or negative outcome.
+- Analysis/scenario: explicitly labeled as a scenario; consistent geometry and visual weight, no probability-sized branches.
+These treatments do not replace words where the financial distinction is necessary. Styling alone is not a legend.
+
+Calculated sRGB contrast on #F5F1E8: ink #202722 13.55:1; muted #576158 5.72:1; teal #226B5C 5.60:1; clay #965038 5.32:1; indigo #354F91 6.95:1. All specified text pairs exceed 4.5:1. These are token calculations, not image-background or browser-render tests. Do not lower essential-text opacity. Do not place teal on clay. Meaningful strokes need >=3:1 against the adjacent fill; if a later asset/background changes, recheck that pair.
+
+Provide a concise semantic scene description for assistive technology: what the visual shows, relevant value/period/definition, uncertainty, and main takeaway. Expose settled scene/beat descriptions without reading each animation frame. No focusable hidden buttons or focus popups on the canvas. Thai narration and the owner reading editions supply longer equivalents. All key distinctions must survive grayscale and reduced motion; no hover-only evidence or pointer-dependent continuation.
+
+Font sources, checked 1 October 2026:
+- Noto Sans Thai: https://github.com/google/fonts/tree/main/ofl/notosansthai
+- Thai license: https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/OFL.txt
+- Noto Sans: https://github.com/google/fonts/tree/main/ofl/notosans
+- Latin license: https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/OFL.txt
+
+Both license files identify SIL OFL 1.1. Visual/Builder must pin actual files and source revision, retain notices, record local paths/hashes and verify Thai/Latin coverage from those binaries. Expected specimen includes “กำไรยั่งยืนหรือยัง”, “เบื้องต้น”, “ไตรมาส”, “เงินสด”, “Q2 2026”, “>11,500” and “80%”. The fallback is recovery, not permission to ship missing fonts. Do not use runtime Google Fonts or other network font requests.
+
+## Financial encoding contract
+
+Each displayed numerical claim is a tuple: claim ID, metric name, period/as-of, unit/denominator, evidence status, value/qualifier. Keep those necessary labels attached through every reveal and hold. Data labels may use the essential-label exception only when the visual would otherwise be false or undecodable. Explanation paragraphs do not become data labels by being small.
+
+- FY2025 recognized revenue, Q2 2026 preliminary recognized revenue and end-July annualized run-rate must never share a revenue-comparison axis, connected growth line, sized circles, stacked total or implied ratio. Align date/definition groups typographically, not by magnitude. If using duration spans, length encodes only verified calendar duration and must be labeled accordingly.
+- Publication date and reporting period are different clocks. The later Reuters headline must not move FY2025 after Q2 on a period timeline. A reporting-date layer, if genuinely needed, must be a separately labeled layer; prefer narration over a second visual clock.
+- Net loss and its reported non-cash component belong to FY2025. A conceptual inclusion bracket is allowed; a calculated residual, subtraction animation, numeric waterfall or labeled cash-burn remainder is not. Do not animate money disappearing.
+- Q2 positive adjusted operating income is preliminary. Q3 is outlook. No unlabeled positive bar, numeric profit size, net-income number or green cash-flow conclusion can be inferred.
+- The reported gross-margin exclusion statement belongs only to gross margin. Prefer keeping the >80% figure in narration unless Visual can preserve all indispensable metric/exclusion labels legibly. If shown, isolate it from adjusted operating income; no shared profit funnel or all-cost wedge.
+- Commitments are cumulative multiyear obligations. No equal annual payment blocks, annual-average computation, debt-due-now pile or sum with overlapping partnership announcements. A non-quantitative contract span must explicitly communicate approximate multiyear scope, not a maturity schedule.
+- No current revenue-mix pie chart, unnamed real customer logos, inferred retention distribution, utilization percentage or fabricated forecast series. Historical customer concentration needs FY2025 attached. Claude Code February evidence cannot become current total-company mix.
+- Comparisons/scenarios without quantified evidence use equal visual weight, no numeric axes, no implied likelihood ordering and no winner badge. A metaphor is not self-labeling: use a short explicit schematic/scenario label within ordinary-copy budget, or choose a literal conceptual arrangement instead.
+
+## Medium rules and scene-family guidance
+
+Prefer simple 2D vector/DOM graphics and the authentic opening image. Design does not select a framework. No 3D/WebGL, rendered datacenter world, animation video or simulated terminal is justified by this story: depth adds no supported data dimension. Real media is used for authentic identity/evidence only, with suitable rights; no AI-generated company/product reconstruction.
+
+This table gives allowed visual jobs and forbidden implications, not final layouts or beat inventories. Agent 3 owns precise geometry, copy ledger, assets and all nine per-scene state plans.
+
+| Scene | Design job and appropriate family | Locked factual/visual boundary |
+|---|---|---|
+| S01 | Authentic company identity with a single open sustainability question, static on first paint | Official original asset; 7 Thai ordinary words plus at most one wordmark = 8. No triumphant chart or collapse imagery |
+| S02 | Document-status/evidence boundary; distinguish submitted draft from unknown offer terms | No bell-ringing, live ticker, SEC approval stamp or invented S-1 facsimile. Submission is not completed listing |
+| S03 | Period-and-definition comparison with typographic/date anchors | No common magnitude axis across FY2025, Q2 and run-rate; keep preliminary/as-of visible if figures are shown |
+| S04 | Concrete job-to-payment concept; focus on why repeat use matters | If illustrative work is shown, label it illustrative within ordinary-copy budget. No invented successful-task KPI, real customer identity, current mix or retention |
+| S05 | Conceptual separation of accounting loss and cash | Historical FY2025 kept attached; no residual calculation, numeric reconciliation or disappearing-money metaphor |
+| S06 | Evidence-status distinction and unanswered path to net income/cash | Positive preliminary operating signal genuinely visible; outlook explicitly distinct. Gross-margin exclusions cannot migrate to another metric |
+| S07 | Capacity benefit first, then multiyear contractual constraint | No apparent actual rack counts, payment calendar, summed overlap or all-debt-now encoding. Approximate 80% must retain its actual contractual denominator if shown |
+| S08 | Clearly labeled conditional alternatives, revealed with equal weight | Three narrated possibilities retained; no probabilities, numeric forecast, unmarked scale or unequal animation implying a preferred outcome |
+| S09 | Evidence questions brought into one closing relationship | Keep revenue quality, profit-to-cash and obligations-over-time understandable; no investment verdict or new numerical claim |
+
+A content arrow is optional and rare: maximum two visible at once, 3 logical px, small arrowhead, no circular button background or edge placement. It may show sequence or dependency only. A broken link signifies missing reconciliation only when explicitly identified; it must not suggest cash cannot exist. On S05 prefer separation rather than a directional flow that implies computed cash. No navigation arrow is allowed.
+
+## Copy contract for Visual
+
+Retain Content's meaning and stable scene IDs. Ordinary copy includes headings, model/entity labels, explanatory labels, scenario/metaphor markers, image text, wordmarks and attribution across every reveal, including repeated copies. The 0–8 target is scene-wide, not per beat. Content proposals are candidates, not a reason to add another heading. If a schematic needs a label, shorten/replace the proposed headline rather than add it above eight.
+
+Content candidate ordinary counts: S01 7 plus one wordmark; S02 8; S03 5; S04 5; S05 6; S06 7; S07 6; S08 7; S09 5. Thai segmentation is the meaningful linguistic segmentation recorded in 01_CONTENT.md. English multiword labels count as individual words. Punctuation is not a word; a mathematical relationship still needs to be inventoried as a visible mark. Source attribution counts as ordinary unless it is an indispensable data identity, with a specific reason.
+
+In 03_VISUAL_PLAN.md enumerate exact ordinary copy, segmented tokens, count, every excluded label with necessity, excluded count and total. Preserve signs such as “>”, “เกือบ”, “ราว”, period labels and uncertainty. A numeric visual without these qualifications fails truthfulness even if it is sparse. Prefer fewer displayed figures with richer narration to a crowded chart. Do not shrink text, rasterize prose, cycle synonyms or hide crucial caveats in tooltips to pass the budget.
+
+## Motion grammar and stable-state behavior
+
+Motion is presenter-triggered, never a clock for narration. No auto-advance and no display timeout. The 560-second editorial budget is not a playback duration or a measured rehearsal.
+
+| Pattern | Trigger / semantic job | Affected subject and motion | Timing / settled endpoint | Reduced motion |
+|---|---|---|---|---|
+| Establish | Scene entry; orient the eye | One subject opacity 0→1; optional <=24 logical px translation for a new group only | 500 ms + 200 ms settle; fixed anchor, full opacity | Immediate same anchor/opacity |
+| Reveal relationship | Space from a hold; introduce one next spoken idea | Add one label/object or draw one semantic connector; preserve prior necessary context | 650 ms + 200 ms settle; completed geometry and full labels | Immediate full relationship |
+| Qualify evidence | Space from a hold; distinguish preliminary/outlook/unknown | Reveal attached status label or boundary; do not resize a number or move its period | 500 ms + 200 ms settle; qualifier remains visible | Immediate identical qualification |
+| Shift attention | Space from a hold; move focus between existing groups | Ink outline emphasis or accent change; do not dim indispensable text below contrast minimum | 500 ms + 200 ms settle; only one active focal accent | Immediate identical emphasis |
+| Exit | Space only at final held beat; change scene | 350 ms crossfade without sliding the entire canvas or morphing incompatible metrics | Next scene establishes then holds | Immediate next semantic initial state |
+| Hold | Completion or Space during active motion | No transforms, opacity changes, blinking, counters, camera movement or rendering loop | Indefinite until deliberate input | Same hold |
+
+Every intermediate reveal also settles and holds. Visual must list initial, each reveal endpoint and final endpoint, what survives, what leaves, narration cue, transition reason and exit. S01 initial cover is already meaningful and contains the authentic asset; no blank entrance/preloader. R immediately cancels pending motion and restores that state. Never interpolate between different financial metrics as though one transforms numerically into another.
+
+An initial scene may be wholly static. Duration tokens are upper editorial defaults, not a requirement to animate all objects. If two operations occur as one beat, they explain one relationship and finish within 850 ms; otherwise split into presenter-controlled beats. The pointer follows actual mouse movement independently and remains still during a stationary hold.
+
+## Hidden input contract
+
+- Spacebar is the complete forward route. A discrete keydown during active motion completes only the current beat to its semantic endpoint. A later discrete keydown from hold reveals the next beat or, at the last beat, advances one scene.
+- Ignore held-key repeat events; one press cannot queue a cascade. Ignore editable/text-entry targets and Ctrl/Alt/Meta combinations. Prevent page scroll only when actually consuming the presentation Spacebar.
+- R is mandatory. It cancels every active transition/timer and returns to S01 initial cover. Repeated R is idempotent. No stale callback may reintroduce the interrupted scene.
+- At S09 final hold, Spacebar stays on that hold; it does not wrap, exit or show a completion panel.
+- Optional Left Arrow returns to the preceding scene's final held state; optional F enters/exits browser fullscreen on deliberate input. Absence is acceptable; if included, document and test. Browser-owned fullscreen notices are outside app control.
+- Optional P may toggle the dot; it never becomes necessary for forward flow. No visible hint, tooltip, control, help drawer, menu, progress marker, scene number, playback bar, source panel or navigation arrow appears.
+- Inputs behave identically under reduced motion. Visual objects are never required click targets. Touch/keyboard-only use has no pointer dependency; this is not a promise of a new touch-navigation interface.
+
+## Presenter pointer
+
+One 14 CSS px indigo dot uses the static dual edge above. The actual mouse hotspot is its center in viewport CSS coordinates. It is outside the scaled logical-canvas transform so stage fitting/fullscreen does not magnify it. No interpolation lag, trail, pulsing, spring or ambient animation.
+
+Show only for a mouse inside the fitted 16:9 stage, not in letterbox space. Hide on leave/window blur. Hide the native cursor only while custom pointer rendering is working inside the stage; restore outside, on failure or when the dot is toggled off. Dot uses pointer-events:none and aria-hidden=true, takes no focus and never changes scene state or captures input. It remains at the mouse position through R reset if still inside the stage. Keyboard-only and touch operation do not create a synthetic mouse dot.
+
+The paper and ink edges preserve a contour over both dark and light portions of an authentic image. Actual cover contrast, tracking, stage boundaries, blur recovery and failure restoration remain Builder/QA tests; calculated indigo-on-paper contrast is not sufficient evidence for them.
+
+## Authentic first-cover contract
+
+Preferred asset is one official Anthropic or Claude wordmark/mark with verifiable original file provenance, not a recreated text logo. Use exactly one brand wordmark if keeping the Content question. Fit-contain with original aspect ratio; no stretching, recoloring, masking, 3D extrusion or redesign. Asset clear-space requirements take priority over suggested placement; adjust surrounding geometry, not the trademark.
+
+The logo or authentic relevant company image is the dominant identifying object, centered in the upper-middle region. The question sits below with generous negative space, at most two Thai lines. No faux IPO badge, ticker, dollar pile, AI robot stock art, fabricated launch scene or chart-shaped flourish. The cover must be present on initial state and R reset, normal and reduced-motion.
+
+Visual must resolve:
+1. Exact official source page and direct original asset URL, retrieval date, rights/usage basis and any attribution constraints.
+2. Asset identity, local offline path, file type/dimensions/hash and actual pixels inspected.
+3. Permitted crop/fit and clear space, displayed resolution, wordmark/image text inventory.
+4. A second verified authentic fallback or a deterministic reuse of the same independently packaged authentic asset where allowed; never a generated substitute. If no usable authentic asset is available, block READY_FOR_BUILD.
+5. Proposed S01 composition and all-scene copy/contrast implications.
+
+The candidate from Content is https://www.anthropic.com/news/confidential-draft-s1-sec . This is a provenance starting point, not proof of a downloadable license. Company ownership/trademark does not by itself establish broad redistribution permission. Design does not declare asset rights or availability verified. If attribution requires extra visible copy, revise the headline within budget or route the conflict; do not hide required credit.
+
+## Performance and verification targets for later stages
+
+These are targets, not observed results:
+- After loopback server readiness, meaningful S01 including the local authentic asset and fonts within 2 seconds on the recorded QA desktop/browser; no network-dependent logo/font swap.
+- Input response begins within 100 ms, with state changes deterministic under rapid input. No narration-disrupting stalls over 100 ms during tested transitions; record actual conditions and measured observations.
+- A stationary hold has no continuing scene animation or needless requestAnimationFrame loop. Pointer updates occur on events only. Test every scene hold for >=30 seconds plus inspect timer/state behavior.
+- No unexpected external runtime requests, browser console errors, missing assets or full-page scrolling at 1920×1080, 1280×720 and one non-16:9 viewport.
+- All essential copy remains readable and unclipped with packaged fonts and fallback failure exercised. Record grayscale, reduced-motion and pointer-over-image checks.
+- Independent QA must evaluate the exact downloaded ZIP. Design calculations and specification review are not package/Windows evidence.
+
+## Decisions and exceptions
+
+| ID | Requirement | Topic choice / rationale | Check or downstream proof |
+|---|---|---|---|
+| DS01 | Narration-first / clean canvas | Editorial evidence composition, no dashboards or persistent UI | AC-002, AC-005, AC-007 |
+| DS02 | Truthful metrics | Separate period/definition groups, no cross-basis magnitude chart | C02/C03/C06; AC-001 |
+| DS03 | Accounting integrity | No computed loss-to-cash waterfall; preliminary/outlook distinction retained | C02/C03/C04/C09/C12 |
+| DS04 | Thai readability | Locally packaged Noto pair, minimum 32 logical px, generous diacritic space | Font sources checked; binary/render test pending |
+| DS05 | Semantic color | Ink/teal/clay with labels and line styles; pointer-only indigo | Contrast calculations above; grayscale/image tests pending |
+| DS06 | Stable narration | Every reveal settles/holds; no auto-time or looping | AC-008..AC-012 pending runtime |
+| DS07 | Authentic opening | One original official asset; no generated reconstruction | AC-013/AC-023 pending Visual asset verification |
+| DS08 | Visible pointer | 14 CSS px exact-tracking dot with static contrasting edges | AC-022 pending runtime |
+| DS09 | Ordinary copy | 0–8 across all states; wordmarks/metaphor labels count | Visual exact ledger required, AC-006 |
+| DS10 | Media economy | 2D plus authentic identity; no gratuitous 3D or motion video | Simplest adequate mechanism for financial definitions |
+| DS11 | Desktop canvas | Fixed 16:9 fitted stage, no mobile reflow | Owner-approved artifact scope; AC-004 |
+| DS12 | Local delivery | Offline assets; no hosting requirement or external font loads | Builder package identity and AC-017/021 pending |
+
+No owner rule exception is introduced. The presenter dot is the existing v1.6 narrow clean-canvas exception.
+
+## Design gate review
+
+Review date: 2026-10-01 UTC. Scope: specification inspection and token calculation, not rendered/asset/runtime verification.
+
+| Gate | Result | Concrete evidence |
+|---|---|---|
+| Correct incoming state/identity | PASS | Remote README followed by WORKFLOW_STATUS; READY_FOR_DESIGN, expected Content handoff/source, exact branch and folder |
+| Required upstream inputs | PASS | Full nine-scene narration, source/claim registers, Design role contract and AC-001..AC-023 read; claims unchanged |
+| Filled tokens/hierarchy | PASS | Numeric safe areas, type/spacing tokens, roles, minimum contrast and medium decisions above |
+| Truthful boundary review | PASS | S03 incompatible scales barred; S05 residual barred; S06 metric exclusions isolated; S07 payment allocation barred; S08 unquantified scenarios |
+| Motion/hold/keys | PASS_SPECIFICATION | Trigger/endpoint/reduced-motion grammar, repeat input/reset/final boundary specified |
+| Cover and pointer | PASS_SPECIFICATION | Exact composition and pointer tokens specified; authentic file/rights delegated explicitly, no fabricated readiness |
+| Copy safeguards | PASS_SPECIFICATION | Candidate counts checked against Content; all-state ledger and exclusions required from Visual |
+| Preservation | PASS | No Content/Visual/Build/QA criteria, owner artifacts, main or historical branches altered by Design |
+| Runtime/package/Windows/owner rehearsal | NOT_RUN | No implementation or package exists; 9:20 remains editorial estimate |
+
+Design is ready for Visual specification and asset verification. It is not ready for Build. No essential owner design decision is missing. Pending downstream work is exact S01 asset rights/provenance/offline materialization, font binary verification, final scene geometry/copy/state ledger and all Build/QA checks.
+
+Next actor: Agent 3 — Visual Director. Read README and current WORKFLOW_STATUS first, then 01_CONTENT.md, this file, 03_VISUAL_PLAN.md, 04_BUILD.md, 05_QA.md and both registers. Fill the Visual Plan without changing claims or building. Keep the same branch and owner folder 1ck20putxcHJuhwAwS8ryHpKuIMAqYBiz.
+
+---
+
+# Master instructions retained from v1.6
+
 # 02_DESIGN_SYSTEM.md — Agent 2: Design
 
 Design defines how the presentation behaves. Translate narration into a consistent visual language without rewriting the story.
